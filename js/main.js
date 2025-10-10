@@ -185,17 +185,31 @@ function initContactForm() {
             submitBtn.classList.add('btn-loading');
             
             try {
-                // Simulate form submission (replace with actual endpoint)
-                await simulateFormSubmission(new FormData(this));
+                // Submit to form.taxi
+                const formData = new FormData(this);
+                const response = await fetch('https://form.taxi/s/p7rwvhh3', {
+                    method: 'POST',
+                    body: formData
+                });
                 
-                // Success
-                showNotification('Ihre Nachricht wurde erfolgreich gesendet!', 'success');
-                this.reset();
+                if (response.ok) {
+                    // Success
+                    showNotification('Ihre Nachricht wurde erfolgreich gesendet!', 'success');
+                    this.reset();
+                } else {
+                    throw new Error('Server error: ' + response.status);
+                }
                 
             } catch (error) {
-                // Error
-                showNotification('Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.', 'error');
-                console.error('Form submission error:', error);
+                // Error - fallback to direct form submission
+                console.error('AJAX submission failed, falling back to direct submission:', error);
+                showNotification('Nachricht wird gesendet...', 'info');
+                
+                // Allow normal form submission to form.taxi
+                setTimeout(() => {
+                    this.submit();
+                }, 500);
+                return;
                 
             } finally {
                 // Reset button
@@ -203,7 +217,7 @@ function initContactForm() {
                     submitBtn.innerHTML = originalText;
                     submitBtn.disabled = false;
                     submitBtn.classList.remove('btn-loading');
-                }, 1000);
+                }, 1500);
             }
         });
         

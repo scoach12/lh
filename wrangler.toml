@@ -1,0 +1,8 @@
+name = "lh-therapie-website"
+compatibility_date = "2024-10-10"
+
+[env.production]
+routes = []
+
+# Pages configuration
+pages_build_output_dir = "."

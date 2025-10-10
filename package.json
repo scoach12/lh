@@ -1,0 +1,17 @@
+{
+  "name": "webapp",
+  "version": "1.0.0",
+  "description": "Eine professionelle Website für Dr. med. Sabrina Kising, Fachärztin für Gynäkologie und Geburtshilfe mit Spezialisierung auf Trauma-Therapie, Paar- und Sexualtherapie.",
+  "main": "sw.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "wrangler pages deploy . --project-name=lh-therapie-website",
+    "preview": "wrangler pages dev ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "wrangler": "^4.42.2"
+  }
+}

@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informationen für medizinisches Fachpersonal & Therapeuten | Dr. med. Sabrina Kising</title>
+    <meta name="description" content="Professionelle Unterstützung bei traumatischen Geburten - Informationen für Hebammen, Ärzte, Psychotherapeuten und medizinisches Fachpersonal. Kostenloser Praxis-Flyer zum Download.">
+    <meta name="keywords" content="Geburtstrauma, Hebammen, Ärzte, Psychotherapeuten, Gynäkologie, Psychiatrie, medizinisches Fachpersonal, Trauma-Therapie, Online-Therapie, Weiterempfehlung">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-green': '#274543',
+                        'warm-gray': '#F5F5F5'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'dancing': ['Dancing Script', 'cursive'],
+                        'playfair': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- MeeterGo Integration -->
+    <script defer src="https://liv-showcase.s3.eu-central-1.amazonaws.com/browser-v3.js"></script>
+
+    <!-- Structured Data for Medical Professional Information -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalWebPage",
+        "name": "Informationen für Hebammen & Praxen - Geburtstrauma Therapie",
+        "description": "Professionelle Unterstützung und Informationen für medizinisches Fachpersonal bei traumatischen Geburten",
+        "author": {
+            "@type": "Person",
+            "name": "Dr. med. Sabrina Kising",
+            "jobTitle": "Fachärztin für Gynäkologie und Geburtshilfe",
+            "url": "https://liebe-heilung.de"
+        },
+        "about": {
+            "@type": "MedicalCondition",
+            "name": "Geburtstrauma",
+            "description": "Traumatische Geburtserfahrungen und deren therapeutische Behandlung"
+        },
+        "audience": {
+            "@type": "MedicalAudience",
+            "name": "Hebammen und medizinisches Fachpersonal"
+        }
+    }
+    </script>
+</head>
+<body class="font-inter bg-white text-gray-800 leading-relaxed">
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-40">
+        <nav class="container mx-auto px-4 py-0 md:py-2 xl:py-1">
+            <div class="flex items-center justify-center md:justify-start xl:justify-between md:space-x-8 xl:space-x-0 relative">
+                <!-- Logo -->
+                <a href="index.html" class="hover:opacity-80 transition-opacity duration-300 relative">
+                    <div class="w-36 h-32 md:w-28 md:h-28 xl:w-36 xl:h-32 flex-shrink-0 relative">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/0eb951b3173a0dd89cf2fcc457ff0104" 
+                             alt="Liebe & Heilung - Dr. med. Sabrina Kising" 
+                             class="w-44 h-44 md:w-36 md:h-36 xl:w-48 xl:h-48 object-contain absolute -top-4 -left-2 md:-top-4 md:-left-4 xl:-top-6 xl:-left-4">
+                    </div>
+                </a>
+
+                <!-- Tablet/Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
+                    <a href="trauma-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
+                    <a href="paar-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
+                    <a href="sexual-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
+                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
+                    <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
+                        <span class="xl:hidden">Termin vereinbaren</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-800 hover:text-orange-500 absolute right-0 top-1/2 transform -translate-y-1/2">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <div id="mobile-menu" class="hidden md:hidden mt-2 py-2 border-t border-gray-200">
+                <div class="flex flex-col space-y-4">
+                    <a href="index.html" class="text-gray-800 hover:text-orange-500 transition-colors">Start</a>
+                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
+                    <a href="paar-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
+                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
+                    <a href="ueber-mich.html" class="text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
+                    <a href="blog/index.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Blog</a>
+                    <a href="kontakt.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Kontakt</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
+                        <span class="xl:hidden">Termin vereinbaren</span>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-40">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-br from-orange-50 to-gray-100 py-20">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div class="inline-flex items-center bg-orange-100 text-orange-600 px-6 py-2 rounded-full text-sm font-medium mb-6">
+                        <i class="fas fa-user-md mr-2"></i>
+                        Für medizinisches Fachpersonal & Therapeuten
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6">
+                        Informationen für 
+                        <span class="text-orange-500">medizinisches Fachpersonal</span>
+                    </h1>
+                    
+                    <p class="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed">
+                        Professionelle Unterstützung und Materialien für Hebammen, Ärzte, Psychotherapeuten und medizinisches Fachpersonal bei der Begleitung von Frauen nach traumatischen Geburtserfahrungen
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#material-download" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-download mr-2"></i>
+                            Praxis-Material herunterladen
+                        </a>
+                        <a href="#fachkontakt" class="border-2 border-orange-500 text-orange-500 px-8 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300">
+                            <i class="fas fa-phone mr-2"></i>
+                            Fachkontakt aufnehmen
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Zielgruppen -->
+        <section class="py-16 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-users text-orange-500 mr-3"></i>
+                            Für wen sind diese Informationen?
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Diese Seite richtet sich an alle Fachkräfte, die Frauen nach traumatischen Geburtserfahrungen begleiten
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <!-- Hebammen -->
+                        <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-baby text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Hebammen</h3>
+                            <p class="text-sm text-gray-600">Freiberuflich tätige und angestellte Hebammen in Praxis, Klinik und Hausgeburtshilfe</p>
+                        </div>
+
+                        <!-- Ärzte -->
+                        <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-stethoscope text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Ärzte</h3>
+                            <p class="text-sm text-gray-600">Gynäkologen, Geburtshilfe, Psychiater, Hausärzte und andere Fachärzte</p>
+                        </div>
+
+                        <!-- Psychotherapeuten -->
+                        <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-brain text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Psychotherapeuten</h3>
+                            <p class="text-sm text-gray-600">Niedergelassene und angestellte Psychotherapeuten aller Richtungen</p>
+                        </div>
+
+                        <!-- Weitere Fachkräfte -->
+                        <div class="bg-white rounded-xl p-6 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                                <i class="fas fa-heart text-2xl"></i>
+                            </div>
+                            <h3 class="text-lg font-bold text-gray-800 mb-3">Weitere Fachkräfte</h3>
+                            <p class="text-sm text-gray-600">Sozialarbeiter, Familienhebammen, Beratungsstellen und therapeutische Einrichtungen</p>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <div class="bg-orange-50 border-l-4 border-orange-500 rounded-r-xl p-6 max-w-4xl mx-auto">
+                            <p class="text-lg text-gray-700">
+                                <i class="fas fa-info-circle text-orange-500 mr-2"></i>
+                                <strong>Gemeinsames Ziel:</strong> Frauen nach traumatischen Geburtserfahrungen die beste mögliche 
+                                Unterstützung zu bieten - durch professionelle Vernetzung und qualifizierte Weiterempfehlungen.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warum Geburtstrauma-Therapie wichtig ist -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-heart text-orange-500 mr-3"></i>
+                            Warum Geburtstrauma-Therapie so wichtig ist
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Als Hebamme, Ärztin, Psychotherapeut oder andere medizinische Fachkraft sind Sie oft die ersten Ansprechpartner für Frauen nach belastenden Geburtserfahrungen.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- Häufigkeit -->
+                        <div class="bg-orange-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-chart-bar text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">25-45% Betroffenheit</h3>
+                            <p class="text-gray-600">
+                                Bis zu 45% aller Frauen erleben ihre Geburt als traumatisch - eine erschreckend hohe Zahl, die professionelle Hilfe erfordert.
+                            </p>
+                        </div>
+
+                        <!-- Langzeitfolgen -->
+                        <div class="bg-gray-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-clock text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Langzeitfolgen</h3>
+                            <p class="text-gray-600">
+                                Unbehandelte Geburtstraumata können zu PTBS, Depressionen und Problemen in der Mutter-Kind-Bindung führen.
+                            </p>
+                        </div>
+
+                        <!-- Frühe Intervention -->
+                        <div class="bg-orange-50 rounded-2xl p-8 text-center hover:shadow-lg transition-shadow duration-300">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                                <i class="fas fa-hands-helping text-2xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Frühe Intervention</h3>
+                            <p class="text-gray-600">
+                                Je früher professionelle Hilfe erfolgt, desto besser sind die Heilungschancen und desto weniger chronifizieren die Symptome.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Meine Qualifikation -->
+        <section class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                        <div class="text-center mb-12">
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                                <i class="fas fa-user-graduate text-orange-500 mr-3"></i>
+                                Meine fachliche Qualifikation
+                            </h2>
+                            <p class="text-xl text-gray-600">
+                                Doppelte Expertise für optimale Patientenbetreuung
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <div class="space-y-8">
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-orange-500 text-white p-3 rounded-full flex-shrink-0">
+                                            <i class="fas fa-stethoscope"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg text-gray-800 mb-2">Medizinische Expertise</h3>
+                                            <p class="text-gray-600">Fachärztin für Gynäkologie und Geburtshilfe mit jahrelanger Erfahrung in der Geburtsmedizin</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-gray-500 text-white p-3 rounded-full flex-shrink-0">
+                                            <i class="fas fa-brain"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg text-gray-800 mb-2">Therapeutische Kompetenz</h3>
+                                            <p class="text-gray-600">Spezialisierung auf Trauma-Therapie, Paar- und Sexualtherapie mit fundierten Ausbildungen</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-start space-x-4">
+                                        <div class="bg-orange-500 text-white p-3 rounded-full flex-shrink-0">
+                                            <i class="fas fa-heart"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-bold text-lg text-gray-800 mb-2">Persönliche Erfahrung</h3>
+                                            <p class="text-gray-600">Eigene Betroffenheit schafft authentische Verbindung und tiefes Verständnis für die Patientinnen</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="bg-gradient-to-br from-orange-100 to-gray-100 rounded-2xl p-8">
+                                    <img src="https://page.gensparksite.com/v1/base64_upload/f3e181bbdcc68e191a4253193367f476" 
+                                         alt="Dr. med. Sabrina Kising" 
+                                         class="w-32 h-32 rounded-full mx-auto mb-6 object-cover shadow-lg">
+                                    <h3 class="text-2xl font-bold text-gray-800 mb-2">Dr. med. Sabrina Kising</h3>
+                                    <p class="text-orange-600 font-medium mb-4">Fachärztin für Gynäkologie und Geburtshilfe</p>
+                                    <p class="text-gray-600 text-sm">
+                                        "Meine doppelte Expertise als Ärztin und Therapeutin ermöglicht es mir, 
+                                        Ihre Patientinnen ganzheitlich und auf höchstem medizinischen Niveau zu begleiten."
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wann sollten Sie weiterempfehlen? -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-lightbulb text-orange-500 mr-3"></i>
+                            Wann sollten Sie mich weiterempfehlen?
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Erkennen Sie als Hebamme, Ärztin, Psychotherapeut oder in einer anderen medizinischen Funktion diese Anzeichen bei Ihren Patientinnen? Dann ist eine professionelle therapeutische Begleitung sinnvoll.
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <!-- Akute Symptome -->
+                        <div class="bg-orange-50 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-exclamation-triangle text-orange-500 mr-3"></i>
+                                Akute Symptome
+                            </h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Flashbacks oder Albträume bezüglich der Geburt</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Panikattacken oder starke Ängste</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Vermeidung von allem, was an die Geburt erinnert</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Nicht über die Geburt sprechen können</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Gedankenvermeidung und Verdrängung</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Emotionale Taubheit oder Übererregung</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-orange-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Schwere Schlafstörungen</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Beziehungsebene -->
+                        <div class="bg-gray-50 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6 flex items-center">
+                                <i class="fas fa-heart-broken text-gray-500 mr-3"></i>
+                                Beziehungsebene
+                            </h3>
+                            <ul class="space-y-4 text-gray-700">
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-gray-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Probleme in der Mutter-Kind-Bindung</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-gray-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Partnerschaftskonflikte nach der Geburt</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-gray-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Sexuelle Probleme oder komplette Vermeidung</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-gray-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Sozialer Rückzug und Isolation</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <i class="fas fa-chevron-right text-gray-500 mr-3 mt-1 text-sm"></i>
+                                    <span>Schuldgefühle und Selbstvorwürfe</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="mt-12 text-center">
+                        <div class="bg-gradient-to-r from-orange-100 to-gray-100 rounded-2xl p-8 max-w-4xl mx-auto">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">
+                                <i class="fas fa-user-check text-orange-500 mr-3"></i>
+                                Wichtig zu wissen
+                            </h3>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                <strong>Nicht jede schwere Geburt führt zu einem Trauma</strong> - aber jede Frau, die ihre Geburt als traumatisch erlebt hat, 
+                                verdient professionelle Unterstützung. <span class="text-orange-600 font-medium">Es geht um das subjektive Erleben der Frau, 
+                                nicht um die medizinischen Umstände.</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material Download Bereich -->
+        <section id="material-download" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-download text-orange-500 mr-3"></i>
+                            Praxis-Material für Sie
+                        </h2>
+                        <p class="text-xl text-gray-600">
+                            Kostenlose Materialien zum Ausdrucken und Aufhängen in Ihrer Praxis
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                        <div class="grid md:grid-cols-2 gap-12 items-center">
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                                    <i class="fas fa-file-pdf text-orange-500 mr-3"></i>
+                                    Informations-Flyer für Ihre Praxis
+                                </h3>
+                                
+                                <div class="space-y-4 mb-8">
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Professionell gestaltet im A4-Format</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Wichtige Informationen über Geburtstrauma</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Meine Kontaktdaten und Qualifikationen</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">QR-Code für direkte Online-Terminbuchung</span>
+                                    </div>
+                                    <div class="flex items-center space-x-3">
+                                        <i class="fas fa-check-circle text-green-500"></i>
+                                        <span class="text-gray-700">Einfühlsame Ansprache für betroffene Frauen</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                                        <i class="fas fa-download mr-2"></i>
+                                        Flyer herunterladen (PDF)
+                                    </button>
+                                    <button class="border-2 border-gray-500 text-gray-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-500 hover:text-white transition-all duration-300 flex items-center justify-center">
+                                        <i class="fas fa-eye mr-2"></i>
+                                        Vorschau anzeigen
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="text-center">
+                                <div class="bg-gradient-to-br from-orange-50 to-gray-50 rounded-2xl p-8 shadow-lg">
+                                    <!-- Placeholder für Flyer-Vorschau -->
+                                    <div class="bg-white rounded-lg shadow-md p-6 mb-6 border-2 border-dashed border-orange-200">
+                                        <i class="fas fa-file-pdf text-orange-500 text-6xl mb-4"></i>
+                                        <h4 class="text-lg font-bold text-gray-800 mb-2">Praxis-Flyer</h4>
+                                        <p class="text-sm text-gray-600">A4 Format, hochauflösend</p>
+                                        <p class="text-xs text-gray-500 mt-2">Bereit zum Ausdrucken</p>
+                                    </div>
+                                    <p class="text-sm text-gray-600">
+                                        <i class="fas fa-info-circle mr-1"></i>
+                                        Der Flyer wird regelmäßig aktualisiert
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Zusätzliche Materialien -->
+                        <div class="mt-16 pt-12 border-t border-gray-200">
+                            <h3 class="text-xl font-bold text-gray-800 mb-8 text-center">
+                                <i class="fas fa-plus-circle text-orange-500 mr-2"></i>
+                                Weitere Materialien auf Anfrage
+                            </h3>
+                            
+                            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                <div class="bg-orange-50 rounded-lg p-6 text-center">
+                                    <i class="fas fa-clipboard-list text-orange-500 text-3xl mb-4"></i>
+                                    <h4 class="font-bold text-gray-800 mb-2">Checklisten</h4>
+                                    <p class="text-sm text-gray-600">Symptom-Checklisten für die erste Einschätzung</p>
+                                </div>
+                                
+                                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                                    <i class="fas fa-question-circle text-gray-500 text-3xl mb-4"></i>
+                                    <h4 class="font-bold text-gray-800 mb-2">FAQ-Broschüre</h4>
+                                    <p class="text-sm text-gray-600">Häufige Fragen zum Thema Geburtstrauma</p>
+                                </div>
+                                
+                                <div class="bg-orange-50 rounded-lg p-6 text-center">
+                                    <i class="fas fa-handshake text-orange-500 text-3xl mb-4"></i>
+                                    <h4 class="font-bold text-gray-800 mb-2">Kooperations-Info</h4>
+                                    <p class="text-sm text-gray-600">Informationen zur Zusammenarbeit</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Wie läuft eine Weiterempfehlung ab? -->
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-route text-orange-500 mr-3"></i>
+                            Wie läuft eine Weiterempfehlung ab?
+                        </h2>
+                        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Ein einfacher, professioneller Ablauf für Sie und optimale Betreuung für Ihre Patientinnen
+                        </p>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-8">
+                        <!-- Schritt 1 -->
+                        <div class="text-center">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                                1
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Erkennung & Ansprache</h3>
+                            <p class="text-gray-600 mb-6">
+                                Sie erkennen Anzeichen eines möglichen Geburtstraumas und sprechen die Patientin einfühlsam darauf an.
+                            </p>
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <i class="fas fa-lightbulb text-orange-500 mb-2"></i>
+                                <p class="text-sm text-gray-700">
+                                    <strong>Tipp:</strong> "Es ist völlig normal, wenn die Geburt belastend war. Es gibt professionelle Hilfe."
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Schritt 2 -->
+                        <div class="text-center">
+                            <div class="bg-gray-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                                2
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Information & Weiterempfehlung</h3>
+                            <p class="text-gray-600 mb-6">
+                                Sie geben der Patientin den Flyer mit und empfehlen mich als Fachärztin mit therapeutischer Zusatzqualifikation.
+                            </p>
+                            <div class="bg-gray-50 rounded-lg p-4">
+                                <i class="fas fa-user-md text-gray-500 mb-2"></i>
+                                <p class="text-sm text-gray-700">
+                                    <strong>Vorteil:</strong> Medizinische und therapeutische Kompetenz aus einer Hand
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Schritt 3 -->
+                        <div class="text-center">
+                            <div class="bg-orange-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">
+                                3
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800 mb-4">Direkter Kontakt</h3>
+                            <p class="text-gray-600 mb-6">
+                                Die Patientin kontaktiert mich direkt über den QR-Code oder die Website für einen zeitnahen Termin.
+                            </p>
+                            <div class="bg-orange-50 rounded-lg p-4">
+                                <i class="fas fa-clock text-orange-500 mb-2"></i>
+                                <p class="text-sm text-gray-700">
+                                    <strong>Schnell:</strong> Meist innerhalb von 1-2 Wochen Termine verfügbar
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Was passiert dann? -->
+                    <div class="mt-16">
+                        <div class="bg-gradient-to-r from-orange-50 to-gray-50 rounded-3xl p-8 md:p-12">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+                                <i class="fas fa-heart text-orange-500 mr-3"></i>
+                                Was passiert dann in der Therapie?
+                            </h3>
+                            
+                            <div class="grid md:grid-cols-2 gap-8">
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-4">
+                                        <i class="fas fa-comments text-orange-500 mr-2"></i>
+                                        Erstberatung & Diagnostik
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-700 text-sm">
+                                        <li>• Ausführliche Anamnese der Geburtserfahrung</li>
+                                        <li>• Einschätzung der aktuellen Belastung</li>
+                                        <li>• Aufklärung über Trauma-Folgen</li>
+                                        <li>• Gemeinsame Therapiezielplanung</li>
+                                    </ul>
+                                </div>
+                                
+                                <div>
+                                    <h4 class="text-lg font-bold text-gray-800 mb-4">
+                                        <i class="fas fa-seedling text-gray-500 mr-2"></i>
+                                        Therapeutische Begleitung
+                                    </h4>
+                                    <ul class="space-y-2 text-gray-700 text-sm">
+                                        <li>• Trauma-fokussierte Therapieverfahren</li>
+                                        <li>• Stabilisierungs- und Ressourcenarbeit</li>
+                                        <li>• Bearbeitung der Geburtserfahrung</li>
+                                        <li>• Integration und Neuorientierung</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 text-center">
+                                <p class="text-gray-700 font-medium">
+                                    <i class="fas fa-shield-alt text-orange-500 mr-2"></i>
+                                    <strong>Wichtig:</strong> Sie erhalten selbstverständlich ein professionelles Feedback über den Therapieverlauf 
+                                    (mit Einverständnis der Patientin) für eine optimale weitere Betreuung.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Fachkontakt -->
+        <section id="fachkontakt" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto">
+                    <div class="text-center mb-16">
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+                            <i class="fas fa-phone text-orange-500 mr-3"></i>
+                            Direkter Fachkontakt
+                        </h2>
+                        <p class="text-xl text-gray-600">
+                            Haben Sie als medizinische Fachkraft oder Therapeut Fragen oder benötigen Sie weiteres Material? Kontaktieren Sie mich gerne direkt.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                        <div class="grid md:grid-cols-2 gap-12">
+                            <!-- Kontakt für Fachpersonal -->
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                                    <i class="fas fa-user-md text-orange-500 mr-3"></i>
+                                    Speziell für Fachpersonal
+                                </h3>
+                                
+                                <div class="space-y-6">
+                                    <div class="bg-orange-50 rounded-lg p-6">
+                                        <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                                            <i class="fas fa-envelope text-orange-500 mr-2"></i>
+                                            E-Mail Kontakt
+                                        </h4>
+                                        <p class="text-gray-700 mb-2">
+                                            <strong>Für Fachpersonal:</strong>
+                                        </p>
+                                        <a href="mailto:fachkontakt@liebe-heilung.de" class="text-orange-600 hover:underline font-medium">
+                                            fachkontakt@liebe-heilung.de
+                                        </a>
+                                        <p class="text-sm text-gray-600 mt-2">
+                                            Speziell für Anfragen von Hebammen, Ärzten, Psychotherapeuten und medizinischem Fachpersonal
+                                        </p>
+                                    </div>
+
+                                    <div class="bg-gray-50 rounded-lg p-6">
+                                        <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                                            <i class="fas fa-clock text-gray-500 mr-2"></i>
+                                            Schnelle Rückmeldung
+                                        </h4>
+                                        <p class="text-gray-700">
+                                            Ich melde mich in der Regel <strong>innerhalb von 24 Stunden</strong> bei Ihnen zurück 
+                                            und stehe für Fragen zur Verfügung.
+                                        </p>
+                                    </div>
+
+                                    <div class="bg-orange-50 rounded-lg p-6">
+                                        <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                                            <i class="fas fa-handshake text-orange-500 mr-2"></i>
+                                            Kooperations-Gespräch
+                                        </h4>
+                                        <p class="text-gray-700">
+                                            Gerne führe ich auch ein persönliches Gespräch mit Ihnen über Möglichkeiten 
+                                            der Zusammenarbeit und beantworte Ihre Fragen.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Was Sie von mir erwarten können -->
+                            <div>
+                                <h3 class="text-2xl font-bold text-gray-800 mb-6">
+                                    <i class="fas fa-star text-orange-500 mr-3"></i>
+                                    Was Sie von mir erwarten können
+                                </h3>
+                                
+                                <div class="space-y-4">
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Professionelle Zusammenarbeit</p>
+                                            <p class="text-sm text-gray-600">Respektvolle Kommunikation auf Augenhöhe</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Zeitnahe Terminvergabe</p>
+                                            <p class="text-sm text-gray-600">Meist innerhalb von 1-2 Wochen verfügbar</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Feedback & Austausch</p>
+                                            <p class="text-sm text-gray-600">Rückmeldung über Therapieverlauf (mit Einverständnis)</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Kostenlose Materialien</p>
+                                            <p class="text-sm text-gray-600">Flyer, Broschüren und Informationsmaterial</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3">
+                                        <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                        <div>
+                                            <p class="font-medium text-gray-800">Fortbildungs-Angebote</p>
+                                            <p class="text-sm text-gray-600">Auf Anfrage Schulungen zum Thema Geburtstrauma</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Direkte Kontaktaufnahme -->
+                                <div class="mt-8">
+                                    <a href="mailto:fachkontakt@liebe-heilung.de" class="block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center">
+                                        <i class="fas fa-envelope mr-2"></i>
+                                        Jetzt Fachkontakt aufnehmen
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Abschluss-CTA -->
+        <section class="py-20 bg-gradient-to-br from-orange-500 to-orange-600 text-white">
+            <div class="container mx-auto px-4">
+                <div class="max-w-4xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Gemeinsam für bessere Betreuung nach traumatischen Geburten
+                    </h2>
+                    <p class="text-xl mb-8 opacity-90">
+                        Lassen Sie uns als medizinische Fachkräfte und Therapeuten zusammenarbeiten, um Frauen nach belastenden Geburtserfahrungen 
+                        die bestmögliche Unterstützung zu bieten.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                        <a href="#material-download" class="bg-white text-orange-600 px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-download mr-2"></i>
+                            Material herunterladen
+                        </a>
+                        <a href="mailto:fachkontakt@liebe-heilung.de" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-all duration-300">
+                            <i class="fas fa-envelope mr-2"></i>
+                            Kontakt aufnehmen
+                        </a>
+                    </div>
+
+                    <div class="mt-12 pt-8 border-t border-orange-400">
+                        <p class="text-lg opacity-90">
+                            <i class="fas fa-heart mr-2"></i>
+                            <strong>Vielen Dank</strong> für Ihr Engagement und Ihre wichtige Arbeit im Bereich der Geburtshilfe.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-warm-gray py-16">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-12 gap-8">
+                <!-- Logo & Description -->
+                <div class="md:col-span-6 lg:col-span-5">
+                    <div class="mb-6">
+                        <h2 class="text-3xl font-bold text-gray-800 mb-4" style="font-family: 'Dancing Script', cursive;">
+                            Liebe Heilung
+                        </h2>
+                        <p class="text-lg text-gray-700 font-medium mb-4">
+                            Heilung beginnt da, wo Liebe Raum bekommt.
+                        </p>
+                        <p class="text-gray-600 leading-relaxed">
+                            Ganzheitliche Online-Begleitung in Paar- und Sexualtherapie 
+                            sowie bei traumatischen Geburten – empathisch, professionell 
+                            und persönlich.
+                        </p>
+                        <p class="text-sm text-gray-500 mt-3">
+                            Dr. med. Sabrina Kising
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Mein Angebot -->
+                <div class="md:col-span-3 lg:col-span-3">
+                    <h4 class="font-bold text-lg text-gray-800 mb-4">Mein Angebot</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>
+                            <a href="trauma-therapie.html" class="hover:text-orange-500 transition-colors">
+                                Trauma-Therapie
+                            </a>
+                        </li>
+                        <li>
+                            <a href="paar-therapie.html" class="hover:text-orange-500 transition-colors">
+                                Paar-Therapie
+                            </a>
+                        </li>
+                        <li>
+                            <a href="sexual-therapie.html" class="hover:text-orange-500 transition-colors">
+                                Sexual-Therapie
+                            </a>
+                        </li>
+                        <li>
+                            <a href="hebammen-information.html" class="hover:text-orange-500 transition-colors">
+                                Für Fachpersonal
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Weitere Informationen -->
+                <div class="md:col-span-3 lg:col-span-4">
+                    <h4 class="font-bold text-lg text-gray-800 mb-4">Weitere Informationen</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li>
+                            <a href="ueber-mich.html" class="hover:text-orange-500 transition-colors">
+                                Über mich
+                            </a>
+                        </li>
+                        <li>
+                            <a href="kontakt.html" class="hover:text-orange-500 transition-colors">
+                                Kontakt
+                            </a>
+                        </li>
+                        <li>
+                            <a href="datenschutz.html" class="hover:text-orange-500 transition-colors">
+                                Datenschutz
+                            </a>
+                        </li>
+                        <li>
+                            <a href="impressum.html" class="hover:text-orange-500 transition-colors">
+                                Impressum
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Social Media & Copyright -->
+            <div class="border-t border-gray-300 mt-12 pt-8">
+                <div class="text-center relative">
+                    <p class="text-gray-600">
+                        &copy; 2025 Liebe-Heilung.de. Alle Rechte vorbehalten.
+                    </p>
+                    
+                    <!-- Nach oben Button -->
+                    <button id="scrollToTop" class="scroll-to-top-btn absolute right-0 top-0 bg-gradient-to-br from-orange-500 to-dark-green text-white p-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 group">
+                        <i class="fas fa-arrow-up text-lg group-hover:animate-bounce"></i>
+                        <span class="sr-only">Nach oben scrollen</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

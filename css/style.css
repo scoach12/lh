@@ -1,0 +1,725 @@
+/* Custom CSS for Liebe-Heilung.de */
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body styles */
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+}
+
+/* Logo font */
+.logo-font {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* Eye-catcher animations */
+.eye-catcher {
+    animation: fadeInScale 1.2s ease-out;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9) translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* Eye-catcher image animations */
+.eyecatcher-image {
+    transition: all 0.5s ease;
+    transform-origin: center;
+}
+
+.eyecatcher-image:hover {
+    transform: scale(1.05);
+}
+
+/* Float animation for decorative elements */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.animate-float {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Handwriting effect */
+.handwriting {
+    position: relative;
+}
+
+.handwriting::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent 0%, #f97316 10%, #f97316 90%, transparent 100%);
+    opacity: 0.6;
+    border-radius: 2px;
+}
+
+/* Custom animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.05);
+        opacity: 0.8;
+    }
+}
+
+@keyframes gradient {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Navigation styles */
+.nav-link {
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: translateY(-2px);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background: linear-gradient(90deg, #f97316, #ea580c);
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* Active navigation link styles */
+.nav-link.active {
+    color: #f97316 !important;
+    font-weight: 600;
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background: linear-gradient(90deg, #f97316, #ea580c);
+}
+
+/* Button styles */
+.btn-primary, .btn-secondary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.btn-primary::before, .btn-secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.btn-primary:hover::before, .btn-secondary:hover::before {
+    left: 100%;
+}
+
+/* Hero section animations */
+.hero-content {
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Service cards */
+.service-card {
+    position: relative;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(233, 30, 99, 0.05), rgba(156, 39, 176, 0.05));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 1rem;
+}
+
+.service-card:hover::before {
+    opacity: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Gradient text animation */
+.gradient-text {
+    background: linear-gradient(-45deg, #E91E63, #9C27B0, #2196F3, #009688);
+    background-size: 400% 400%;
+    animation: gradient 3s ease infinite;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Floating elements animation */
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.floating {
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating:nth-child(2) {
+    animation-delay: -2s;
+}
+
+.floating:nth-child(3) {
+    animation-delay: -4s;
+}
+
+/* Form styles */
+input:focus, textarea:focus, select:focus {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(249, 115, 22, 0.1);
+}
+
+/* Global focus outlines - Override all pink focus states with orange */
+*:focus {
+    outline: 2px solid #f97316 !important;
+    outline-offset: 2px !important;
+}
+
+/* Specific focus ring styles */
+.focus\:ring-healing-pink:focus,
+.focus\:border-healing-pink:focus {
+    --tw-ring-color: rgb(249 115 22 / 0.5) !important;
+    border-color: #f97316 !important;
+}
+
+/* Button and link focus states */
+button:focus,
+a:focus {
+    outline: 2px solid #f97316 !important;
+    outline-offset: 2px !important;
+}
+
+/* Override Tailwind's default focus ring colors */
+.focus\:ring-pink-500:focus,
+.focus\:ring-pink-600:focus,
+.focus\:ring-rose-500:focus {
+    --tw-ring-color: rgb(249 115 22 / 0.5) !important;
+}
+
+/* Input focus states */
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: #f97316 !important;
+    --tw-ring-color: rgb(249 115 22 / 0.2) !important;
+}
+
+/* Navigation and interactive element focus */
+.nav-link:focus,
+.service-card:focus {
+    outline: 2px solid #f97316 !important;
+    outline-offset: 2px !important;
+}
+
+/* Testimonial cards */
+.testimonial-card {
+    transition: all 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: scale(1.02);
+}
+
+/* Loading animation for buttons */
+.btn-loading {
+    position: relative;
+    color: transparent !important;
+}
+
+.btn-loading::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Scroll indicator - Orange to Dark Green - v2.0 */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #f97316 0%, #ea580c 20%, #dc2626 40%, #274543 60%, #1e3432 80%, #0f1918 100%);
+    background-color: #f97316; /* Fallback */
+    box-shadow: 0 2px 10px rgba(249, 115, 22, 0.3);
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.1s ease, opacity 0.3s ease;
+    z-index: 1000;
+    border-radius: 0 0 2px 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Force override any existing scroll indicator styles */
+div.scroll-indicator {
+    background: linear-gradient(90deg, #f97316 0%, #ea580c 20%, #dc2626 40%, #274543 60%, #1e3432 80%, #0f1918 100%);
+    background-color: #f97316;
+}
+
+/* Visible state */
+.scroll-indicator.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Enhanced scroll indicator with glow effect */
+.scroll-indicator::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(249, 115, 22, 0.8));
+    border-radius: 0 0 2px 0;
+    filter: blur(1px);
+}
+
+/* Pulse animation for scroll indicator when at certain positions */
+.scroll-indicator.pulse {
+    animation: scrollPulse 2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+    0%, 100% {
+        box-shadow: 0 2px 10px rgba(249, 115, 22, 0.3);
+    }
+    50% {
+        box-shadow: 0 2px 20px rgba(249, 115, 22, 0.6), 0 0 30px rgba(39, 69, 67, 0.3);
+    }
+}
+
+/* Mobile adjustments for scroll indicator */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        height: 3px;
+    }
+}
+
+/* Ensure scroll indicator is above navigation but below modals */
+header {
+    position: relative;
+    z-index: 40;
+}
+
+.scroll-indicator {
+    z-index: 45;
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+/* Additional gradient variations for different themes */
+.scroll-indicator.theme-warm {
+    background: linear-gradient(90deg, #f97316, #fb923c, #fdba74, #274543, #1e3432);
+}
+
+.scroll-indicator.theme-cool {
+    background: linear-gradient(90deg, #ea580c, #dc2626, #b91c1c, #1e3432, #0f1918);
+}
+
+/* Scroll indicator completion effect */
+.scroll-indicator.completed {
+    background: linear-gradient(90deg, #10b981, #059669, #047857);
+    height: 6px;
+    transition: height 0.3s ease, background 0.5s ease;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8f9fa;
+    border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #274543);
+    border-radius: 6px;
+    border: 2px solid #f8f9fa;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ea580c, #1e3432);
+    border: 2px solid #e5e7eb;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, #dc2626, #0f1918);
+}
+
+/* Firefox scrollbar */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #f97316 #f8f9fa;
+}
+
+/* Scrollbar for specific sections with dark background */
+.dark-section::-webkit-scrollbar-track {
+    background: #374151;
+}
+
+.dark-section::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f97316, #274543);
+    border: 2px solid #374151;
+}
+
+.dark-section::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ea580c, #1e3432);
+}
+
+/* Scroll to Top Button */
+.scroll-to-top-btn {
+    background: linear-gradient(135deg, #f97316, #274543);
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top-btn.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.scroll-to-top-btn:hover {
+    background: linear-gradient(135deg, #ea580c, #1e3432);
+    transform: translateY(-2px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(249, 115, 22, 0.3);
+}
+
+.scroll-to-top-btn:active {
+    transform: translateY(0) scale(0.95);
+}
+
+.scroll-to-top-btn i {
+    transition: all 0.3s ease;
+}
+
+.scroll-to-top-btn:hover i {
+    transform: translateY(-1px);
+}
+
+/* Responsive adjustments for scroll button */
+@media (max-width: 768px) {
+    .scroll-to-top-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+    }
+}
+
+/* Intersection Observer animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.6s ease;
+}
+
+.slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .service-card {
+        margin-bottom: 1rem;
+    }
+    
+    .floating-elements {
+        display: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .service-card {
+        border: 2px solid #000;
+    }
+    
+    .btn-primary, .btn-secondary {
+        border: 2px solid #000;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        line-height: 1.4;
+    }
+    
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+    outline: 2px solid #E91E63;
+    outline-offset: 2px;
+}
+
+/* Skip link for screen readers */
+.skip-link {
+    position: absolute;
+    top: -100px;
+    left: 6px;
+    background: linear-gradient(135deg, #f97316, #274543);
+    color: white;
+    padding: 8px 12px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+    font-weight: 500;
+    box-shadow: 0 2px 10px rgba(249, 115, 22, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.skip-link:focus {
+    top: 6px;
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(135deg, #ea580c, #1e3432);
+    box-shadow: 0 4px 20px rgba(249, 115, 22, 0.4);
+    transform: translateY(-1px);
+}
+
+/* Loading state styles */
+.loading {
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+/* Error state styles */
+.error {
+    border-color: #f56565 !important;
+    box-shadow: 0 0 0 3px rgba(245, 101, 101, 0.1) !important;
+}
+
+/* Success state styles */
+.success {
+    border-color: #48bb78 !important;
+    box-shadow: 0 0 0 3px rgba(72, 187, 120, 0.1) !important;
+}
+
+/* Notification styles */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 16px 24px;
+    border-radius: 8px;
+    color: white;
+    font-weight: 500;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+}
+
+.notification.error {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+}
+
+.notification.info {
+    background: linear-gradient(135deg, #4299e1, #3182ce);
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #1a1a1a;
+        --text-color: #ffffff;
+        --card-bg: #2d2d2d;
+    }
+}
+
+/* Performance optimizations */
+.service-card,
+.btn-primary,
+.btn-secondary {
+    will-change: transform;
+}
+
+/* Container queries support */
+@supports (container-type: inline-size) {
+    .service-grid {
+        container-type: inline-size;
+    }
+    
+    @container (max-width: 600px) {
+        .service-card {
+            flex-direction: column;
+        }
+    }
+}

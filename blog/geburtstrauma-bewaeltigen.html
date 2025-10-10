@@ -36,6 +36,9 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../css/style.css">
     
+    <!-- Meetergo Script -->
+    <script defer src="https://liv-showcase.s3.eu-central-1.amazonaws.com/browser-v3.js"></script>
+    
     <!-- Tailwind Config -->
     <script>
         tailwind.config = {
@@ -338,35 +341,66 @@
         </a>
     </div>
 
+    <!-- Header & Navigation -->
     <!-- Navigation -->
     <header class="fixed top-0 left-0 right-0 bg-white/95 backdrop-blur-sm shadow-sm z-40">
-        <nav class="container mx-auto px-4 py-4">
-            <div class="flex items-center justify-between">
+        <nav class="container mx-auto px-4 py-0 md:py-2 xl:py-1">
+            <div class="flex items-center justify-center md:justify-start xl:justify-between md:space-x-8 xl:space-x-0 relative">
                 <!-- Logo -->
-                <a href="../index.html" class="flex items-center space-x-3 hover:opacity-80 transition-opacity duration-300">
-                    <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-emerald-600 rounded-full flex items-center justify-center">
-                        <i class="fas fa-heart text-white text-lg"></i>
-                    </div>
-                    <div>
-                        <h1 class="text-xl font-bold text-gray-800" style="font-family: 'Dancing Script', cursive;">
-                            Liebe & Heilung
-                        </h1>
-                        <p class="text-xs text-gray-600">Dr. med. Sabrina Kising</p>
+                <a href="../index.html" class="hover:opacity-80 transition-opacity duration-300 relative">
+                    <div class="w-36 h-32 md:w-28 md:h-28 xl:w-36 xl:h-32 flex-shrink-0 relative">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/0eb951b3173a0dd89cf2fcc457ff0104" 
+                             alt="Liebe Heilung - Dr. med. Sabrina Kising" 
+                             class="w-44 h-44 md:w-36 md:h-36 xl:w-48 xl:h-48 object-contain absolute -top-4 -left-2 md:-top-4 md:-left-4 xl:-top-6 xl:-left-4">
                     </div>
                 </a>
 
-                <!-- Desktop Navigation -->
-                <div class="hidden md:flex items-center space-x-8">
+                <!-- Desktop Navigation (XL screens and up) -->
+                <div class="hidden xl:flex items-center space-x-8">
                     <a href="../index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
                     <a href="../trauma-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
                     <a href="../paar-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
                     <a href="../sexual-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
                     <a href="../ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
-                    <a href="index.html" class="nav-link text-gray-800 font-semibold hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="../index.html#contact" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                    <a href="index.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="../hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Für Fachpersonal</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        <span>Online Termin vereinbaren</span>
+                    </a>
+                </div>
+
+                <!-- Tablet Navigation (MD to XL screens) -->
+                <div class="hidden md:flex xl:hidden items-center space-x-6">
+                    <a href="../index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
+                    
+                    <!-- Coaching-Bereiche Dropdown -->
+                    <div class="relative" id="coaching-dropdown">
+                        <button class="nav-link text-gray-800 hover:text-orange-500 transition-colors flex items-center space-x-1 whitespace-nowrap" onclick="toggleCoachingDropdown()">
+                            <span>Coaching-Bereiche</span>
+                            <i class="fas fa-chevron-down text-xs transform transition-transform duration-200" id="coaching-chevron"></i>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
+                            <a href="../trauma-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
+                                <i class="fas fa-heart mr-2 text-orange-400"></i>
+                                Trauma-Therapie
+                            </a>
+                            <a href="../paar-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
+                                <i class="fas fa-heart mr-2 text-orange-400"></i>
+                                Paar-Therapie
+                            </a>
+                            <a href="../sexual-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
+                                <i class="fas fa-heart mr-2 text-orange-400"></i>
+                                Sexual-Therapie
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="../ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
+                    <a href="index.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Blog</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-calendar-alt mr-2"></i>
+                        <span>Termin vereinbaren</span>
                     </a>
                 </div>
 
@@ -385,7 +419,8 @@
                     <a href="../sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
                     <a href="../ueber-mich.html" class="text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
                     <a href="index.html" class="text-gray-800 font-semibold hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="../index.html#contact" class="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300">
+                    <a href="../hebammen-information.html" class="text-gray-800 hover:text-orange-500 transition-colors">Für Fachpersonal</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
                         <span class="hidden xl:inline">Online Termin vereinbaren</span>
                         <span class="xl:hidden">Termin vereinbaren</span>
@@ -791,6 +826,28 @@
     <script src="../js/main.js"></script>
     
     <script>
+        // Toggle Coaching Dropdown
+        function toggleCoachingDropdown() {
+            const menu = document.getElementById('coaching-menu');
+            const chevron = document.getElementById('coaching-chevron');
+            if (menu && chevron) {
+                menu.classList.toggle('hidden');
+                chevron.classList.toggle('rotate-180');
+            }
+        }
+
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('coaching-dropdown');
+            const menu = document.getElementById('coaching-menu');
+            const chevron = document.getElementById('coaching-chevron');
+            
+            if (dropdown && menu && !dropdown.contains(event.target)) {
+                menu.classList.add('hidden');
+                chevron.classList.remove('rotate-180');
+            }
+        });
+
         // Reading Progress Bar
         function updateReadingProgress() {
             const article = document.querySelector('article');

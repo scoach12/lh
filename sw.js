@@ -1,7 +1,7 @@
 // Service Worker for Liebe-Heilung.de
 // Provides offline functionality and performance improvements
 
-const CACHE_NAME = 'liebe-heilung-v1.0.7';
+const CACHE_NAME = 'liebe-heilung-v1.0.8';
 const urlsToCache = [
     '/',
     '/index.html',

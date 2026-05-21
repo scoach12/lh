@@ -229,8 +229,12 @@
     <main id="main">
 
         <!-- Warum ich das tue -->
-        <section id="meine-geschichte" class="py-20 bg-white">
-            <div class="container mx-auto px-4">
+        <section id="meine-geschichte" class="py-20 bg-gradient-to-br from-orange-50/40 via-white to-emerald-50/40 relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute top-20 -left-20 w-72 h-72 bg-orange-200/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 -right-20 w-80 h-80 bg-emerald-200/20 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
                         <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">WARUM ICH DAS TUE</p>
@@ -248,19 +252,21 @@
                             Was mich nicht losgelassen hat: Nach der Geburt klafft eine Lücke. Der medizinische Teil ist erledigt. Aber was danach kommt – das fragt niemand ab. Wie viele Frauen danach allein blieben. Mit Bildern, die nicht verschwanden. Mit Gefühlen, für die es keinen Raum gab.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-10">
                             Und wie oft der Partner daneben stand – hilflos. Auch betroffen. Auch ohne Worte.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6 font-medium">
+                        <!-- Pull-Quote -->
+                        <p class="text-2xl md:text-3xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3 my-10">
                             Ich kenne das nicht nur als Ärztin.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-10">
                             Deshalb habe ich mich zusätzlich als Paar- und Sexualberaterin ausbilden lassen. Weil eine Geburt zwei Leben verändert. Und das sich nicht immer gut anfühlt.
                         </p>
 
-                        <p class="text-lg md:text-xl text-gray-800 font-playfair italic leading-relaxed">
+                        <!-- Abschluss-Highlight -->
+                        <p class="text-xl md:text-2xl text-gray-800 font-playfair italic leading-relaxed text-center mt-12">
                             Das ist der Grund, warum ich heute hier bin.
                         </p>
                     </div>
@@ -269,8 +275,12 @@
         </section>
 
         <!-- Wie ich arbeite -->
-        <section class="py-20 bg-warm-gray">
-            <div class="container mx-auto px-4">
+        <section class="py-20 bg-warm-gray relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute -top-10 right-10 w-64 h-64 bg-orange-200/15 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 -left-10 w-72 h-72 bg-emerald-200/15 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
                         <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">WIE ICH ARBEITE</p>
@@ -280,63 +290,94 @@
                     </div>
 
                     <div class="prose prose-lg max-w-none">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
                             Ich kenne den Kreißsaal – als Ort der Sicherheit, der Kompetenz, des Lebens und der Freude. Und ich weiß, dass dort Momente entstehen können, die Druck und Tempo brauchen. Momente, die zu viel sind. In denen man nicht mitkommt. Nicht gehört wird. Übergangen wird. Sich allein fühlt.
                         </p>
 
-                        <p class="text-lg md:text-xl text-gray-800 font-playfair italic leading-relaxed mb-6">
+                        <!-- Pull-Quote -->
+                        <p class="text-2xl md:text-3xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3 my-10">
                             Momente, die sich festsetzen.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
                             Als Beraterin begleite ich genau das, was danach bleibt. Was sich in den Körper eingegraben hat. Was zwischen zwei Menschen entstanden ist – oder verloren gegangen.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-10 font-medium">
+                        <p class="text-lg text-gray-700 leading-relaxed mb-12 font-medium">
                             Diese Kombination ist selten. Und für genau dein Thema entscheidend.
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                        <p class="text-xl md:text-2xl text-gray-800 font-playfair italic leading-relaxed mb-10">
                             Gemeinsam schauen wir auf:
                         </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            <strong class="text-gray-800">1 – Was wirklich passiert ist</strong><br>
-                            Nicht nur medizinisch – sondern was es mit dir gemacht hat. Was du gefühlt, gedacht, erlebt hast.
-                        </p>
+                        <!-- Schritt 1 -->
+                        <div class="flex items-start gap-6 mb-8">
+                            <span class="font-dancing text-orange-500 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">1</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Was wirklich passiert ist</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Nicht nur medizinisch – sondern was es mit dir gemacht hat. Was du gefühlt, gedacht, erlebt hast.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            <strong class="text-gray-800">2 – Was du gerade brauchst</strong><br>
-                            Ohne Bewertung. Ohne Druck. In deinem Tempo.
-                        </p>
+                        <!-- Schritt 2 -->
+                        <div class="flex items-start gap-6 mb-8">
+                            <span class="font-dancing text-emerald-600 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">2</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Was du gerade brauchst</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Ohne Bewertung. Ohne Druck. In deinem Tempo.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-10">
-                            <strong class="text-gray-800">3 – Den Weg zurück</strong><br>
-                            Zu dir. Zu deinem Körper. Zu eurem Miteinander.
-                        </p>
+                        <!-- Schritt 3 -->
+                        <div class="flex items-start gap-6 mb-12">
+                            <span class="font-dancing text-orange-500 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">3</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Den Weg zurück</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Zu dir. Zu deinem Körper. Zu eurem Miteinander.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p class="text-2xl md:text-3xl font-dancing text-orange-500 mt-8">
-                            Sabrina Kising
-                        </p>
+                        <!-- Signatur -->
+                        <div class="text-right mt-12">
+                            <p class="text-4xl md:text-5xl font-dancing text-orange-500">
+                                Sabrina Kising
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Blockzitat -->
-        <section class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2">
-                        „Der Körper heilt schneller als die Seele. Und was zwischen Paaren nach der Geburt passiert – das sieht in keiner Akte."
+        <section class="py-20 bg-gradient-to-r from-orange-50 via-white to-emerald-50 relative overflow-hidden">
+            <!-- Dezenter Akzent -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-healing-orange/5 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto text-center">
+                    <i class="fas fa-quote-left text-healing-orange/30 text-5xl md:text-6xl mb-6"></i>
+                    <p class="text-2xl md:text-3xl lg:text-4xl text-dark-green font-semibold font-playfair italic leading-snug">
+                        Der Körper heilt schneller als die Seele.<br>
+                        Und was zwischen Paaren nach der Geburt passiert – <span class="text-orange-500">das sieht in keiner Akte.</span>
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Meine Qualifikationen -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute top-40 -right-20 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-40 -left-20 w-80 h-80 bg-emerald-100/30 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
                 <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
                         <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">MEINE QUALIFIKATIONEN</p>
@@ -345,26 +386,47 @@
                         </h2>
                     </div>
 
-                    <div class="prose prose-lg max-w-none">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            <strong class="text-gray-800">1 – Fachärztin für Frauenheilkunde und Geburtshilfe</strong><br>
-                            Langjährige Erfahrung in einem Perinatalzentrum Level 1 – einem der geburtenstärksten und medizinisch anspruchsvollsten Häuser.
-                        </p>
+                    <div class="space-y-10">
+                        <!-- Punkt 1 -->
+                        <div class="flex items-start gap-6">
+                            <span class="font-dancing text-orange-500 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">1</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Fachärztin für Frauenheilkunde und Geburtshilfe</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Langjährige Erfahrung in einem Perinatalzentrum Level 1 – einem der geburtenstärksten und medizinisch anspruchsvollsten Häuser.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            <strong class="text-gray-800">2 – Ausbildung in Paar- und Sexualberatung</strong><br>
-                            Fundierte therapeutische Zusatzausbildung. Spezialisierung auf Geburtstrauma, postpartale Veränderungen und Schwangerschaftsverlust.
-                        </p>
+                        <!-- Punkt 2 -->
+                        <div class="flex items-start gap-6">
+                            <span class="font-dancing text-emerald-600 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">2</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Ausbildung in Paar- und Sexualberatung</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Fundierte therapeutische Zusatzausbildung. Spezialisierung auf Geburtstrauma, postpartale Veränderungen und Schwangerschaftsverlust.
+                                </p>
+                            </div>
+                        </div>
 
-                        <p class="text-lg text-gray-700 leading-relaxed mb-10">
-                            <strong class="text-gray-800">3 – Von der Praxis in die Online-Begleitung</strong><br>
-                            Die Arbeit mit Frauen hat mich erfüllt. Was mich frustriert hat: der Zeitdruck. Wesentliche Themen blieben unbesprochen – nicht weil niemand sprechen wollte, sondern weil keine Zeit war. Das hat mich umdenken lassen.
-                        </p>
+                        <!-- Punkt 3 -->
+                        <div class="flex items-start gap-6">
+                            <span class="font-dancing text-orange-500 text-6xl md:text-7xl leading-none flex-shrink-0 -mt-2">3</span>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">Von der Praxis in die Online-Begleitung</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Die Arbeit mit Frauen hat mich erfüllt. Was mich frustriert hat: der Zeitdruck. Wesentliche Themen blieben unbesprochen – nicht weil niemand sprechen wollte, sondern weil keine Zeit war. Das hat mich umdenken lassen.
+                                </p>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="mt-12">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Wichtig zu wissen</h3>
-                        <div class="bg-orange-50 border-l-4 border-healing-orange p-6 rounded-lg">
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                            <i class="fas fa-info-circle text-healing-orange mr-2"></i>
+                            Wichtig zu wissen
+                        </h3>
+                        <div class="bg-gradient-to-br from-orange-50 to-emerald-50 border-l-4 border-healing-orange p-8 rounded-2xl shadow-sm">
                             <p class="text-gray-700 leading-relaxed">
                                 Meine Online-Begleitung in den Bereichen <strong>Traumabearbeitung, Paar- und Sexualberatung</strong> ist ein beratendes und unterstützendes Angebot. Es ersetzt keine Psychotherapie nach dem Psychotherapeutengesetz (§ 1 PsychThG) und keine ärztliche Behandlung. Es erfolgt keine Diagnosestellung. Sollten sich im Verlauf Hinweise auf eine behandlungsbedürftige psychische Erkrankung zeigen, empfehle ich gemeinsam den richtigen nächsten Schritt.
                             </p>
@@ -375,25 +437,38 @@
         </section>
 
         <!-- Schweigen macht es schwerer -->
-        <section class="py-20 bg-warm-gray">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto text-center">
+        <section class="py-20 bg-gradient-to-br from-emerald-50/40 via-warm-gray to-orange-50/40 relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute top-10 left-1/4 w-64 h-64 bg-emerald-200/15 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-1/4 w-64 h-64 bg-orange-200/15 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <i class="fas fa-comment-dots text-healing-orange/40 text-5xl mb-6"></i>
                     <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
                         Schweigen macht es <span class="text-orange-500">schwerer</span>
                     </h2>
-                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
-                        Die meisten Dinge, über die meine Klientinnen mit mir sprechen, haben sie vorher mit niemandem besprochen. Das Aussprechen ist oft schon ein Teil der Heilung.
+                    <p class="text-xl md:text-2xl text-gray-700 font-playfair italic leading-relaxed">
+                        Die meisten Dinge, über die meine Klientinnen mit mir sprechen, haben sie vorher mit niemandem besprochen.
+                    </p>
+                    <p class="text-lg md:text-xl text-dark-green font-semibold mt-6">
+                        Das Aussprechen ist oft schon ein Teil der Heilung.
                     </p>
                 </div>
             </div>
         </section>
 
         <!-- Call to Action -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4 text-center">
+        <section class="py-20 bg-gradient-to-br from-orange-50 via-white to-emerald-50 relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute -top-10 -left-10 w-80 h-80 bg-orange-200/25 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-10 -right-10 w-96 h-96 bg-emerald-200/25 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
                 <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">BEREIT FÜR DEN ERSTEN SCHRITT?</p>
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
-                    Wenn du spürst, dass da etwas ist – <span class="text-orange-500">dann lass uns reden.</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight max-w-3xl mx-auto">
+                    Wenn du spürst, dass da etwas ist –<br>
+                    <span class="text-orange-500 font-dancing text-5xl md:text-6xl lg:text-7xl">dann lass uns reden.</span>
                 </h2>
                 <p class="text-lg md:text-xl text-gray-700 mb-10 max-w-2xl mx-auto leading-relaxed">
                     Kein Druck. Kein Programm. Nur ein Gespräch.

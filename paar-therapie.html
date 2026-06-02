@@ -49,6 +49,7 @@
                         'healing-purple': '#9B59B6',
                         'healing-teal': '#26A69A',
                         'healing-blue': '#3498DB',
+                        'healing-orange': '#FF6B35',
                         'soft-pink': '#FDF2F8',
                         'soft-purple': '#F3E8FF',
                         'warm-gray': '#F8F9FA',
@@ -139,52 +140,39 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation (XL screens and up) -->
-                <div class="hidden xl:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    <a href="trauma-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
-                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
-                    <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Für Fachpersonal</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Online Termin vereinbaren</span>
-                    </a>
-                </div>
+                <!-- Desktop & Tablet Navigation (MD screens and up) - Meine Angebote als Dropdown -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-7 xl:space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Start</a>
 
-                <!-- Tablet Navigation (MD to XL screens) -->
-                <div class="hidden md:flex xl:hidden items-center space-x-6">
-                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    
-                    <!-- Coaching-Bereiche Dropdown -->
+                    <!-- Meine Angebote Dropdown -->
                     <div class="relative" id="coaching-dropdown">
-                        <button class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors flex items-center space-x-1 whitespace-nowrap" onclick="toggleCoachingDropdown()">
-                            <span>Coaching-Bereiche</span>
+                        <button class="nav-link active font-semibold text-gray-800 hover:text-orange-500 transition-colors flex items-center space-x-1 whitespace-nowrap" onclick="toggleCoachingDropdown()">
+                            <span>Meine Angebote</span>
                             <i class="fas fa-chevron-down text-xs transform transition-transform duration-200" id="coaching-chevron"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
                             <a href="trauma-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
-                            <a href="paar-therapie.html" class="block px-4 py-2 text-gray-800 bg-orange-50 text-orange-500 font-semibold transition-colors">
+                            <a href="paar-therapie.html" class="block px-4 py-2 bg-orange-50 text-orange-500 font-semibold text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Paar-Therapie
+                                Noch wir
                             </a>
                             <a href="sexual-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </div>
                     </div>
-                    
-                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
+
+                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Über mich</a>
                     <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap hidden lg:inline-block">Für Fachpersonal</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 lg:px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 whitespace-nowrap" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
 
@@ -198,16 +186,15 @@
             <div id="mobile-menu" class="hidden md:hidden mt-2 py-2 border-t border-gray-200">
                 <div class="flex flex-col space-y-2">
                     <a href="index.html" class="text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="text-gray-800 font-semibold hover:text-orange-500 transition-colors">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
+                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Dein Geburtserlebnis</a>
+                    <a href="paar-therapie.html" class="text-gray-800 font-semibold hover:text-orange-500 transition-colors">Noch wir</a>
+                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Für dich – als Frau</a>
                     <a href="ueber-mich.html" class="text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
                     <a href="blog/index.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Blog</a>
-                    <a href="kontakt.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Kontakt</a>
                     <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
             </div>
@@ -221,26 +208,32 @@
                 <!-- Content -->
                 <div class="eye-catcher order-2 lg:order-1">
                     <div class="mb-6">
-                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-2">IN DER PARTNERSCHAFT</p>
-                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-                            Online Paartherapie
+                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-2">NOCH WIR.</p>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6 leading-tight">
+                            Ihr liebt euch noch.<br>
+                            Entdeckt euch <span class="text-orange-500">neu</span>.
                         </h1>
                     </div>
-                    <p class="text-xl text-gray-700 mb-8 leading-relaxed font-medium">
-                        Online-Beziehungsberatung – Gemeinsam neue Wege finden
+                    <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                        Vielleicht war es die Geburt. Vielleicht kam es schleichend.<br>
+                        Ihr funktioniert als Eltern, als Team –<br>
+                        und trotzdem ist da eine Stille zwischen euch, die vorher nicht war.
                     </p>
-                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
-                        Eine erfüllte Partnerschaft ist eine der wertvollsten und gleichzeitig herausforderndsten Verbindungen im Leben. Konflikte, emotionale Distanz oder ungelöste Themen können dazu führen, dass Paare sich voneinander entfremden. In der Paartherapie unterstütze ich Sie dabei, neue Wege der Verständigung und Verbundenheit zu finden.
+                    <p class="text-lg text-gray-700 mb-8 leading-relaxed font-medium">
+                        Diese Stille ist kein Ende. Sie ist ein Signal.
+                    </p>
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
+                        Ihr habt euch nicht verloren. Ihr seid einfach noch nicht angekommen – als das Paar, das ihr jetzt sein könnt.
                     </p>
                     
                     <div class="flex flex-wrap gap-4">
                         <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            Termin vereinbaren
+                            Gespräch vereinbaren
                         </a>
-                        <a href="#herausforderungen" class="border-2 border-dark-green text-dark-green px-8 py-4 rounded-lg font-semibold hover:bg-dark-green hover:text-white transition-all duration-300">
-                            <i class="fas fa-arrow-down mr-2"></i>
-                            Mehr erfahren
+                        <a href="#" class="meetergo-modal-button btn-secondary border-2 border-emerald-700 text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 hover:text-white transition-all duration-300 text-center" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            15 Min. Kennenlernen – kostenlos
                         </a>
                     </div>
                 </div>
@@ -287,549 +280,334 @@
             <div class="container mx-auto px-4">
                 <div class="max-w-6xl mx-auto">
                     <div class="text-center mb-16">
-                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">IN DER PARTNERSCHAFT</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Typische <span class="text-orange-500">Herausforderungen</span>
+                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">KENNT IHR DAS?</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6 leading-tight">
+                            Ihr funktioniert.<br class="hidden md:block">
+                            Aber ihr wollt <span class="text-orange-500">mehr als das</span>.
                         </h2>
+                        <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mt-6">
+                            Sie hat ihren Körper neu erlebt – und sucht sich darin gerade.<br class="hidden md:block">
+                            Er will nah sein – und weiß nicht wie.<br class="hidden md:block">
+                            Beide wollen dasselbe. Und ihr braucht nur den Weg zurück zueinander.
+                        </p>
                     </div>
 
                     <div class="grid md:grid-cols-2 lg:grid-cols-2 gap-12">
-                        <!-- Beziehungskrisen & Konflikte -->
+                        <!-- Nach der Geburt -->
                         <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl border border-orange-200">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Beziehungskrisen & Konflikte:</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Nach der Geburt:</h3>
                             <ul class="space-y-4">
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Häufige Streitigkeiten oder sich wiederholende Konflikte ohne Lösung.</p>
+                                    <p class="text-gray-700 leading-relaxed">Das Baby ist da. Und trotzdem fühlt sich etwas leer an.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Kommunikationsprobleme und Missverständnisse.</p>
+                                    <p class="text-gray-700 leading-relaxed">Einer hat sich verändert. Der andere steht daneben und versteht nicht wie.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Emotionale Distanz und das Gefühl, nicht mehr richtig verbunden zu sein.</p>
+                                    <p class="text-gray-700 leading-relaxed">Ihr funktioniert als Eltern. Aber als Paar – da ist eine Stille.</p>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <p class="text-gray-700 leading-relaxed">Morgens, abends, nebeneinander – und trotzdem allein.</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Sexualität & Intimität -->
+                        <!-- Nähe & Körper -->
                         <div class="bg-white border-2 border-amber-500/20 p-8 rounded-2xl">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Sexualität & Intimität:</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Nähe & Körper:</h3>
                             <ul class="space-y-4">
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Unterschiedliches Verlangen nach Nähe und Sexualität.</p>
+                                    <p class="text-gray-700 leading-relaxed">Körperliche Nähe ist weniger geworden – oder gerade gar nicht mehr möglich.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Lustlosigkeit oder Unsicherheiten in der Sexualität.</p>
+                                    <p class="text-gray-700 leading-relaxed">Er will sie berühren. Sie weicht zurück. Nicht weil die Liebe fehlt – sondern weil sie selbst nicht weiß, wer sie noch ist.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Der Wunsch nach mehr Intimität und Verbindung.</p>
+                                    <p class="text-gray-700 leading-relaxed">Er sucht Nähe und Vertrautheit. Sie braucht gerade Raum für sich. Beides ist berechtigt – und trotzdem tut es weh.</p>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-amber-500 rounded-full mt-3 flex-shrink-0"></div>
+                                    <p class="text-gray-700 leading-relaxed">Gespräche darüber sind nicht möglich – weil die Worte fehlen.</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Vertrauen & Treue -->
+                        <!-- Kommunikation -->
                         <div class="bg-white border-2 border-emerald-600/20 p-8 rounded-2xl">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Vertrauen & Treue:</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Kommunikation:</h3>
                             <ul class="space-y-4">
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-600 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Unsicherheiten in der Beziehung oder Eifersucht.</p>
+                                    <p class="text-gray-700 leading-relaxed">Gespräche finden nicht statt. Oder sie enden im Schweigen. Oder im Streit. Alles fühlt sich falsch an.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-600 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Umgang mit Untreue oder emotionalen Affären.</p>
+                                    <p class="text-gray-700 leading-relaxed">Einer redet. Der andere ist längst weg – auch wenn er noch im Raum ist.</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-600 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Offene Beziehungen und alternative Beziehungsmodelle.</p>
+                                    <p class="text-gray-700 leading-relaxed">Die Worte fehlen. Und je länger sie fehlen, desto schwerer wird die Stille.</p>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-emerald-600 rounded-full mt-3 flex-shrink-0"></div>
+                                    <p class="text-gray-700 leading-relaxed">Ihr streitet über den Geschirrspüler. Aber das Eigentliche bleibt ungesagt.</p>
                                 </li>
                             </ul>
                         </div>
 
-                        <!-- Lebensphasen & Veränderungen -->
+                        <!-- Orientierung -->
                         <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-2xl border border-emerald-200">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Lebensphasen & Veränderungen:</h3>
+                            <h3 class="text-2xl font-bold text-gray-800 mb-6">Orientierung:</h3>
                             <ul class="space-y-4">
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-800 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Elternschaft und die Auswirkungen auf die Beziehung.</p>
+                                    <p class="text-gray-700 leading-relaxed">Ist das noch unsere Beziehung – oder nur noch unser Alltag?</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-800 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Veränderungen in langjährigen Partnerschaften.</p>
+                                    <p class="text-gray-700 leading-relaxed">Wir haben alles richtig gemacht. Warum fühlt sich das hier so falsch an?</p>
                                 </li>
                                 <li class="flex items-start space-x-3">
                                     <div class="w-2 h-2 bg-emerald-800 rounded-full mt-3 flex-shrink-0"></div>
-                                    <p class="text-gray-700 leading-relaxed">Fragen zur Zukunft der Beziehung: Trennung oder Neuanfang?</p>
+                                    <p class="text-gray-700 leading-relaxed">Ich liebe mein Kind und meine/n Partner/in. Aber die Situation – die zehrt mich auf.</p>
+                                </li>
+                                <li class="flex items-start space-x-3">
+                                    <div class="w-2 h-2 bg-emerald-800 rounded-full mt-3 flex-shrink-0"></div>
+                                    <p class="text-gray-700 leading-relaxed">Bleibt das jetzt immer so?</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
+
+                    <!-- Blockzitat unter den Kacheln (Stil wie Trauma-/Sexualtherapie) -->
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mt-16 max-w-3xl mx-auto">
+                        Ihr habt nichts falsch gemacht. Ihr braucht keine Reparatur – ihr braucht einen Raum, in dem ihr wieder zu zweit werdet.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Warum Paar-Therapie -->
+        <!-- Warum jetzt – nicht erst wenn es „zu spät" ist -->
         <section class="py-20 bg-warm-gray">
             <div class="container mx-auto px-4">
                 <div class="max-w-6xl mx-auto">
                     <div class="grid lg:grid-cols-2 gap-16 items-center">
                         <!-- Image -->
                         <div class="order-2 lg:order-1">
-                            <div class="relative">
-                                <img src="https://page.gensparksite.com/v1/base64_upload/c3db84bafb604ce91ba54652b6f489a4" 
-                                     alt="Warum Paar-Therapie - Zwei Herzen verbunden" 
-                                     class="w-full rounded-3xl shadow-2xl eyecatcher-image">
+                            <div class="relative max-w-md mx-auto">
+                                <div class="relative z-10">
+                                    <img src="https://page.gensparksite.com/v1/base64_upload/c3db84bafb604ce91ba54652b6f489a4" 
+                                         alt="Warum Paar-Therapie - Zwei Herzen verbunden" 
+                                         class="w-full h-auto rounded-3xl shadow-2xl eyecatcher-image">
+                                </div>
+                                <div class="absolute -top-10 -left-12 w-20 h-20 bg-healing-pink opacity-25 rounded-full"></div>
+                                <div class="absolute -bottom-12 -right-10 w-24 h-24 bg-healing-purple opacity-20 rounded-full"></div>
                             </div>
                         </div>
 
                         <!-- Content -->
                         <div class="order-1 lg:order-2">
-                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
-                                Warum <span class="text-orange-500">Paar-Therapie</span>
+                            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8 leading-tight">
+                                Der beste Zeitpunkt ist<br>
+                                der Moment, in dem ihr <span class="text-orange-500">noch wollt</span>.
                             </h2>
-                            
-                            <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                                Viele Paare zögern, sich Unterstützung zu suchen, weil sie denken, dass ihre Probleme „nicht groß genug" seien oder eine Therapie nur für Paare in akuten Krisen gedacht ist. Doch Paartherapie kann dabei helfen, bereits frühzeitig:
-                            </p>
 
-                            <div class="space-y-6 mb-8">
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <i class="fas fa-comments text-orange-500 text-sm"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        <strong>Die Kommunikation zu verbessern</strong> und Missverständnisse aufzulösen.
-                                    </p>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-amber-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <i class="fas fa-heart text-amber-500 text-sm"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        <strong>Wieder Nähe und Intimität herzustellen</strong> und sich auf einer tieferen Ebene zu begegnen.
-                                    </p>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <i class="fas fa-lightbulb text-emerald-500 text-sm"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        <strong>Konflikte konstruktiv zu lösen</strong>, ohne in alten Mustern gefangen zu bleiben.
-                                    </p>
-                                </div>
-                                
-                                <div class="flex items-start space-x-4">
-                                    <div class="w-8 h-8 bg-emerald-700/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                        <i class="fas fa-search text-emerald-700 text-sm"></i>
-                                    </div>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        <strong>Herauszufinden, was die Beziehung braucht</strong>, um wieder erfüllend zu sein.
-                                    </p>
-                                </div>
-                            </div>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                                Paartherapie ist kein Notausgang. Sie ist ein bewusster Schritt – den ihr geht, solange ihr beide noch spürt: Da ist etwas zwischen uns. Das wollen wir nicht verlieren.
+                            </p>
+                            <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                                Genau in diesem Moment ist die Arbeit am leichtesten und am wirksamsten. Nicht in der Krise. Nicht, wenn der Faden gerissen ist – sondern jetzt, wo er noch trägt.
+                            </p>
+                            <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2">
+                                Wenn ihr das spürt, seid ihr genau richtig hier.
+                            </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Du als Partner: empowernde Einladung -->
+        <section class="py-24 relative overflow-hidden bg-gradient-to-br from-orange-50 via-white to-emerald-50">
+            <!-- Sanfte Glow-Akzente für Lebendigkeit -->
+            <div class="absolute top-10 left-10 w-72 h-72 bg-orange-200/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-80 h-80 bg-emerald-200/30 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-3xl mx-auto">
+                    <div class="text-center mb-12">
+                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">DU ALS PARTNER</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                            Du bist nicht das Problem.<br class="hidden md:block">
+                            Du bist <span class="text-orange-500">die halbe Lösung</span>.
+                        </h2>
+                    </div>
+
+                    <p class="text-lg text-gray-700 leading-relaxed mb-5">
+                        Paartherapie wird oft erzählt, als ginge es um Frauen, die etwas verarbeiten – und Männer, die zuhören. Bei mir nicht.
+                    </p>
+                    <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                        Du siehst Dinge, die sie nicht sieht. Du spürst Dinge, die sie nicht ausspricht. Du hast eine eigene Geschichte mit dieser Geburt, mit diesem Elternsein, mit dem, was sich seitdem verschoben hat. Die zählt genauso.
+                    </p>
+
+                    <!-- Kurze, klare Du-Sätze: aktivierend, nicht klagend -->
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <span class="text-lg text-gray-700 leading-relaxed">
+                                <span class="font-semibold text-gray-800">Du darfst dich zeigen</span> – nicht nur als Begleiter, sondern als Mann mit eigenem Erleben.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <span class="text-lg text-gray-700 leading-relaxed">
+                                <span class="font-semibold text-gray-800">Du darfst Wünsche haben</span> – nach Nähe, nach Klarheit, nach dem, was zwischen euch wieder möglich werden soll.
+                            </span>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 mr-4 flex-shrink-0"></div>
+                            <span class="text-lg text-gray-700 leading-relaxed">
+                                <span class="font-semibold text-gray-800">Du gestaltest mit</span> – nicht weil du sollst, sondern weil ohne dich nicht die ganze Beziehung am Tisch sitzt.
+                            </span>
+                        </li>
+                    </ul>
+
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2">
+                        Wenn ihr zu zweit kommt, arbeite ich mit euch beiden. Auf Augenhöhe.
+                    </p>
                 </div>
             </div>
         </section>
 
         <!-- Mein Ansatz -->
-        <section class="py-20 bg-white">
+        <section class="py-20 bg-gradient-to-b from-orange-50/40 to-white">
             <div class="container mx-auto px-4">
-                <div class="text-center mb-16">
-                    <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">BEZIEHUNGEN & PARTNERSCHAFTEN</p>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
-                        Mein <span class="text-orange-500">Ansatz</span>
+                <div class="text-center mb-12">
+                    <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">MEIN ANSATZ</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+                        Ich öffne den Raum<br class="hidden md:block">
+                        <span class="text-orange-500">zwischen euch</span>.
                     </h2>
+                    <!-- Kurzer Vorlauf: aktiv, klar -->
+                    <p class="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto mt-6">
+                        Es geht nicht darum, wer Recht hat. Es geht darum, was zwischen euch wirklich passiert –<br class="hidden md:block">
+                        und was ihr daraus machen wollt.
+                    </p>
                 </div>
 
                 <div class="grid lg:grid-cols-2 gap-12 items-start max-w-6xl mx-auto">
-                    <!-- Persönliche Erfahrung -->
+                    <!-- Linke Karte: Qualifikations-Story (gemeinsame DNA mit Trauma/Sexualtherapie) -->
                     <div class="bg-gradient-to-br from-gray-50 to-orange-50 rounded-3xl p-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">Durch meine Erfahrung als Fachärztin und persönliche Betroffenheit</h3>
-                        <p class="text-gray-700 leading-relaxed mb-6">
-                            Als Ärztin und Therapeutin erlebe ich täglich, wie sich zwischenmenschliche Beziehungen auf das Wohlbefinden und die Gesundheit auswirken. Ich habe in meiner beruflichen Laufbahn viele Paare in unterschiedlichen Lebensphasen begleitet – von der Freude einer Schwangerschaft bis hin zu belastenden Krisensituationen.
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Als Ärztin und Therapeutin – eine Kombination, die es selten gibt</h3>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Ich habe hunderte Geburten begleitet. Ich weiß, was in diesen Räumen passiert – medizinisch, emotional, zwischen zwei Menschen.
                         </p>
-                        <p class="text-gray-700 leading-relaxed">
-                            Gleichzeitig kenne ich die Herausforderungen einer Partnerschaft nicht nur aus therapeutischer Sicht, sondern auch aus eigener Erfahrung. Ich weiß, wie wichtig es ist, einen sicheren Raum zu haben, in dem beide Partner gehört und verstanden werden. Diese persönliche Erfahrung ermöglicht es mir, Sie nicht nur mit fachlicher Expertise, sondern auch mit echtem Verständnis und Empathie zu begleiten.
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Was danach kommt, landet selten in einer Akte. Wie sich ein Paar verändert. Was zwischen zwei Menschen entsteht, wenn ein Kind da ist – und plötzlich alles anders ist.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Deshalb habe ich mich zusätzlich als Paar- und Sexualtherapeutin ausbilden lassen. Weil ich gesehen habe, was Geburten mit Beziehungen machen. Und weil ich beides zusammendenken wollte.
+                        </p>
+                        <p class="text-lg md:text-xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mt-6">
+                            Diese Kombination ist selten. Und für genau euer Thema entscheidend.
                         </p>
                     </div>
 
-                    <!-- Gemeinsamer Prozess -->
+                    <!-- Rechte Spalte: 3 klare Schritte (aktive Verben, ohne Nummerierung) -->
                     <div>
-                        <h3 class="text-xl font-bold text-gray-800 mb-6">Gemeinsam erarbeiten wir:</h3>
-                        
-                        <div class="modal-content space-y-6" style="background: white; border: none; contain: layout style paint;">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-orange-600 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-white font-bold">1</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-2">Beziehungsmuster zu verstehen:</h4>
-                                    <p class="text-gray-600">Welche Dynamiken spielen sich zwischen Ihnen ab? Wo entstehen Konflikte und warum?</p>
-                                </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-6">Wie wir gemeinsam arbeiten</h3>
+
+                        <div class="space-y-7">
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Wir verstehen, was passiert ist</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Die Geburt, das Elternwerden, der Alltag – ihr seht, was euch verändert hat. Verstehen ist der erste Schritt zurück zur Handlungsfähigkeit.
+                                </p>
                             </div>
 
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-white font-bold">2</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-2">Bedürfnisse zu artikulieren:</h4>
-                                    <p class="text-gray-600">Was brauchen Sie wirklich in Ihrer Beziehung? Wie können Sie das ausdrücken, ohne zu verletzen?</p>
-                                </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Ihr sprecht aus, was lange ungesagt blieb</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Beide. Auf Augenhöhe. Was du brauchst. Was sie braucht. Ohne Schuld – aber mit der Klarheit, die ihr im Alltag nicht hinbekommt.
+                                </p>
                             </div>
 
-                            <div class="flex items-start space-x-4">
-                                <div class="w-10 h-10 bg-gradient-to-r from-emerald-800 to-emerald-900 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <span class="text-white font-bold">3</span>
-                                </div>
-                                <div>
-                                    <h4 class="font-bold text-gray-800 mb-2">Neue Wege zu finden:</h4>
-                                    <p class="text-gray-600">Wir entwickeln individuelle Strategien für bessere Kommunikation, mehr Intimität und eine erfüllte Partnerschaft, die zu Ihnen beiden passt.</p>
-                                </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800 mb-2">Ihr findet wieder zueinander – konkret</h4>
+                                <p class="text-gray-600 leading-relaxed">
+                                    Keine Theorie. Wir arbeiten an dem, was zwischen euch im Alltag wirklich zählt: Nähe, Sprache, Berührung, gemeinsame Richtung.
+                                </p>
                             </div>
                         </div>
 
-                        <div class="mt-12 bg-orange-50 rounded-2xl p-6 border-l-4 border-orange-500">
-                            <p class="text-gray-700 leading-relaxed font-medium">
-                                Mein Ziel ist es, Sie beide dabei zu unterstützen, wieder zueinander zu finden und eine 
-                                Beziehung zu gestalten, die Sie beide nährt und stärkt.
-                            </p>
-                            <div class="mt-4 text-right">
-                                <div class="text-xl text-orange-600 font-dancing transform -rotate-1 inline-block" style="font-family: 'Kaushan Script', cursive; letter-spacing: 1px; font-weight: 400;">
-                                    Sabrina Kising
-                                </div>
+                        <div class="mt-10 text-right">
+                            <div class="text-3xl text-orange-500 font-dancing">
+                                Sabrina Kising
                             </div>
                         </div>
                     </div>
                 </div>
+
+                <!-- Abschluss-Quote (Identität, mittig unter beiden Spalten) -->
+                <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 max-w-2xl mx-auto mt-16">
+                    Ich begegne euch als&nbsp;Gynäkologin. Als&nbsp;Paartherapeutin. Als&nbsp;Mutter. Als&nbsp;Frau.
+                </p>
             </div>
         </section>
 
-        <!-- Für wen ist Paar-Therapie geeignet -->
-        <section class="py-20 bg-warm-gray">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Für wen ist <span class="text-orange-500">Paar-Therapie geeignet</span>
-                        </h2>
-                    </div>
-
-                    <div class="prose prose-lg max-w-none mb-12">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                            Meine Paarberatung richtet sich an alle Paare, die Unterstützung in ihrer Beziehung suchen – unabhängig von ihrer aktuellen Situation. Manche nennen es Eheberatung, Ehetherapie, Beziehungstherapie, Paar-Coaching, Beziehungsberatung oder Partnerschaftsberatung. Doch unabhängig vom Begriff geht es mir immer um das gleiche: eine professionelle Begleitung, um eure Partnerschaft zu stärken und neue Wege zu finden.
-                        </p>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-8 mb-12">
-                        <!-- Paare in Krisen -->
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-orange-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-exclamation-triangle text-orange-600 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Paare</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                in Krisen oder mit ungelösten Konflikten, die nach neuen Wegen und Lösungen suchen.
-                            </p>
-                        </div>
-
-                        <!-- Partner -->
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-heart-broken text-emerald-600 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Partner</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                die sich emotional voneinander entfernt haben, und wieder Nähe aufbauen möchten.
-                            </p>
-                        </div>
-
-                        <!-- Menschen -->
-                        <div class="bg-white p-6 rounded-2xl shadow-lg text-center">
-                            <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                <i class="fas fa-users text-emerald-500 text-2xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold text-gray-800 mb-4">Menschen</h3>
-                            <p class="text-gray-700 leading-relaxed">
-                                die ihre Beziehung bewusster gestalten und vertiefen wollen.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg">
-                        <p class="text-gray-700 font-medium">
-                            <strong>Paare in herausfordernden Lebensphasen,</strong> wie nach der Geburt eines Kindes, während beruflicher Belastungen oder anderen Veränderungen.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials -->
+        <!-- Testimonials Section -->
         <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">ERFAHRUNGSBERICHTE</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Was andere über mich <span class="text-orange-500">sagen</span>
-                        </h2>
-                    </div>
-
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 1 -->
-                        <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Als Ärztin erlebe ich oft belastende Situationen, über die ich mit niemandem sprechen kann. Dr. Kising bietet einen geschützten Raum, in dem ich mich offen austauschen kann – das ist unbezahlbar."
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-orange-600">Dr. Katharina S.</p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="bg-white border-2 border-emerald-200 p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Ich war immer eifersüchtig, konnte aber nie genau sagen, warum. Durch die Gespräche mit Dr. Kising habe ich verstanden, woher dieses Gefühl kommt – und endlich einen Weg gefunden, damit umzugehen."
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-emerald-600">Sandra H.</p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="bg-gradient-to-br from-emerald-50 to-emerald-100 p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Ich hätte nicht gedacht, dass eine Online-Beratung so intensiv sein kann. Dr. Kising schafft es, dass man sich verstanden und gut aufgehoben fühlt – auch über den Bildschirm!"
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-emerald-600">Anja R.</p>
-                            </div>
-                        </div>
-                    </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">ERFAHRUNGSBERICHTE</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                        Was andere über mich <span class="text-orange-500">sagen</span>
+                    </h2>
                 </div>
-            </div>
-        </section>
 
-        <!-- FAQ Section -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">HÄUFIG GESTELLTE FRAGEN</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            <span class="text-orange-500">FAQ</span> - Paartherapie
-                        </h2>
-                        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Antworten auf die wichtigsten Fragen zur Paartherapie und -beratung
-                        </p>
-                    </div>
-
-                    <div class="space-y-4">
-                        <!-- FAQ Item 1 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-1">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Wie läuft eine Paartherapie ab?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-1" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Jede Therapie ist individuell und richtet sich nach den Themen und Zielen des Paares. In den Sitzungen geht es um offene Gespräche, Reflexion und gezielte Übungen, um Kommunikationsmuster zu verbessern und neue Lösungswege für die Beziehung zu entwickeln.
-                                    </p>
-                                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                    <!-- Testimonial 1 -->
+                    <div class="bg-orange-50 rounded-2xl p-8 shadow-lg">
+                        <div class="mb-6">
+                            <div class="flex text-orange-500 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
                             </div>
-                        </div>
-
-                        <!-- FAQ Item 2 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-2">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Wie lange dauert eine Paartherapie/-beratung und wie viele Sitzungen sind notwendig?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-2" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-emerald-50 rounded-xl p-6 border-l-4 border-emerald-600">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Die Anzahl und Dauer der Sitzungen hängt von der individuellen Situation ab. Manche Paare profitieren bereits von wenigen Sitzungen, während andere einen längeren Prozess benötigen, um nachhaltige Veränderungen zu erreichen. Nach 4 Sitzungen ziehen wir eine Zwischenbilanz.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 3 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-3">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Müssen beide Partner an der Therapie/Beratung teilnehmen?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-3" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Idealerweise nehmen beide Partner teil, aber auch eine Einzelberatung kann hilfreich sein, um Dynamiken in der Beziehung zu verstehen und erste Veränderungen anzustoßen.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 4 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-4">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Was kostet eine Paartherapie/-beratung und übernimmt die Krankenkasse die Kosten?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-4" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-emerald-50 rounded-xl p-6 border-l-4 border-emerald-600">
-                                    <p class="text-gray-700 leading-relaxed mb-4">
-                                        In der Regel werden die Kosten nicht von der Krankenkasse übernommen, da Paarberatung nicht als medizinische Behandlung gilt. Bitte wenden Sie sich diesbezüglich an Ihre Krankenkasse.
-                                    </p>
-                                    <div class="bg-white rounded-lg p-3 border border-emerald-200">
-                                        <p class="text-sm text-gray-600">
-                                            <i class="fas fa-info-circle text-emerald-600 mr-2"></i>
-                                            <strong>Preisübersicht auf der Honorarseite.</strong>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 5 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-5">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Wo findet die Paartherapie/-beratung statt?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-5" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Meine Paarberatung findet ausschließlich online statt. Dies ermöglicht Ihnen maximale Flexibilität und Diskretion – egal, wo Sie sich befinden.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 6 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-6">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Was ist der Unterschied zwischen Paartherapie/-beratung und Sexualberatung?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-6" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-emerald-50 rounded-xl p-6 border-l-4 border-emerald-600">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Paarberatung bezieht sich auf die gesamte Beziehungsdynamik, während Sexualberatung sich speziell mit Themen rund um Intimität, Lust und sexuelle Herausforderungen befasst.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- FAQ Item 7 -->
-                        <div class="bg-white border border-gray-200 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300">
-                            <button class="faq-button w-full px-8 py-6 text-left flex items-center justify-between focus:outline-none focus:ring-2 focus:ring-orange-500/20 rounded-2xl transition-all duration-300" data-target="faq-7">
-                                <h3 class="text-lg font-semibold text-gray-800 pr-4">
-                                    Kann eine Paartherapie die Beziehung retten?
-                                </h3>
-                                <div class="faq-icon-container flex-shrink-0">
-                                    <div class="w-8 h-8 bg-orange-500/10 rounded-full flex items-center justify-center">
-                                        <i class="fas fa-plus text-orange-500 text-sm transition-transform duration-300"></i>
-                                    </div>
-                                </div>
-                            </button>
-                            <div id="faq-7" class="faq-content hidden px-8 pb-6">
-                                <div class="bg-orange-50 rounded-xl p-6 border-l-4 border-orange-500">
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Eine Paartherapie kann helfen, Klarheit zu gewinnen, Probleme zu lösen und die Beziehung zu stärken. Ob eine Beziehung gerettet werden kann, hängt von vielen Faktoren ab – das Ziel ist immer, eine gesunde und ehrliche Basis zu schaffen.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FAQ Bottom CTA -->
-                    <div class="mt-16 text-center">
-                        <div class="bg-gradient-to-r from-orange-50 to-emerald-50 rounded-2xl p-8 border border-orange-200">
-                            <h3 class="text-2xl font-bold text-gray-800 mb-4">
-                                Haben Sie weitere Fragen?
-                            </h3>
-                            <p class="text-gray-600 mb-6 max-w-2xl mx-auto">
-                                Gerne beantworte ich Ihre individuellen Fragen in einem kostenlosen Erstgespräch.
+                            <p class="text-gray-700 leading-relaxed">
+                                „Rückblickend – was für ein Irrsinn. Wie wir uns verrückt gemacht haben, gelitten, gestritten... Nach der Geburt unseres Sohnes – völlig überfordert. Danke, dass du uns begleitet und uns Klarheit und Verständnis gegeben hast."
                             </p>
-                            <a href="#" class="meetergo-modal-button inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
-                                <i class="fas fa-comments mr-2"></i>
-                                Kostenloses Erstgespräch vereinbaren
-                            </a>
+                        </div>
+                        <div class="border-t pt-4">
+                            <p class="font-semibold text-orange-600">— Paar nach Geburt</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="bg-emerald-50 rounded-2xl p-8 shadow-lg">
+                        <div class="mb-6">
+                            <div class="flex text-orange-500 mb-4">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <p class="text-gray-700 leading-relaxed">
+                                „Wir wussten gar nicht mehr, wie wir miteinander umgehen sollten. Jetzt ist es leichter. Wir haben mehr Verständnis – und wir setzen, trotz Alltag, nach und nach vieles um."
+                            </p>
+                        </div>
+                        <div class="border-t pt-4">
+                            <p class="font-semibold text-emerald-600">— Paar</p>
                         </div>
                     </div>
                 </div>
@@ -839,27 +617,43 @@
         <!-- Call to Action -->
         <section class="py-20 bg-gradient-to-r from-orange-500 to-emerald-600 text-white">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Lassen Sie uns gemeinsam den ersten Schritt gehen
+                <h2 class="text-3xl md:text-4xl font-bold mb-8 leading-tight">
+                    Macht den ersten Schritt –<br class="hidden md:block">
+                    zusammen.
                 </h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
-                    Ihre Beziehung verdient Aufmerksamkeit und Pflege. 
-                    Lassen Sie uns gemeinsam neue Wege finden, um Ihre Partnerschaft zu stärken.
-                </p>
+                <div class="max-w-3xl mx-auto mb-10 space-y-5">
+                    <p class="text-xl md:text-2xl font-semibold leading-snug">
+                        Ihr müsst nicht wissen, was ihr sagen wollt.<br class="hidden md:block">
+                        Ihr müsst nur entscheiden, dass ihr es angeht.
+                    </p>
+                    <p class="text-lg leading-relaxed opacity-95">
+                        15 Minuten am Telefon. Kostenlos. Ohne Verpflichtung.<br class="hidden md:block">
+                        Danach wisst ihr, ob es passt – und wie es weitergeht.
+                    </p>
+                </div>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#" class="meetergo-modal-button bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        Gespräch vereinbaren
                     </a>
-                    <a href="kontakt.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300">
-                        <i class="fas fa-envelope mr-2"></i>
-                        Kontakt aufnehmen
+                    <a href="#" class="meetergo-modal-button border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        15 Min. Kennenlernen – kostenlos
                     </a>
-                    <a href="ueber-mich.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-emerald-600 transition-all duration-300">
-                        <i class="fas fa-user-md mr-2"></i>
-                        Mehr über Dr. Sabrina Kising
-                    </a>
+                </div>
+
+                <!-- Preistransparenz - selbstbewusst unter dem CTA -->
+                <div class="mt-14 pt-10 border-t border-white/30 max-w-2xl mx-auto">
+                    <div class="grid sm:grid-cols-2 gap-6 text-white">
+                        <div>
+                            <p class="text-base font-medium tracking-wide mb-1">Einzelbegleitung</p>
+                            <p class="text-lg opacity-95">50 Min. · <span class="font-semibold">160 €</span></p>
+                        </div>
+                        <div>
+                            <p class="text-base font-medium tracking-wide mb-1">Paarbegleitung</p>
+                            <p class="text-lg opacity-95">80 Min. · <span class="font-semibold">220 €</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -879,10 +673,13 @@
                         <p class="text-lg text-gray-700 font-medium mb-4">
                             Heilung beginnt da, wo Liebe Raum bekommt.
                         </p>
+                        <p class="font-playfair italic text-lg text-gray-800 leading-relaxed mb-2">
+                            Eltern werden verändert alles. Auch die Liebe.
+                        </p>
                         <p class="text-gray-600 leading-relaxed">
-                            Ganzheitliche Online-Begleitung in Paar- und Sexualtherapie 
-                            sowie bei traumatischen Geburten – empathisch, professionell 
-                            und persönlich.
+                            Für Frauen nach belastenden Geburtserfahrungen.
+                            <br>
+                            Für Paare, die sich nicht verlieren wollen.
                         </p>
                         <p class="text-sm text-gray-500 mt-3">
                             Dr. med. Sabrina Kising
@@ -892,21 +689,21 @@
 
                 <!-- Mein Angebot -->
                 <div class="md:col-span-3 lg:col-span-3">
-                    <h4 class="font-bold text-lg text-gray-800 mb-4">Mein Angebot</h4>
+                    <h4 class="font-bold text-lg text-gray-800 mb-4">Meine Angebote</h4>
                     <ul class="space-y-3 text-gray-600">
                         <li>
                             <a href="trauma-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
                         </li>
                         <li>
                             <a href="paar-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Paar-Therapie
+                                Noch wir
                             </a>
                         </li>
                         <li>
                             <a href="sexual-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </li>
                     </ul>
@@ -1124,52 +921,11 @@
                     }
                 }
             });
-
-            // FAQ Accordion Functionality
-            const faqButtons = document.querySelectorAll('.faq-button');
-            
-            faqButtons.forEach(button => {
-                button.addEventListener('click', function() {
-                    const targetId = this.getAttribute('data-target');
-                    const targetContent = document.getElementById(targetId);
-                    const icon = this.querySelector('i');
-                    const isCurrentlyOpen = !targetContent.classList.contains('hidden');
-                    
-                    // Close all other FAQ items
-                    faqButtons.forEach(otherButton => {
-                        if (otherButton !== this) {
-                            const otherId = otherButton.getAttribute('data-target');
-                            const otherContent = document.getElementById(otherId);
-                            const otherIcon = otherButton.querySelector('i');
-                            
-                            if (!otherContent.classList.contains('hidden')) {
-                                otherContent.classList.add('hidden');
-                                otherIcon.classList.remove('fa-minus', 'rotate-180');
-                                otherIcon.classList.add('fa-plus');
-                                otherButton.parentElement.classList.remove('ring-2', 'ring-orange-500/20', 'bg-orange-50/50');
-                            }
-                        }
-                    });
-                    
-                    // Toggle current item
-                    if (isCurrentlyOpen) {
-                        targetContent.classList.add('hidden');
-                        icon.classList.remove('fa-minus', 'rotate-180');
-                        icon.classList.add('fa-plus');
-                        this.parentElement.classList.remove('ring-2', 'ring-orange-500/20', 'bg-orange-50/50');
-                    } else {
-                        targetContent.classList.remove('hidden');
-                        icon.classList.remove('fa-plus');
-                        icon.classList.add('fa-minus', 'rotate-180');
-                        this.parentElement.classList.add('ring-2', 'ring-orange-500/20', 'bg-orange-50/50');
-                    }
-                });
-            });
         });
     </script>
 
     <script>
-        // Coaching-Bereiche Dropdown Funktionalität
+        // Meine Angebote Dropdown Funktionalität
         function toggleCoachingDropdown() {
             const menu = document.getElementById('coaching-menu');
             const chevron = document.getElementById('coaching-chevron');

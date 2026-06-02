@@ -157,52 +157,39 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation (XL screens and up) -->
-                <div class="hidden xl:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Start</a>
-                    <a href="trauma-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
-                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
-                    <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Für Fachpersonal</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Online Termin vereinbaren</span>
-                    </a>
-                </div>
+                <!-- Desktop & Tablet Navigation (MD screens and up) - Meine Angebote als Dropdown -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-7 xl:space-x-8">
+                    <a href="index.html" class="nav-link active font-semibold text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Start</a>
 
-                <!-- Tablet Navigation (MD to XL screens) -->
-                <div class="hidden md:flex xl:hidden items-center space-x-6">
-                    <a href="index.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Start</a>
-                    
-                    <!-- Coaching-Bereiche Dropdown -->
+                    <!-- Meine Angebote Dropdown -->
                     <div class="relative" id="coaching-dropdown">
                         <button class="nav-link text-gray-800 hover:text-orange-500 transition-colors flex items-center space-x-1 whitespace-nowrap" onclick="toggleCoachingDropdown()">
-                            <span>Coaching-Bereiche</span>
+                            <span>Meine Angebote</span>
                             <i class="fas fa-chevron-down text-xs transform transition-transform duration-200" id="coaching-chevron"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
                             <a href="trauma-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
                             <a href="paar-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Paar-Therapie
+                                Noch wir
                             </a>
                             <a href="sexual-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </div>
                     </div>
-                    
-                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Über mich</a>
+
+                    <a href="ueber-mich.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Über mich</a>
                     <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap hidden lg:inline-block">Für Fachpersonal</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 lg:px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 whitespace-nowrap" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
 
@@ -216,17 +203,16 @@
             <div id="mobile-menu" class="hidden md:hidden mt-2 py-2 border-t border-gray-200">
                 <div class="flex flex-col space-y-2">
                     <a href="index.html" class="text-gray-800 font-semibold hover:text-orange-500 transition-colors py-1">Start</a>
-                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Sexual-Therapie</a>
+                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Dein Geburtserlebnis</a>
+                    <a href="paar-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Noch wir</a>
+                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Für dich – als Frau</a>
                     <a href="ueber-mich.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Über mich</a>
                     <a href="blog/index.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Blog</a>
                     <a href="hebammen-information.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Für Fachpersonal</a>
-                    <a href="kontakt.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Kontakt</a>
                     <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
             </div>
@@ -234,96 +220,162 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative h-screen bg-gradient-to-r from-gray-100 to-gray-200 overflow-hidden">
-        <div class="absolute inset-0">
-            <!-- Hero Image Background -->
-            <div class="w-full h-full relative">
+    <section id="home" class="relative bg-gradient-to-r from-gray-100 to-gray-200 lg:h-screen lg:overflow-hidden">
+        <!-- ============ MOBILE LAYOUT: Foto oben, Text unten ============ -->
+        <div class="lg:hidden">
+            <!-- Mobile Foto -->
+            <div class="relative w-full h-[70vh] sm:h-[75vh] overflow-hidden">
                 <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
                      alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
-                     class="w-full h-full object-cover object-top">
-                
-                <!-- Gradient Overlay for Text Readability -->
-                <div class="absolute inset-0 bg-gradient-to-r from-white/85 via-white/50 to-transparent lg:from-white/90 lg:via-white/40 lg:to-transparent"></div>
+                     class="w-full h-full object-cover" style="object-position: 60% 15%;">
+                <!-- Sanfter Verlauf nach unten -->
+                <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white"></div>
+            </div>
+
+            <!-- Mobile Text-Bereich -->
+            <div class="bg-white px-5 pt-2 pb-10">
+                <!-- Eye-Catcher Element -->
+                <div class="mb-6 -mt-12 relative z-10">
+                    <div class="inline-block bg-white rounded-2xl px-6 py-4 shadow-2xl border-2 border-orange-200 relative overflow-hidden eye-catcher">
+                        <div class="absolute inset-0 opacity-10">
+                            <div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 22px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.1) 40px, rgba(0,0,0,0.1) 42px);"></div>
+                        </div>
+                        <div class="relative z-10 text-center">
+                            <div class="text-4xl sm:text-5xl text-orange-500 handwriting font-dancing leading-tight mb-2">
+                                Dr. Sabrina Kising
+                            </div>
+                            <div class="h-px w-14 bg-orange-300 mx-auto mb-2"></div>
+                            <p class="text-[10px] sm:text-xs text-gray-700 font-semibold tracking-[0.15em] uppercase">
+                                <!-- Mobile: kompakte Variante -->
+                                <span class="sm:hidden">Gynäkologin <span class="text-orange-500">·</span> Sexualtherapeutin <span class="text-orange-500">·</span> Mutter <span class="text-orange-500">·</span> Frau</span>
+                                <!-- Ab sm: volle Variante mit Paar- &amp; Sexualtherapeutin -->
+                                <span class="hidden sm:inline">Gynäkologin <span class="text-orange-500">·</span> Paar- &amp; Sexualtherapeutin <span class="text-orange-500">·</span> Mutter <span class="text-orange-500">·</span> Frau</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hauptaussage -->
+                <h1 class="text-2xl sm:text-3xl font-bold text-gray-800 leading-tight mb-5">
+                    Du bist Mutter geworden.<br>
+                    Und willst
+                    <span class="bg-gradient-to-r from-orange-500 to-emerald-700 bg-clip-text text-transparent">
+                        verdammt nochmal auch Frau sein.
+                    </span>
+                </h1>
+
+                <!-- Brücke -->
+                <p class="text-base sm:text-lg text-gray-700 leading-snug mb-5">
+                    Da wo du in den Hintergrund getreten bist –<br>
+                    da willst du es wiederhaben.
+                </p>
+
+                <!-- Klimax: Die vier Werte -->
+                <div class="font-playfair italic text-xl sm:text-2xl text-gray-800 leading-[1.35] mb-6">
+                    <p>Die Lust. Die Tiefe.</p>
+                    <p>Die Verbundenheit. <span class="text-orange-500 font-semibold">Dich selbst.</span></p>
+                </div>
+
+                <!-- Buttons -->
+                <div class="flex flex-col gap-3">
+                    <a href="#" class="meetergo-modal-button btn-primary bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 text-center text-base flex items-center justify-center" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-calendar-plus mr-2"></i>
+                        Gespräch vereinbaren
+                    </a>
+                    <a href="#services" class="btn-secondary border-2 border-emerald-700 text-emerald-700 px-6 py-3 rounded-lg font-semibold hover:bg-emerald-700 hover:text-white transition-all duration-300 text-center text-base flex items-center justify-center">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        15 Min. Kennenlernen – kostenlos
+                    </a>
+                </div>
             </div>
         </div>
-        
-        <!-- Content Overlay -->
-        <div class="relative z-10 container mx-auto px-4 h-full flex items-end pb-12 md:pb-16 lg:pb-20">
-            <div class="grid lg:grid-cols-5 gap-8 lg:gap-12 items-end w-full">
-                <!-- Content - Takes 3 columns on large screens -->
-                <div class="text-left lg:col-span-3">
-                    <!-- Eye-Catcher Element - Nur auf größeren Bildschirmen sichtbar -->
-                    <div class="hidden md:block mb-6 md:mb-8 lg:mb-12 flex justify-start">
-                        <div class="bg-white/95 backdrop-blur-sm rounded-xl md:rounded-2xl p-4 md:p-6 lg:p-8 shadow-xl border border-orange-100 relative overflow-hidden eye-catcher w-full max-w-xs sm:max-w-sm md:max-w-md">
-                            <!-- Brick pattern background -->
-                            <div class="absolute inset-0 opacity-10">
-                                <div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 22px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.1) 40px, rgba(0,0,0,0.1) 42px);"></div>
-                            </div>
-                            <div class="relative z-10 text-center">
-                                <h1 class="text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-playfair font-bold text-gray-800 leading-tight mb-1 md:mb-2">
-                                    Online-Therapeutin
-                                </h1>
-                                <div class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-orange-500 handwriting font-dancing">
-                                    Dr. Sabrina Kising
+
+        <!-- ============ DESKTOP LAYOUT: Foto als Hintergrund ============ -->
+        <div class="hidden lg:block h-full">
+            <div class="absolute inset-0">
+                <div class="w-full h-full relative">
+                    <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
+                         alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
+                         class="w-full h-full object-cover object-[center_top]">
+                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/55 to-transparent"></div>
+                </div>
+            </div>
+            
+            <div class="relative z-10 container mx-auto px-4 h-full flex items-end pb-16">
+                <div class="grid grid-cols-5 gap-12 items-end w-full">
+                    <div class="text-left col-span-3">
+                        <!-- Eye-Catcher Element -->
+                        <div class="mb-7">
+                            <div class="inline-block bg-white/95 backdrop-blur-sm rounded-2xl px-9 py-5 shadow-2xl border-2 border-orange-200 relative overflow-hidden eye-catcher">
+                                <div class="absolute inset-0 opacity-10">
+                                    <div class="w-full h-full" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 20px, rgba(0,0,0,0.1) 20px, rgba(0,0,0,0.1) 22px), repeating-linear-gradient(90deg, transparent, transparent 40px, rgba(0,0,0,0.1) 40px, rgba(0,0,0,0.1) 42px);"></div>
+                                </div>
+                                <div class="relative z-10 text-center">
+                                    <div class="text-5xl text-orange-500 handwriting font-dancing leading-tight mb-2">
+                                        Dr. Sabrina Kising
+                                    </div>
+                                    <div class="h-px w-16 bg-orange-300 mx-auto mb-2"></div>
+                                    <p class="text-xs lg:text-sm text-gray-700 font-semibold tracking-[0.15em] uppercase">
+                                        Gynäkologin <span class="text-orange-500">·</span> Paar- &amp; Sexualtherapeutin <span class="text-orange-500">·</span> Mutter <span class="text-orange-500">·</span> Frau
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4 md:mb-6 leading-tight mt-8 md:mt-0">
-                        Seit der Geburt ist alles anders –
-                        <span class="bg-gradient-to-r from-orange-500 to-emerald-700 bg-clip-text text-transparent">
-                            aber kaum jemand spricht darüber.
-                        </span>
-                    </h2>
-                    <!-- Langer Text wird auf mobilen Geräten ausgeblendet -->
-                    <p class="hidden md:block text-lg md:text-xl text-gray-600 mb-8 leading-relaxed max-w-lg">
-                        Ich begleite Frauen und Paare, die spüren: Irgendetwas stimmt nicht mehr – mit mir, mit uns, mit meinem Körper.
-                    </p>
-                    <!-- Kurzer Text nur auf mobilen Geräten sichtbar -->
-                    <div class="md:hidden mb-6 text-center">
-                        <p class="text-xl text-gray-700 mb-2 font-semibold">
-                            Online-Therapeutin
+                        <!-- Hauptaussage -->
+                        <h1 class="text-[2rem] xl:text-[2.25rem] font-bold text-gray-800 leading-tight mb-5">
+                            Du bist Mutter geworden.<br>
+                            Und willst
+                            <span class="bg-gradient-to-r from-orange-500 to-emerald-700 bg-clip-text text-transparent">
+                                verdammt nochmal auch Frau sein.
+                            </span>
+                        </h1>
+
+                        <!-- Brücke -->
+                        <p class="text-lg xl:text-xl text-gray-700 leading-snug mb-5 max-w-xl">
+                            Da wo du in den Hintergrund getreten bist –<br>
+                            da willst du es wiederhaben.
                         </p>
-                        <p class="text-3xl text-orange-600 font-bold leading-tight" style="font-family: 'Dancing Script', cursive;">
-                            Dr. Sabrina Kising
-                        </p>
+
+                        <!-- Klimax: Die vier Werte -->
+                        <div class="font-playfair italic text-[1.5rem] xl:text-[1.75rem] text-gray-800 leading-[1.35] mb-7 max-w-xl">
+                            <p>Die Lust. Die Tiefe.</p>
+                            <p>Die Verbundenheit. <span class="text-orange-500 font-semibold">Dich selbst.</span></p>
+                        </div>
+
+                        <!-- Buttons -->
+                        <div class="flex flex-row gap-4">
+                            <a href="#" class="meetergo-modal-button btn-primary bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center text-base flex items-center" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                                <i class="fas fa-calendar-plus mr-2"></i>
+                                Online-Gespräch vereinbaren
+                            </a>
+                            <a href="#services" class="btn-secondary border-2 border-emerald-700 text-emerald-700 px-8 py-4 rounded-lg font-semibold hover:bg-emerald-700 hover:text-white transition-all duration-300 text-center text-base flex items-center">
+                                <i class="fas fa-info-circle mr-2"></i>
+                                15 Min. Kennenlernen – kostenlos
+                            </a>
+                        </div>
                     </div>
-                    <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
-                        <a href="#" class="meetergo-modal-button hidden sm:flex btn-primary bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center text-sm sm:text-base" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
-                            <i class="fas fa-calendar-plus mr-2"></i>
-                            <span class="hidden sm:inline">Online-Termin vereinbaren</span>
-                            <span class="sm:hidden">Termin vereinbaren</span>
-                        </a>
-                        <a href="#services" class="btn-secondary border-2 border-emerald-700 text-emerald-700 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-emerald-700 hover:text-white transition-all duration-300 text-center text-sm sm:text-base">
-                            <i class="fas fa-info-circle mr-2"></i>
-                            15 Min. Kennenlernen – kostenlos
-                        </a>
-                    </div>
+                    
+                    <div class="col-span-2"></div>
                 </div>
-                
-                <!-- Right side spacer for image - Takes 2 columns -->
-                <div class="hidden lg:block lg:col-span-2"></div>
             </div>
-        </div>
-        
-        <!-- Professional Badge - Responsive positioning -->
-        <div class="absolute top-4 right-4 lg:top-8 lg:right-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 lg:px-6 lg:py-3 rounded-full text-sm lg:text-lg font-semibold shadow-xl z-20">
-            <i class="fas fa-user-md mr-1 lg:mr-2"></i>
-            Dr. med.
-        </div>
-        
-
-        
-        <!-- Floating Elements - Nur auf Desktop sichtbar -->
-        <div class="hidden lg:block absolute top-20 left-1/2 w-16 h-16 bg-emerald-700/20 rounded-full flex items-center justify-center animate-pulse z-15">
-            <i class="fas fa-user-friends text-emerald-700 text-xl"></i>
-        </div>
-        <div class="hidden lg:block absolute bottom-32 left-20 w-16 h-16 bg-healing-blue/20 rounded-full flex items-center justify-center animate-pulse z-15">
-            <i class="fas fa-shield-alt text-healing-blue text-xl"></i>
-        </div>
-        <div class="hidden lg:block absolute top-1/2 right-32 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center z-15">
-            <i class="fas fa-heart text-orange-500"></i>
+            
+            <!-- Professional Badge - nur Desktop -->
+            <div class="absolute top-24 right-8 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-5 py-2 rounded-full text-base font-semibold shadow-xl z-20 flex items-center">
+                <i class="fas fa-user-md mr-2"></i>
+                Dr. med.
+            </div>
+            
+            <!-- Floating Elements -->
+            <div class="absolute top-20 left-1/2 w-16 h-16 bg-emerald-700/20 rounded-full flex items-center justify-center animate-pulse z-15">
+                <i class="fas fa-user-friends text-emerald-700 text-xl"></i>
+            </div>
+            <div class="absolute bottom-32 left-20 w-16 h-16 bg-healing-blue/20 rounded-full flex items-center justify-center animate-pulse z-15">
+                <i class="fas fa-shield-alt text-healing-blue text-xl"></i>
+            </div>
+            <div class="absolute top-1/2 right-32 w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center z-15">
+                <i class="fas fa-heart text-orange-500"></i>
+            </div>
         </div>
     </section>
 
@@ -331,100 +383,98 @@
     <section id="services" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Meine <span class="text-orange-500">Coaching-Bereiche</span>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800">
+                    Wo erkennst du <span class="text-orange-500">dich</span>?
                 </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Einfühlsame Unterstützung in drei Kernbereichen mit bewährten therapeutischen Methoden.
-                </p>
             </div>
 
-            <div class="space-y-16">
+            <div class="space-y-20 md:space-y-24">
                 <!-- Trauma-Therapie -->
-                <div id="trauma" class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="mb-6">
-                            <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-2">NACH DER GEBURT</p>
-                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-6">
-                                „Die Geburt liegt hinter mir.<br class="hidden md:block"> Aber ich komme nicht darüber hinweg."
+                <div id="trauma" class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                    <div class="order-2 lg:order-1 lg:col-span-7">
+                        <div class="max-w-xl">
+                            <p class="text-sm uppercase tracking-[0.2em] text-dark-green font-medium mb-6">DEIN GEBURTSERLEBNIS</p>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-8">
+                                „Hauptsache, das Baby ist gesund."<br>
+                                Und <span class="text-healing-orange">du</span>?
                             </h3>
+                            <div class="text-lg md:text-xl text-gray-600 leading-relaxed space-y-4 mb-10">
+                                <p>Die Geburt liegt hinter dir – vielleicht Monate, vielleicht Jahre.</p>
+                                <p>Und trotzdem ist da noch etwas.</p>
+                                <p>Etwas, das bleibt. Das keinen Namen hat.<br>Das du vielleicht noch niemandem gesagt hast.</p>
+                            </div>
+                            <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3 mb-10">
+                                Was du erlebt hast, zählt.<br>Auch wenn es niemand gesehen hat.
+                            </p>
+                            <a href="trauma-therapie.html" class="inline-block bg-dark-green text-white px-7 py-4 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
+                                Erzähl mir, was war
+                            </a>
                         </div>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                            Das Baby ist gesund. Alle sagen: Das ist das Wichtigste.
-                        </p>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                            Aber dich lassen Bilder nicht los. Gefühle, die du nicht einordnen kannst.
-                        </p>
-                        <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
-                            Was du erlebt hast, zählt. Auch wenn es niemand gesehen hat.
-                        </p>
-                        <a href="trauma-therapie.html" class="inline-block bg-dark-green text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
-                            Genau das ist es
-                        </a>
                     </div>
-                    <div class="order-1 lg:order-2 flex justify-center">
-                        <div class="w-80 h-80 bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
+                    <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center">
+                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/005740a99da5270d410164e8da5fa054" 
-                                 alt="Aquarell-Silhouette einer schwangeren Frau mit Spiegelung - Symbol für Trauma-Therapie und Heilung" 
+                                 alt="Aquarell-Silhouette einer schwangeren Frau mit Spiegelung - Symbol für dein Geburtserlebnis und Heilung" 
                                  class="w-full h-full object-cover rounded-2xl">
                         </div>
                     </div>
                 </div>
 
                 <!-- Paar-Therapie -->
-                <div id="paar" class="grid lg:grid-cols-2 gap-12 items-center bg-gradient-to-r from-orange-50 to-emerald-50 py-12 px-8 rounded-3xl">
-                    <div class="order-2 lg:order-1">
-                        <div class="w-80 h-80 bg-white rounded-2xl flex items-center justify-center relative overflow-hidden mx-auto shadow-xl border border-orange-100">
+                <div id="paar" class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center bg-gradient-to-r from-orange-50 to-emerald-50 py-16 px-8 md:px-12 rounded-3xl">
+                    <div class="order-2 lg:order-1 lg:col-span-5 flex justify-center">
+                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/6314f2426497cf05b27187ee9e349c17" 
-                                 alt="Aquarell-Silhouetten eines Paares mit Spiegelung - Symbol für Paar-Therapie und Verbindung" 
+                                 alt="Aquarell-Silhouetten eines Paares mit Spiegelung - Symbol für ‚Noch wir‘ und Verbindung" 
                                  class="w-full h-full object-cover rounded-2xl">
                         </div>
                     </div>
-                    <div class="order-1 lg:order-2">
-                        <div class="mb-6">
-                            <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-2">WENN DIE NÄHE FEHLT</p>
-                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-6">
-                                „Wir leben nebeneinander –<br class="hidden md:block"> aber nicht mehr miteinander."
+                    <div class="order-1 lg:order-2 lg:col-span-7">
+                        <div class="max-w-xl">
+                            <p class="text-sm uppercase tracking-[0.2em] text-dark-green font-medium mb-6">FÜR EUCH ALS PAAR</p>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-8">
+                                Noch <span class="text-healing-orange">wir</span>?<br>
+                                Oder nur noch Eltern?
                             </h3>
+                            <div class="text-lg md:text-xl text-gray-600 leading-relaxed space-y-4 mb-10">
+                                <p>Irgendwann hat sich etwas verschoben.<br>Vielleicht nach der Geburt. Vielleicht schleichend über Jahre.</p>
+                                <p>Gespräche bleiben an der Oberfläche. Die Nähe fehlt.<br>Der andere fühlt sich fremd an – obwohl er direkt neben dir sitzt.</p>
+                            </div>
+                            <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3 mb-10">
+                                Ihr habt euch nicht verloren.<br>Ihr habt euch nur aus den Augen verloren.
+                            </p>
+                            <a href="paar-therapie.html" class="inline-block bg-dark-green text-white px-7 py-4 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
+                                Zurück zu „noch wir"
+                            </a>
                         </div>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                            Irgendwann hat sich etwas verschoben. Vielleicht nach der Geburt. Vielleicht schleichend über Jahre.
-                        </p>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                            Gespräche bleiben an der Oberfläche. Die Nähe fehlt. Der andere fühlt sich fremd an – obwohl er direkt neben dir sitzt.
-                        </p>
-                        <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
-                            Das lässt sich verändern.
-                        </p>
-                        <a href="paar-therapie.html" class="inline-block bg-dark-green text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
-                            Das kenne ich
-                        </a>
                     </div>
                 </div>
 
                 <!-- Sexual-Therapie -->
-                <div id="sexual" class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div class="order-2 lg:order-1">
-                        <div class="mb-6">
-                            <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-2">KÖRPER &amp; INTIMITÄT – OFFEN SPRECHEN</p>
-                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-6">
-                                „Da stimmt etwas nicht –<br class="hidden md:block"> aber ich weiß nicht wie ich es sagen soll."
+                <div id="sexual" class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+                    <div class="order-2 lg:order-1 lg:col-span-7">
+                        <div class="max-w-xl">
+                            <p class="text-sm uppercase tracking-[0.2em] text-dark-green font-medium mb-6">KÖRPER &amp; SEXUALITÄT</p>
+                            <h3 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-8">
+                                Er liegt neben dir.<br>
+                                Und du hoffst einfach nur, dass er <span class="text-healing-orange">nicht</span> fragt.
                             </h3>
+                            <div class="text-lg md:text-xl text-gray-600 leading-relaxed space-y-4 mb-10">
+                                <p>Die Lust ist weg. Oder der Zugang zu dir selbst.</p>
+                                <p>Dein Körper fühlt sich an wie ausgeliehen.<br>Und du weißt nicht wie du es sagen kannst.</p>
+                            </div>
+                            <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3 mb-10">
+                                Das ist kein Defekt.<br>Das ist ein Körper, der verdammt viel trägt.
+                            </p>
+                            <a href="sexual-therapie.html" class="inline-block bg-dark-green text-white px-7 py-4 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
+                                Lass uns darüber reden
+                            </a>
                         </div>
-                        <p class="text-lg text-gray-600 leading-relaxed mb-4">
-                            Sexualität ist persönlich – und manchmal kompliziert. Ich biete dir einen geschützten Raum, um über Lust, Frust, Nähe oder Unsicherheiten zu sprechen. Nach der Geburt – oder unabhängig davon.
-                        </p>
-                        <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
-                            Online, vertrauensvoll und ohne Tabus – für mehr Verbindung zu dir selbst und zu deinem Partner.
-                        </p>
-                        <a href="sexual-therapie.html" class="inline-block bg-dark-green text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
-                            Genau das ist es
-                        </a>
                     </div>
-                    <div class="order-1 lg:order-2 flex justify-center">
-                        <div class="w-80 h-80 bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
+                    <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center">
+                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/fde0978a3eea22ea5484d96118eacc18" 
-                                 alt="Aquarell-Tulpe in Orange-Tönen - Symbol für Sexual-Therapie und Blüte der Intimität" 
+                                 alt="Aquarell-Tulpe in Orange-Tönen - Symbol für ‚Für dich – als Frau‘ und Blüte der Intimität" 
                                  class="w-full h-full object-cover rounded-2xl">
                         </div>
                     </div>
@@ -509,67 +559,84 @@
     <!-- About Section -->
     <section id="about" class="py-20 bg-gradient-to-r from-soft-orange to-soft-pink">
         <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 <!-- Content -->
-                <div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
-                        Über <span class="text-orange-500">mich</span>
-                    </h2>
-                    
-                    <!-- Name und Qualifikation -->
-                    <div class="mb-8">
-                        <h3 class="text-xl font-bold text-gray-800 mb-3">
-                            Dr. med. Sabrina Kising – Fachärztin für Frauenheilkunde und Geburtshilfe
-                        </h3>
-                    </div>
-                    
-                    <!-- Was mich bewegt -->
-                    <div class="mb-8">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Was mich bewegt</h4>
-                        <p class="text-gray-600 leading-relaxed">
-                            Geburt, Beziehung, Sexualität – all das wirkt tief. Manchmal ein Leben lang. 
-                            Ich möchte Räume schaffen, in denen echte Gespräche möglich sind und Heilung beginnen darf.
+                <div class="lg:col-span-7 space-y-10">
+                    <!-- Header -->
+                    <div>
+                        <p class="text-sm uppercase tracking-[0.2em] text-dark-green font-medium mb-6">ÜBER MICH</p>
+                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 leading-tight mb-5">
+                            Dr. Sabrina <span class="text-healing-orange">Kising</span>.
+                        </h2>
+                        <p class="text-lg md:text-xl text-gray-800 font-bold leading-relaxed">
+                            Gynäkologin. Paar- und Sexualtherapeutin.<br>Mutter. Frau.
                         </p>
                     </div>
-                    
-                    <!-- Mein Ansatz -->
-                    <div class="mb-8">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Mein Ansatz</h4>
-                        <p class="text-gray-600 leading-relaxed">
-                            Ich bin Fachärztin für Gynäkologie und Therapeutin – diese Kombination ist kein Zufall. 
-                            Nach Jahren in einer großen Geburtsklinik habe ich verstanden: Der Körper heilt schneller 
-                            als die Seele. Und was wirklich passiert – das steht in keiner Akte.
-                        </p>
+
+                    <!-- Einstieg -->
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                        Die meisten Frauen, die zu mir kommen, haben eines gemeinsam:<br>Sie haben mit niemandem darüber gesprochen.
+                    </p>
+
+                    <!-- USP-Säulen -->
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-5">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mt-1">
+                                <i class="fas fa-stethoscope text-healing-orange"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-gray-800 text-lg mb-1">Als Gynäkologin</p>
+                                <p class="text-gray-600 leading-relaxed">kenne ich deinen weiblichen Körper.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mt-1">
+                                <i class="fas fa-comments text-healing-orange"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-gray-800 text-lg mb-1">Als Paar- und Sexualtherapeutin</p>
+                                <p class="text-gray-600 leading-relaxed">begleite ich dich zu erkennen, was dahintersteckt.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-5">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center mt-1">
+                                <i class="fas fa-heart text-healing-orange"></i>
+                            </div>
+                            <div class="pt-2">
+                                <p class="font-bold text-gray-800 text-lg mb-1">Als Mutter und Frau</p>
+                                <p class="text-gray-600 leading-relaxed">kenne ich deine Situation.</p>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Meine Qualifikationen -->
-                    <div class="mb-8">
-                        <h4 class="text-lg font-semibold text-gray-700 mb-3">Meine Qualifikationen</h4>
-                        <p class="text-gray-600 leading-relaxed">
-                            Fachärztin für Frauenheilkunde und Geburtshilfe mit langjähriger klinischer Erfahrung. 
-                            Zusatzausbildung in Paar- und Sexualtherapie. Spezialisierung auf Geburtstrauma, 
-                            postpartale Veränderungen und Schwangerschaftsverlust.
-                        </p>
-                    </div>
-                    
+
+                    <!-- Conclusion -->
+                    <p class="text-lg md:text-xl text-gray-700 font-medium leading-relaxed">
+                        Diese Kombination gibt es nicht oft.<br>
+                        <span class="text-dark-green">Und sie macht den Unterschied.</span>
+                    </p>
+
+                    <!-- Hervorhebung -->
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-6 py-3">
+                        Der Körper heilt schneller als die Seele.<br>Was wirklich passiert – darüber rede ich.<br>Offen. Ohne Umwege.
+                    </p>
+
                     <!-- Call to Action -->
-                    <div class="flex flex-wrap gap-4">
-                        <a href="ueber-mich.html" class="inline-block bg-dark-green text-white px-6 py-3 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="ueber-mich.html" class="inline-block bg-dark-green text-white px-7 py-4 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
                             <i class="fas fa-user mr-2"></i>
                             Mehr über mich erfahren
                         </a>
-                        <a href="#" class="meetergo-modal-button inline-block border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <a href="#" class="meetergo-modal-button inline-block border-2 border-orange-500 text-orange-500 px-7 py-4 rounded-lg font-semibold hover:bg-orange-500 hover:text-white transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                            <span class="xl:hidden">Termin vereinbaren</span>
+                            Gespräch vereinbaren
                         </a>
                     </div>
                 </div>
                 
                 <!-- Professional Image -->
-                <div class="flex justify-center">
+                <div class="lg:col-span-5 flex justify-center">
                     <div class="relative">
-                        <div class="w-96 h-[500px] lg:w-[450px] lg:h-[600px] rounded-2xl shadow-2xl overflow-hidden">
+                        <div class="w-80 h-[440px] md:w-96 md:h-[500px] lg:w-[400px] lg:h-[540px] rounded-2xl shadow-2xl overflow-hidden">
                             <img src="https://page.gensparksite.com/v1/base64_upload/eb0cb606af496c778989dea2a813fad3" 
                                  alt="Dr. med. Sabrina Kising bei der Arbeit - professionelle Online-Therapeutin" 
                                  class="w-full h-full object-cover object-center">
@@ -604,137 +671,116 @@
     <!-- Features Section -->
     <section class="py-20 bg-white">
         <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Warum <span class="text-orange-500">Online-Beratung?</span>
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-5">
+                    Warum <span class="text-orange-500">Online</span>?
                 </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Moderne Technologie ermöglicht professionelle Beratung in gewohnter Umgebung.
+                <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+                    Online-Beratung ermöglicht tiefe, echte Arbeit –<br class="hidden md:block"> von wo du gerade bist.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
                 <div class="text-center">
                     <div class="w-20 h-20 bg-gradient-to-r from-orange-500 to-orange-400 rounded-full flex items-center justify-center mb-6 mx-auto">
                         <i class="fas fa-home text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-3">Bequem von zu Hause</h3>
-                    <p class="text-gray-600">Beratung in Ihrer vertrauten Umgebung, ohne Anfahrtswege.</p>
+                    <p class="text-gray-600 leading-relaxed">In deiner vertrauten Umgebung fällt es leichter, sich zu öffnen.</p>
                 </div>
 
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-amber-600 to-yellow-600 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    <div class="w-20 h-20 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                        <i class="fas fa-heart text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Diskret & Sicher</h3>
-                    <p class="text-gray-600">Höchste Datenschutzstandards und absolute Vertraulichkeit.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Niedrige Hemmschwelle</h3>
+                    <p class="text-gray-600 leading-relaxed">Gerade bei intimen Themen – Sexualität, Körper, Beziehung – senkt die Distanz die Scham.</p>
                 </div>
 
                 <div class="text-center">
                     <div class="w-20 h-20 bg-gradient-to-r from-emerald-600 to-emerald-700 rounded-full flex items-center justify-center mb-6 mx-auto">
-                        <i class="fas fa-clock text-white text-2xl"></i>
+                        <i class="fas fa-globe text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Flexible Zeiten</h3>
-                    <p class="text-gray-600">Termine auch abends und am Wochenende möglich.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Von überall möglich</h3>
+                    <p class="text-gray-600 leading-relaxed">Ob ihr als Paar gerade nicht am selben Ort seid oder einfach flexibel bleiben wollt.</p>
                 </div>
 
                 <div class="text-center">
-                    <div class="w-20 h-20 bg-gradient-to-r from-slate-700 to-gray-700 rounded-full flex items-center justify-center mb-6 mx-auto" style="background: linear-gradient(135deg, #274543, #1e3432);">
-                        <i class="fas fa-video text-white text-2xl"></i>
+                    <div class="w-20 h-20 rounded-full flex items-center justify-center mb-6 mx-auto" style="background: linear-gradient(135deg, #274543, #1e3432);">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-800 mb-3">Moderne Technik</h3>
-                    <p class="text-gray-600">Sichere Videoverbindung mit professioneller Beratungsqualität.</p>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Diskret & sicher</h3>
+                    <p class="text-gray-600 leading-relaxed">Höchste Vertraulichkeit – kein Wartezimmer, keine Begegnungen.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="py-20 bg-gradient-to-r from-soft-blue to-soft-purple">
-        <div class="container mx-auto px-4">
+    <section id="testimonials" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Was meine <span class="text-orange-500">Klienten sagen</span>
+                <p class="text-sm uppercase tracking-wide text-gray-500 font-medium mb-4">ERFAHRUNGSBERICHTE</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-8">
+                    Was andere über mich <span class="text-orange-500">sagen</span>
                 </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-                    Erfahrungsberichte von Menschen, die ihren Weg zur Heilung gefunden haben.
-                </p>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-orange-500">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Testimonial 1 - Einzelbegleitung -->
+                <div class="bg-orange-50 rounded-2xl p-8 shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-orange-500 mb-4">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            „Warum hab ich das selbst nicht sehen können? Warum hat mir das bislang niemand gesagt?"
+                        </p>
                     </div>
-                    <p class="text-gray-600 italic mb-6">
-                        "Die Online-Beratung hat mir geholfen, meine Ängste zu überwinden. 
-                        Die einfühlsame Art und die professionelle Unterstützung haben mir 
-                        neuen Mut gegeben."
-                    </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-user text-orange-500"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Maria K.</h4>
-                            <p class="text-sm text-gray-500">Einzelberatung</p>
-                        </div>
+                    <div class="border-t pt-4">
+                        <p class="font-semibold text-orange-600">— Einzelbegleitung</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-orange-500">
+                <!-- Testimonial 2 - Paar / Vater -->
+                <div class="bg-emerald-50 rounded-2xl p-8 shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-orange-500 mb-4">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            „Ich dachte, das wird nichts mehr. Das Kind ist da und ich bin raus. Ich habe mich dafür geschämt – sowas sollte ein Vater nicht denken. Danke, dass du uns geholfen hast, uns als Paar wiederzufinden. Wir haben nicht aufgegeben. Zum Glück."
+                        </p>
                     </div>
-                    <p class="text-gray-600 italic mb-6">
-                        "Als Paar haben wir wieder zueinander gefunden. Die Beratung hat uns 
-                        gezeigt, wie wir besser kommunizieren und unsere Probleme lösen können."
-                    </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-12 h-12 bg-orange-500/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-users text-orange-500"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Tom & Lisa</h4>
-                            <p class="text-sm text-gray-500">Paarberatung</p>
-                        </div>
+                    <div class="border-t pt-4">
+                        <p class="font-semibold text-emerald-600">— Paar / Vater</p>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-2xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="text-orange-500">
+                <!-- Testimonial 3 - Prozessbegleitung -->
+                <div class="bg-orange-50 rounded-2xl p-8 shadow-lg">
+                    <div class="mb-6">
+                        <div class="flex text-orange-500 mb-4">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                         </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            „Auch wenn ich mir ein anderes Ergebnis gewünscht hätte – ich gehe meinen Weg weiter. Deine Begleitung hat mir sehr geholfen. Und tut es immer noch."
+                        </p>
                     </div>
-                    <p class="text-gray-600 italic mb-6">
-                        "Die Trauma-Beratung hat mir geholfen, mit meiner Vergangenheit 
-                        Frieden zu schließen. Ich fühle mich endlich wieder stark und selbstbestimmt."
-                    </p>
-                    <div class="flex items-center space-x-3">
-                        <div class="w-12 h-12 bg-healing-teal/20 rounded-full flex items-center justify-center">
-                            <i class="fas fa-heart text-healing-teal"></i>
-                        </div>
-                        <div>
-                            <h4 class="font-semibold text-gray-800">Anna M.</h4>
-                            <p class="text-sm text-gray-500">Trauma-Beratung</p>
-                        </div>
+                    <div class="border-t pt-4">
+                        <p class="font-semibold text-orange-600">— Prozessbegleitung</p>
                     </div>
                 </div>
             </div>
@@ -809,45 +855,46 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-                    Kontakt <span class="text-orange-500">aufnehmen</span>
-                </h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-                    Lassen Sie uns gemeinsam den ersten Schritt zu Ihrer Heilung gehen.
+    <!-- Final Call to Action -->
+    <section id="contact" class="py-20 bg-gradient-to-r from-orange-500 to-emerald-600 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <p class="text-sm uppercase tracking-[0.2em] text-white/90 font-medium mb-6">BEREIT FÜR DEN ERSTEN SCHRITT?</p>
+            <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-10 leading-tight">
+                Wenn du spürst,<br>
+                dass da noch mehr ist –<br>
+                dann lass uns reden.
+            </h2>
+            <div class="max-w-3xl mx-auto mb-10 space-y-5">
+                <p class="text-xl md:text-2xl font-semibold leading-snug">
+                    Du musst nicht wissen wie du es sagen sollst.<br>
+                    Du musst nicht warten bis es schlimmer wird.<br>
+                    Jetzt ist der richtige Moment.
                 </p>
-                
-                <!-- Contact CTA with Modal -->
-                <div class="max-w-4xl mx-auto">
-                    <div class="bg-gradient-to-br from-orange-50 to-emerald-50 p-8 rounded-2xl shadow-lg border border-orange-100">
-                        <div class="grid md:grid-cols-2 gap-6 items-center">
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-envelope text-orange-500 text-2xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mb-2">Nachricht senden</h3>
-                                <p class="text-sm text-gray-600">Kontaktformular & Infos</p>
-                            </div>
+                <p class="text-lg leading-relaxed opacity-95">
+                    15 Minuten. Kostenlos. Ohne Verpflichtung.
+                </p>
+            </div>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#" class="meetergo-modal-button bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <i class="fas fa-calendar-alt mr-2"></i>
+                    Gespräch vereinbaren
+                </a>
+                <a href="#" class="meetergo-modal-button border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <i class="fas fa-info-circle mr-2"></i>
+                    15 Min. Kennenlernen – kostenlos
+                </a>
+            </div>
 
-                            <div class="text-center">
-                                <div class="w-16 h-16 bg-emerald-700/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <i class="fas fa-video text-emerald-700 text-2xl"></i>
-                                </div>
-                                <h3 class="font-bold text-gray-800 mb-2">Online-Beratung</h3>
-                                <p class="text-sm text-gray-600">Sichere Videoverbindung</p>
-                            </div>
-                        </div>
-                        
-                        <div class="text-center mt-8">
-                            <a href="kontakt.html" class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 mr-4">
-                                <i class="fas fa-envelope mr-2"></i>
-                                Kontakt aufnehmen
-                            </a>
-
-                        </div>
+            <!-- Preistransparenz - selbstbewusst unter dem CTA -->
+            <div class="mt-14 pt-10 border-t border-white/30 max-w-2xl mx-auto">
+                <div class="grid sm:grid-cols-2 gap-6 text-white">
+                    <div>
+                        <p class="text-base font-medium tracking-wide mb-1">Einzelbegleitung</p>
+                        <p class="text-lg opacity-95">50 Min. · <span class="font-semibold">160 €</span></p>
+                    </div>
+                    <div>
+                        <p class="text-base font-medium tracking-wide mb-1">Paarbegleitung</p>
+                        <p class="text-lg opacity-95">80 Min. · <span class="font-semibold">220 €</span></p>
                     </div>
                 </div>
             </div>
@@ -869,10 +916,13 @@
                         <p class="text-lg text-gray-700 font-medium mb-4">
                             Heilung beginnt da, wo Liebe Raum bekommt.
                         </p>
+                        <p class="font-playfair italic text-lg text-gray-800 leading-relaxed mb-2">
+                            Eltern werden verändert alles. Auch die Liebe.
+                        </p>
                         <p class="text-gray-600 leading-relaxed">
-                            Ganzheitliche Online-Begleitung in Paar- und Sexualtherapie 
-                            sowie bei traumatischen Geburten – empathisch, professionell 
-                            und persönlich.
+                            Für Frauen nach belastenden Geburtserfahrungen.
+                            <br>
+                            Für Paare, die sich nicht verlieren wollen.
                         </p>
                         <p class="text-sm text-gray-500 mt-3">
                             Dr. med. Sabrina Kising
@@ -882,21 +932,21 @@
 
                 <!-- Mein Angebot -->
                 <div class="md:col-span-3 lg:col-span-3">
-                    <h4 class="font-bold text-lg text-gray-800 mb-4">Mein Angebot</h4>
+                    <h4 class="font-bold text-lg text-gray-800 mb-4">Meine Angebote</h4>
                     <ul class="space-y-3 text-gray-600">
                         <li>
                             <a href="trauma-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
                         </li>
                         <li>
                             <a href="paar-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Paar-Therapie
+                                Noch wir
                             </a>
                         </li>
                         <li>
                             <a href="sexual-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </li>
                     </ul>
@@ -1417,7 +1467,7 @@
         }
     </style>
     <script>
-        // Coaching-Bereiche Dropdown Funktionalität
+        // Meine Angebote Dropdown Funktionalität
         function toggleCoachingDropdown() {
             const menu = document.getElementById('coaching-menu');
             const chevron = document.getElementById('coaching-chevron');

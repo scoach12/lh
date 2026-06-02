@@ -46,7 +46,8 @@
                 extend: {
                     colors: {
                         'warm-gray': '#F8F9FA',
-                        'dark-green': '#274543'
+                        'dark-green': '#274543',
+                        'healing-orange': '#FF6B35'
                     },
                     fontFamily: {
                         'inter': ['Inter', 'sans-serif'],
@@ -87,52 +88,39 @@
                     </div>
                 </a>
 
-                <!-- Desktop Navigation (XL screens and up) -->
-                <div class="hidden xl:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    <a href="trauma-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
-                    <a href="ueber-mich.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Über mich</a>
-                    <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Für Fachpersonal</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
-                        <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Online Termin vereinbaren</span>
-                    </a>
-                </div>
+                <!-- Desktop & Tablet Navigation (MD screens and up) - Meine Angebote als Dropdown -->
+                <div class="hidden md:flex items-center space-x-6 lg:space-x-7 xl:space-x-8">
+                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Start</a>
 
-                <!-- Tablet Navigation (MD to XL screens) -->
-                <div class="hidden md:flex xl:hidden items-center space-x-6">
-                    <a href="index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    
-                    <!-- Coaching-Bereiche Dropdown -->
+                    <!-- Meine Angebote Dropdown -->
                     <div class="relative" id="coaching-dropdown">
                         <button class="nav-link text-gray-800 hover:text-orange-500 transition-colors flex items-center space-x-1 whitespace-nowrap" onclick="toggleCoachingDropdown()">
-                            <span>Coaching-Bereiche</span>
+                            <span>Meine Angebote</span>
                             <i class="fas fa-chevron-down text-xs transform transition-transform duration-200" id="coaching-chevron"></i>
                         </button>
-                        <div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
+                        <div class="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-lg border border-gray-100 py-2 z-50 hidden" id="coaching-menu">
                             <a href="trauma-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
                             <a href="paar-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Paar-Therapie
+                                Noch wir
                             </a>
                             <a href="sexual-therapie.html" class="block px-4 py-2 text-gray-800 hover:bg-orange-50 hover:text-orange-500 transition-colors">
                                 <i class="fas fa-heart mr-2 text-orange-400"></i>
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </div>
                     </div>
-                    
-                    <a href="ueber-mich.html" class="nav-link active text-gray-800 font-semibold hover:text-orange-500 transition-colors">Über mich</a>
+
+                    <a href="ueber-mich.html" class="nav-link active font-semibold text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap">Über mich</a>
                     <a href="blog/index.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors">Blog</a>
-                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <a href="hebammen-information.html" class="nav-link text-gray-800 hover:text-orange-500 transition-colors whitespace-nowrap hidden lg:inline-block">Für Fachpersonal</a>
+                    <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 lg:px-6 py-2 rounded-lg hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 whitespace-nowrap" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span>Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
 
@@ -146,16 +134,15 @@
             <div id="mobile-menu" class="hidden md:hidden mt-2 py-2 border-t border-gray-200">
                 <div class="flex flex-col space-y-4">
                     <a href="index.html" class="text-gray-800 hover:text-orange-500 transition-colors">Start</a>
-                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Trauma-Therapie</a>
-                    <a href="paar-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Paar-Therapie</a>
-                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Sexual-Therapie</a>
+                    <a href="trauma-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Dein Geburtserlebnis</a>
+                    <a href="paar-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Noch wir</a>
+                    <a href="sexual-therapie.html" class="text-gray-800 hover:text-orange-500 transition-colors">Für dich – als Frau</a>
                     <a href="ueber-mich.html" class="text-gray-800 font-semibold hover:text-orange-500 transition-colors">Über mich</a>
                     <a href="blog/index.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Blog</a>
-                    <a href="kontakt.html" class="text-gray-800 hover:text-orange-500 transition-colors py-1">Kontakt</a>
                     <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-2 rounded-lg text-center hover:shadow-lg transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        <span class="hidden xl:inline">Online Gespräch vereinbaren</span>
+                        <span class="xl:hidden">Gespräch vereinbaren</span>
                     </a>
                 </div>
             </div>
@@ -163,39 +150,64 @@
     </header>
 
     <!-- Hero Section with Personal Photo -->
-    <section class="pt-40 pb-20 bg-gradient-to-br from-orange-50 to-emerald-50">
+    <section class="pt-44 pb-24 bg-gradient-to-br from-orange-50 to-emerald-50">
         <div class="container mx-auto px-4">
-            <div class="grid lg:grid-cols-5 gap-16 items-center">
+            <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
                 <!-- Content -->
-                <div class="order-2 lg:order-1 lg:col-span-2">
-                    <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">ÜBER MICH</p>
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 mb-6 leading-tight">
-                        <span class="font-dancing text-orange-500 text-5xl md:text-6xl lg:text-7xl">Dr. med.</span><br>
-                        Sabrina Kising
-                    </h1>
+                <div class="order-2 lg:order-1 lg:col-span-3">
                     <div class="mb-6">
-                        <p class="text-lg md:text-xl text-gray-700 mb-2 font-medium">Fachärztin für Frauenheilkunde und Geburtshilfe</p>
-                        <p class="text-lg md:text-xl text-gray-700">Paar- und Sexualtherapeutin</p>
+                        <p class="text-sm uppercase tracking-wide text-emerald-700 font-semibold mb-2">ÜBER MICH</p>
+                        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-6">
+                            Dr. Sabrina <span class="text-orange-500">Kising</span>.
+                        </h1>
                     </div>
-                    <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
-                        Mit Leidenschaft begleite ich Frauen, Paare und Familien auf ihrem Weg zu mehr Heilung, 
-                        Vertrauen und emotionalem Wohlbefinden.
+                    <p class="text-lg text-gray-600 leading-relaxed mb-5 whitespace-nowrap">
+                        Gynäkologin. Paar- und Sexualtherapeutin. Mutter. Frau.
                     </p>
-                    <div class="flex flex-wrap gap-4">
-                        <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Die meisten Frauen, die zu mir kommen, haben eines gemeinsam: <span class="font-medium text-gray-800">Sie haben mit niemandem darüber gesprochen.</span>
+                    </p>
+
+                    <!-- Erklärungs-Block: meine drei Rollen -->
+                    <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 mb-7 border border-orange-100/60 shadow-sm space-y-3">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Als <span class="font-semibold text-gray-800">Gynäkologin</span> kenne ich deinen weiblichen Körper.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-emerald-600 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Als <span class="font-semibold text-gray-800">Paar- und Sexualtherapeutin</span> begleite ich dich zu erkennen, was dahintersteckt.
+                            </p>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-2 h-2 bg-orange-500 rounded-full mt-2.5 flex-shrink-0"></div>
+                            <p class="text-lg text-gray-700 leading-relaxed">
+                                Als <span class="font-semibold text-gray-800">Mutter und Frau</span> kenne ich deine Situation.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
+                        Diese Kombination gibt es nicht oft. Und sie macht den Unterschied.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#" class="meetergo-modal-button bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 text-center whitespace-nowrap" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            Termin vereinbaren
+                            Gespräch vereinbaren
                         </a>
-                        <a href="#meine-geschichte" class="border-2 border-dark-green text-dark-green px-8 py-4 rounded-lg font-semibold hover:bg-dark-green hover:text-white transition-all duration-300">
-                            <i class="fas fa-arrow-down mr-2"></i>
-                            Mehr erfahren
+                        <a href="#" class="meetergo-modal-button btn-secondary border-2 border-emerald-700 text-emerald-700 px-6 py-4 rounded-lg font-semibold hover:bg-emerald-700 hover:text-white transition-all duration-300 text-center whitespace-nowrap" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                            <i class="fas fa-info-circle mr-2"></i>
+                            15 Min. Kennenlernen – kostenlos
                         </a>
                     </div>
                 </div>
 
-                <!-- Professional Photo - Larger -->
-                <div class="order-1 lg:order-2 lg:col-span-3">
-                    <div class="relative max-w-2xl mx-auto">
+                <!-- Professional Photo -->
+                <div class="order-1 lg:order-2 lg:col-span-2">
+                    <div class="relative max-w-lg lg:max-w-xl mx-auto">
                         <!-- Decorative Elements -->
                         <div class="absolute -top-8 -left-8 w-32 h-32 bg-orange-500/20 rounded-full blur-xl"></div>
                         <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-emerald-500/20 rounded-full blur-xl"></div>
@@ -230,164 +242,125 @@
 
     <main id="main">
 
-        <!-- Was mich bewegt - Meine persönliche Geschichte -->
-        <section id="meine-geschichte" class="py-20 bg-white">
+        <!-- Warum ich das tue -->
+        <section id="meine-geschichte" class="py-20 bg-gradient-to-br from-orange-50 to-emerald-50">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">ÜBER MICH</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Was mich bewegt – Meine persönliche <span class="text-orange-500">Geschichte</span>
-                        </h2>
-                    </div>
+                <div class="text-center mb-12">
+                    <p class="text-sm uppercase tracking-wide text-emerald-700 font-semibold mb-4">WARUM ICH DAS TUE</p>
+                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight">
+                        Ich kenne diese Lücke.<br class="hidden md:block">
+                        <span class="text-orange-500">Von beiden Seiten</span>.
+                    </h2>
+                </div>
 
-                    <div class="prose prose-lg max-w-none">
-                        <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                            Ich bin Sabrina Kising, Fachärztin für Frauenheilkunde und Geburtshilfe, mit einer Leidenschaft für die ganzheitliche Begleitung von Frauen, Paaren und Familien. Schon während meines Medizinstudiums haben mich nicht nur die physischen Aspekte der Medizin interessiert, sondern besonders, dass der Mensch mehr ist als eine Sammlung von Symptomen. Besonders in der Geburtshilfe wurde mir bewusst, wie tiefgreifend Erlebnisse rund um Schwangerschaft und Geburt das gesamte Leben beeinflussen können – sowohl für Frauen als auch für ihre Partner.
-                        </p>
+                <div class="max-w-3xl mx-auto">
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Ich habe als Chirurgin angefangen. Notaufnahme. Volle Kabinen. Keine Zeit.
+                    </p>
+                    <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                        Einmal kam eine Frau mit angeblicher Blutung. Als ich sie untersuchen wollte, sagte sie:
+                    </p>
 
-                        <p class="text-lg text-gray-700 leading-relaxed">
-                            In meiner klinischen Tätigkeit habe ich viele Geburten begleitet und erlebt, wie unterschiedlich Frauen ihre Schwangerschafts- oder Geburtserfahrungen verarbeiten. Doch was mir immer wieder begegnete, war das Fehlen von Raum für die emotionale Seite dieser Erlebnisse. Viele Frauen und Paare bleiben mit Fragen, Ängsten und Unsicherheiten allein. Ich wollte eine Möglichkeit schaffen, genau dort anzusetzen – mit Zeit, Empathie und einem offenen Ohr.
-                        </p>
-                    </div>
+                    <!-- Pull-Quote 1 -->
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
+                        „Vielleicht brauche ich nur jemanden zum Reden."
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Damals hat mich das wütend gemacht. Heute denke ich: welche Not muss sie gehabt haben, um diesen Schritt zu gehen.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Dann zehn Jahre Gynäkologie in einem der größten Geburtszentren Deutschlands. Hunderte Geburten. Hunderte Frauen.
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-4">
+                        Und immer dieselbe Lücke: Der medizinische Teil ist erledigt. <span class="font-medium text-gray-800">Was danach kommt – das fragt niemand ab.</span>
+                    </p>
+
+                    <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                        Und dann kam meine eigene Erfahrung. Mit Geburt. Mit Partnerschaft. <span class="font-medium text-gray-800">Ich kannte das plötzlich nicht nur als Ärztin.</span>
+                    </p>
+
+                    <!-- Abschluss-Pull-Quote (einheitliches Schema) -->
+                    <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2">
+                        Die Ausbildung zur Paar- und Sexualtherapeutin habe ich zuerst für mich gemacht. Und dann gemerkt: das brauchen alle.
+                    </p>
                 </div>
             </div>
         </section>
 
-        <!-- Wie ich arbeite -->
-        <section class="py-20 bg-warm-gray">
+        <!-- Wie ich arbeite - mit Foto rechts -->
+        <section class="py-20 bg-gradient-to-r from-soft-orange to-soft-pink">
             <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">ÜBER MICH</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Wie ich <span class="text-orange-500">arbeite</span>
+                <div class="grid lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+                    <!-- Content links -->
+                    <div class="order-2 lg:order-1 lg:col-span-3">
+                        <p class="text-sm uppercase tracking-wide text-emerald-700 font-semibold mb-4">WIE ICH ARBEITE</p>
+                        <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 leading-tight mb-8">
+                            Kein Protokoll.<br>
+                            <span class="text-orange-500">Keine Schublade.</span>
                         </h2>
-                    </div>
 
-                    <div class="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                                Mit den Jahren habe ich mich intensiv mit den Themen traumatische Geburt, Sexualität und Partnerschaft und anderen Bereichen vertraut, dass Heilung weit außerhalb der klassischen Schulmedizin liegt – in Gesprächen, im Verstehen und im gemeinsamen Suchen nach Wegen, Erlebtes zu verarbeiten. Deshalb habe ich mich entschieden, meine Arbeit auf eine ganzheitliche, persönliche Beratung auszurichten, die nicht nur die medizinische, sondern auch die emotionale und partnerschaftliche Ebene einbezieht.
-                            </p>
-
-                            <p class="text-lg text-gray-700 leading-relaxed">
-                                Meine Praxis ist online, sodass ich Menschen weltweit erreichen kann – unabhängig von Wohnort oder äußeren Umständen. So haben Sie die Möglichkeit, in einem geschützten Raum über ihre Themen zu sprechen, ganz ohne Stress oder lange Wartezeiten.
-                            </p>
-                        </div>
-
-                        <div>
-                            <p class="text-lg text-gray-700 leading-relaxed mb-8">
-                                Ich bin fest davon überzeugt, dass sich klassische Medizin und feinstoffliche Heilmethoden nicht ausschließen, sondern ergänzen können. Neben meiner schulmedizinischen Ausbildung habe ich mich intensiv mit energetischen Heilmethoden befasst. Dieser ganzheitliche Ansatz ermöglicht es mir, sowohl körperliche als auch emotionale und energetische Prozesse zu berücksichtigen. Dadurch kann ich individuell abgestimmte Begleitungen anbieten, die die medizinische Perspektive mit einer tieferen Ebene des Heilens verbinden.
-                            </p>
-
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Was mir wichtig ist -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-4xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Was mir <span class="text-orange-500">wichtig</span> <span class="text-orange-500">ist</span>
-                        </h2>
-                    </div>
-
-                    <div class="prose prose-lg max-w-none mb-16">
-                        <p class="text-lg text-gray-700 leading-relaxed text-center">
-                            In meiner Arbeit stehen Vertrauen, Offenheit und Verständnis an erster Stelle. Mir ist es wichtig, dass sich jede Person, die sich an mich wendet, gesehen und ernst genommen fühlt. Mein Ziel ist es, einen sicheren Raum zu schaffen, in dem Sie sich ohne Angst öffnen können. Jede Erfahrung ist individuell, und ich arbeite ohne vorgefertigte Lösungen – gemeinsam finden wir den Weg, der zu Ihnen passt.
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Du kommst nicht mit einer Diagnose rein.<br>
+                            Und du gehst nicht mit einem Programm raus.
                         </p>
-                    </div>
 
-                    <div class="mb-12">
-                        <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Wichtiger Hinweis</h3>
-                        <div class="bg-orange-50 border-l-4 border-orange-500 p-6 rounded-lg">
-                            <p class="text-gray-700 mb-4">
-                                Meine Angebote im Bereich <strong>Sexualtherapie, Paartherapie und Traumabegleitung</strong> erfolgen im Rahmen meiner ärztlichen Tätigkeit mit psychosomatischer Grundversorgung. Sie verstehen sich als <strong>unterstützende, beratende und begleitende Maßnahmen</strong>.
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            <span class="font-medium text-gray-800">Du kommst so wie du bist.</span><br>
+                            Mit dem, was dich bewegt – auch wenn du noch keine Worte dafür hast.
+                        </p>
+
+                        <!-- Pull-Quote -->
+                        <p class="text-xl md:text-2xl text-dark-green font-semibold font-playfair italic leading-snug border-l-4 border-healing-orange pl-5 py-2 mb-8">
+                            Ich höre zuerst zu. Ich urteile nicht.
+                        </p>
+
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Ich kenne deinen Körper medizinisch – und ich weiß, was dahinter liegt.
+                        </p>
+
+                        <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                            Manchmal reicht Reden nicht.<br>
+                            Wir arbeiten auch mit dem Körper –<br>
+                            <span class="font-medium text-gray-800">weil er oft weiß, was der Kopf noch nicht sagen kann.</span>
+                        </p>
+
+                        <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                            Das Gespräch, das du hier führst –<br>
+                            das hast du vielleicht noch mit niemandem geführt.<br>
+                            <span class="font-medium text-gray-800">Das ist ok. Dafür bin ich da.</span>
+                        </p>
+
+                        <!-- Was du brauchst - ganz einfach, ohne Technikkram -->
+                        <div class="bg-white/60 backdrop-blur-sm rounded-2xl p-6 md:p-7 border border-orange-100 mb-8">
+                            <p class="text-base md:text-lg text-gray-700 leading-relaxed">
+                                <span class="text-orange-500 font-semibold">Und was brauchst du dafür?</span><br>
+                                Einen ruhigen Ort, an dem dich niemand stört.<br>
+                                Ein Gerät, mit dem du mich sehen und hören kannst – <span class="text-gray-600">Handy, Tablet oder Laptop, ganz wie es dir passt.</span><br>
+                                <span class="font-medium text-gray-800">Mehr nicht.</span>
                             </p>
-                            <p class="text-gray-700">
-                                Es handelt sich <strong>nicht um heilkundliche Psychotherapie nach dem Psychotherapeutengesetz (§ 1 PsychThG)</strong>. Sollten sich im Verlauf Hinweise auf eine behandlungsbedürftige psychische Erkrankung ergeben, empfehle ich die Hinzuziehung eines entsprechend approbierten Psychotherapeuten oder Psychiaters.
+                        </div>
+
+                        <!-- Signatur -->
+                        <div class="text-right">
+                            <p class="text-4xl md:text-5xl font-dancing text-orange-500">
+                                Sabrina Kising
                             </p>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Meine Werte -->
-        <section class="py-20 bg-warm-gray">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Meine <span class="text-orange-500">Werte</span>
-                        </h2>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <!-- Liebe als heilende Kraft -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-orange-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-heart text-orange-500 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Liebe als heilende Kraft</h3>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Liebe ist der Schlüssel zu Heilung und Verbindung – in Beziehungen und zu uns selbst. Gemeinsam erkunden wir Wege, emotionale Blockaden zu lösen, Vertrauen aufzubauen und eine tiefe, erfüllte Intimität zu erleben.
-                                    </p>
-                                </div>
+                    <!-- Foto rechts -->
+                    <div class="order-1 lg:order-2 lg:col-span-2">
+                        <div class="relative max-w-md mx-auto lg:sticky lg:top-32">
+                            <div class="relative z-10 bg-white rounded-2xl shadow-xl border border-orange-100 p-3">
+                                <img src="images/sabrina-tasse-haende.jpg" 
+                                     alt="Dr. Sabrina Kising – ein ruhiger Moment" 
+                                     class="w-full h-auto rounded-xl">
                             </div>
-                        </div>
-
-                        <!-- Sanfte Begleitung bei Veränderungen -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-emerald-600/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-seedling text-emerald-600 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Sanfte Begleitung bei Veränderungen</h3>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Jede Veränderung, sei es in der Partnerschaft oder durch Erfahrungen wie Schwangerschaft und Geburt, bringt Herausforderungen mit sich. Ich begleite Sie einfühlsam auf Ihrem Weg zu mehr Klarheit, innerer Stärke und emotionalem Wohlbefinden.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Heilung durch Bewusstsein und Selbstfürsorge -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-brain text-emerald-500 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Heilung durch Bewusstsein und Selbstfürsorge</h3>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Bewusstes Wahrnehmen der eigenen Bedürfnisse, Ängste und Wünsche ermöglicht nachhaltige Heilung. In einem geschützten Raum unterstütze ich Sie dabei, sich selbst zu verstehen, Blockaden zu lösen und liebevoll für sich zu sorgen.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Offene Kommunikation und Vertrauen -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="flex items-start space-x-4">
-                                <div class="w-16 h-16 bg-emerald-700/20 rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-comments text-emerald-700 text-2xl"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Offene Kommunikation und Vertrauen</h3>
-                                    <p class="text-gray-700 leading-relaxed">
-                                        Ehrliche und wertschätzende Kommunikation ist die Basis für eine tiefe Verbindung – mit Ihrem Partner, Ihrem Kind und sich selbst. Ich helfe Ihnen, Ihre Gefühle und Bedürfnisse zu erkennen und mutig auszudrücken.
-                                    </p>
-                                </div>
-                            </div>
+                            <div class="absolute -top-8 -right-12 w-20 h-20 bg-healing-orange opacity-20 rounded-full"></div>
+                            <div class="absolute -bottom-12 -left-10 w-28 h-28 bg-orange-300 opacity-25 rounded-full"></div>
                         </div>
                     </div>
                 </div>
@@ -395,142 +368,75 @@
         </section>
 
         <!-- Meine Qualifikationen -->
-        <section class="py-20 bg-white">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
+        <section class="py-20 bg-white relative overflow-hidden">
+            <!-- Dezente Hintergrund-Akzente -->
+            <div class="absolute top-40 -right-20 w-72 h-72 bg-orange-100/30 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-40 -left-20 w-80 h-80 bg-emerald-100/30 rounded-full blur-3xl"></div>
+
+            <div class="container mx-auto px-4 relative z-10">
+                <div class="max-w-4xl mx-auto">
                     <div class="text-center mb-16">
-                        <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">ÜBER MICH</p>
+                        <p class="text-sm uppercase tracking-wide text-emerald-700 font-semibold mb-4">MEINE QUALIFIKATIONEN</p>
                         <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Meine <span class="text-orange-500">Qualifikation</span>
+                            Was ich <span class="text-orange-500">mitbringe</span>
                         </h2>
                     </div>
 
-                    <div class="grid md:grid-cols-2 gap-12">
-                        <!-- Linke Spalte -->
-                        <div class="space-y-8">
-                            <!-- Fachärztin -->
-                            <div class="bg-gradient-to-br from-orange-50 to-emerald-50 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Fachärztin für Frauenheilkunde und Geburtshilfe</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Langjährige Ausbildung und ärztliche Tätigkeit mit fundiertem schulmedizinischem Wissen über den weiblichen Körper, Zyklus, Schwangerschaft, Geburt und Wochenjahre.
+                    <div class="space-y-8">
+                        <!-- Punkt 1 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-3 h-3 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">Fachärztin für Frauenheilkunde und Geburtshilfe</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed mb-3">
+                                    Langjährige Erfahrung in einem Perinatalzentrum Level 1. Ich kenne den weiblichen Körper – medizinisch, in seinen Zyklen, in seinen Veränderungen.
                                 </p>
-                            </div>
-
-                            <!-- Spezialisierung -->
-                            <div class="bg-white border-2 border-orange-200 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Spezialisierung auf traumatische Schwangerschafts- und Geburtserfahrungen</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Durch meine klinische Erfahrung und zusätzliche Fortbildungen habe ich mich auf die Begleitung von Frauen und Paaren spezialisiert, die eine belastende oder traumatische Geburt erlebt haben.
-                                </p>
-                            </div>
-
-                            <!-- Paartherapie Ausbildung -->
-                            <div class="bg-gradient-to-br from-emerald-50 to-orange-50 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Ausbildung in Paar- und Sexualtherapie (Mai 2022–Juni 2024)</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Um auch partnerschaftliche und sexuelle Themen kompetent begleiten zu können, habe ich eine fundierte, therapeutische Zusatzausbildung absolviert, die mir ermöglicht, mit Paaren und Einzelpersonen an Beziehungsthemen, Intimität, Kommunikationsproblemen und sexuellen Blockaden zu arbeiten.
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Und ich weiß: <span class="font-medium text-gray-800">der Körper vergisst nichts.</span> Was er erlebt hat, trägt er – oft lange, oft still.
                                 </p>
                             </div>
                         </div>
 
-                        <!-- Rechte Spalte -->
-                        <div class="space-y-8">
-                            <!-- Klinische Erfahrung -->
-                            <div class="bg-gradient-to-br from-emerald-600/10 to-orange-500/10 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Mehrjährige klinische Erfahrung mit über 3.600 Geburten pro Jahr in einem Perinatalzentrum Level 1</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Als Teil eines hochfrequentierten Geburtszentrums habe ich wertvolle Einblicke in alle Aspekte der Geburtshilfe gewonnen – von der natürlichen Geburt bis hin zu komplexen Notfallsituationen.
+                        <!-- Punkt 2 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-3 h-3 bg-emerald-600 rounded-full mt-3 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">Paar- und Sexualtherapeutin</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Fundierte therapeutische Zusatzausbildung. Ich begleite was danach bleibt – im Körper, in der Lust, zwischen zwei Menschen. Was entstanden ist. Was verloren gegangen ist. <span class="font-medium text-gray-800">Was wieder möglich werden kann.</span>
                                 </p>
                             </div>
+                        </div>
 
-                            <!-- Niedergelassener Bereich -->
-                            <div class="bg-white border-2 border-emerald-200 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Tätigkeit im niedergelassenen Bereich</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Zusätzlich zur klinischen Erfahrung war ich im ambulanten Bereich tätig und konnte Patientinnen kontinuierlich begleiten – von der Vorsorge über die Beratung bis hin zur Nachsorge.
-                                </p>
-                            </div>
-
-                            <!-- Energetische Heilmethoden -->
-                            <div class="bg-gradient-to-br from-orange-50 to-emerald-100 p-6 rounded-2xl">
-                                <h3 class="text-xl font-bold text-gray-800 mb-4">Zusätzliche Ausbildungen im Bereich energetisches Arbeiten und feinstoffliche Heilmethoden</h3>
-                                <p class="text-gray-700 leading-relaxed">
-                                    Neben der klassischen Schulmedizin habe ich mich intensiv mit energetischen Heilansätzen befasst. Diese Ausbildungen ermöglichen mir, auch auf feinstofflicher Ebene zu arbeiten – zum Beispiel über Körperwahrnehmung, Energiearbeit oder intuitive Prozesse. Dadurch verbinde ich medizinisches Wissen mit einem erweiterten Blick auf Gesundheit und Heilung.
+                        <!-- Punkt 3 -->
+                        <div class="flex items-start gap-5">
+                            <div class="w-3 h-3 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
+                            <div>
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-800 mb-3">Mutter und Frau</h3>
+                                <p class="text-lg text-gray-700 leading-relaxed">
+                                    Ich kenne das nicht nur aus der Praxis. Elternwerden verändert alles – auch die Liebe. Auch das Begehren. Auch das Bild von sich selbst. <span class="font-medium text-gray-800">Das ist kein Lehrbuchsatz. Das ist meine Geschichte.</span>
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Was andere über mich sagen -->
-        <section class="py-20 bg-warm-gray">
-            <div class="container mx-auto px-4">
-                <div class="max-w-6xl mx-auto">
-                    <div class="text-center mb-16">
-                        <p class="text-sm text-orange-500 font-semibold tracking-wider uppercase mb-4">ÜBER MICH</p>
-                        <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
-                            Was andere über mich <span class="text-orange-500">sagen</span>
-                        </h2>
+                    <!-- Hervorhebung -->
+                    <div class="mt-12 bg-gradient-to-br from-orange-50 to-emerald-50 border-l-4 border-orange-500 rounded-r-xl p-8 shadow-sm">
+                        <p class="text-xl md:text-2xl text-gray-800 font-playfair italic leading-relaxed text-center">
+                            Diese Kombination ist selten.<br>
+                            <span class="font-semibold text-orange-600 not-italic">Und für genau dein Thema entscheidend.</span>
+                        </p>
                     </div>
 
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <!-- Testimonial 1 -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Als Ärztin erlebe ich oft belastende Situationen, über die ich mit niemandem sprechen kann. Dr. Kising bietet einen geschützten Raum, in dem ich mich offen austauschen kann – das ist unbezahlbar."
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-gray-800">Dr. Katharina S.</p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 2 -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Ich war immer eifersüchtig, konnte aber nie genau sagen, warum. Durch die Gespräche mit Dr. Kising habe ich verstanden, woher dieses Gefühl kommt – und endlich einen Weg gefunden, damit umzugehen."
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-gray-800">Sandra H.</p>
-                            </div>
-                        </div>
-
-                        <!-- Testimonial 3 -->
-                        <div class="bg-white p-8 rounded-2xl shadow-lg">
-                            <div class="mb-6">
-                                <div class="flex text-orange-500 mb-4">
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                    <i class="fas fa-star"></i>
-                                </div>
-                                <p class="text-gray-700 leading-relaxed italic">
-                                    "Ich hätte nicht gedacht, dass eine Online-Beratung so intensiv sein kann. Dr. Kising schafft es, dass man sich verstanden und gut aufgehoben fühlt – auch über den Bildschirm!"
-                                </p>
-                            </div>
-                            <div class="border-t border-gray-200 pt-6">
-                                <p class="font-semibold text-gray-800">Anja R.</p>
-                            </div>
+                    <div class="mt-16">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">
+                            <i class="fas fa-info-circle text-healing-orange mr-2"></i>
+                            Wichtig zu wissen
+                        </h3>
+                        <div class="bg-gradient-to-br from-orange-50 to-emerald-50 border-l-4 border-healing-orange p-8 rounded-2xl shadow-sm">
+                            <p class="text-gray-700 leading-relaxed">
+                                Meine Online-Begleitung in den Bereichen <strong>Traumabearbeitung, Paar- und Sexualberatung</strong> ist ein beratendes und unterstützendes Angebot. Es ersetzt keine Psychotherapie nach dem Psychotherapeutengesetz (§ 1 PsychThG) und keine ärztliche Behandlung. Es erfolgt keine Diagnosestellung. Sollten sich im Verlauf Hinweise auf eine behandlungsbedürftige psychische Erkrankung zeigen, empfehle ich gemeinsam den richtigen nächsten Schritt.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -540,23 +446,40 @@
         <!-- Call to Action -->
         <section class="py-20 bg-gradient-to-r from-orange-500 to-emerald-600 text-white">
             <div class="container mx-auto px-4 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                    Lassen Sie uns gemeinsam den ersten Schritt gehen
+                <p class="text-xl md:text-2xl lg:text-3xl text-white font-playfair italic mb-6 leading-snug">
+                    Du weißt jetzt, wer ich bin<br class="hidden md:block">
+                    und was mich bewegt.
+                </p>
+                <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+                    Lass uns darüber sprechen,<br class="hidden md:block">
+                    was dich bewegt.
                 </h2>
-                <p class="text-xl mb-8 max-w-3xl mx-auto leading-relaxed opacity-90">
-                    Ihre Gefühle sind berechtigt. Ihre Erfahrung verdient Aufmerksamkeit. 
-                    Lassen Sie uns gemeinsam Ihren Weg zu mehr Heilung, Vertrauen und emotionalem Wohlbefinden gehen.
+                <p class="text-lg md:text-xl mb-10 max-w-2xl mx-auto leading-relaxed opacity-95">
+                    15 Minuten. Kostenlos. Ohne Verpflichtung.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
                     <a href="#" class="meetergo-modal-button bg-white text-orange-500 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-300 shadow-lg" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
                         <i class="fas fa-calendar-alt mr-2"></i>
-                        <span class="hidden xl:inline">Online Termin vereinbaren</span>
-                        <span class="xl:hidden">Termin vereinbaren</span>
+                        Gespräch vereinbaren
                     </a>
-                    <a href="kontakt.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300">
-                        <i class="fas fa-envelope mr-2"></i>
-                        Kontakt aufnehmen
+                    <a href="#" class="meetergo-modal-button border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-orange-500 transition-all duration-300" link="https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde">
+                        <i class="fas fa-info-circle mr-2"></i>
+                        15 Min. Kennenlernen – kostenlos
                     </a>
+                </div>
+
+                <!-- Preistransparenz - selbstbewusst unter dem CTA -->
+                <div class="mt-14 pt-10 border-t border-white/30 max-w-2xl mx-auto">
+                    <div class="grid sm:grid-cols-2 gap-6 text-white">
+                        <div>
+                            <p class="text-base font-medium tracking-wide mb-1">Einzelbegleitung</p>
+                            <p class="text-lg opacity-95">50 Min. · <span class="font-semibold">160 €</span></p>
+                        </div>
+                        <div>
+                            <p class="text-base font-medium tracking-wide mb-1">Paarbegleitung</p>
+                            <p class="text-lg opacity-95">80 Min. · <span class="font-semibold">220 €</span></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -576,10 +499,13 @@
                         <p class="text-lg text-gray-700 font-medium mb-4">
                             Heilung beginnt da, wo Liebe Raum bekommt.
                         </p>
+                        <p class="font-playfair italic text-lg text-gray-800 leading-relaxed mb-2">
+                            Eltern werden verändert alles. Auch die Liebe.
+                        </p>
                         <p class="text-gray-600 leading-relaxed">
-                            Ganzheitliche Online-Begleitung in Paar- und Sexualtherapie 
-                            sowie bei traumatischen Geburten – empathisch, professionell 
-                            und persönlich.
+                            Für Frauen nach belastenden Geburtserfahrungen.
+                            <br>
+                            Für Paare, die sich nicht verlieren wollen.
                         </p>
                         <p class="text-sm text-gray-500 mt-3">
                             Dr. med. Sabrina Kising
@@ -589,21 +515,21 @@
 
                 <!-- Mein Angebot -->
                 <div class="md:col-span-3 lg:col-span-3">
-                    <h4 class="font-bold text-lg text-gray-800 mb-4">Mein Angebot</h4>
+                    <h4 class="font-bold text-lg text-gray-800 mb-4">Meine Angebote</h4>
                     <ul class="space-y-3 text-gray-600">
                         <li>
                             <a href="trauma-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Trauma-Therapie
+                                Dein Geburtserlebnis
                             </a>
                         </li>
                         <li>
                             <a href="paar-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Paar-Therapie
+                                Noch wir
                             </a>
                         </li>
                         <li>
                             <a href="sexual-therapie.html" class="hover:text-orange-500 transition-colors">
-                                Sexual-Therapie
+                                Für dich – als Frau
                             </a>
                         </li>
                     </ul>
@@ -823,5 +749,32 @@
         });
 
 
+    <script>
+        // Meine Angebote Dropdown Funktionalität
+        function toggleCoachingDropdown() {
+            const menu = document.getElementById('coaching-menu');
+            const chevron = document.getElementById('coaching-chevron');
+
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                chevron.style.transform = 'rotate(180deg)';
+            } else {
+                menu.classList.add('hidden');
+                chevron.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Dropdown schließen wenn außerhalb geklickt wird
+        document.addEventListener('click', function(event) {
+            const dropdown = document.getElementById('coaching-dropdown');
+            const menu = document.getElementById('coaching-menu');
+            const chevron = document.getElementById('coaching-chevron');
+
+            if (dropdown && !dropdown.contains(event.target)) {
+                if (menu) menu.classList.add('hidden');
+                if (chevron) chevron.style.transform = 'rotate(0deg)';
+            }
+        });
+    </script>
 </body>
 </html>

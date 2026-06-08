@@ -205,13 +205,13 @@
         <div class="lg:hidden">
             <!-- Mobile Foto - eigene Portrait-Crops mit Headroom oben, damit der Kopf auf keinem Gerät abgeschnitten wird -->
             <div class="relative w-full h-[70vh] sm:h-[75vh] overflow-hidden">
-                <picture>
+                <picture class="block w-full h-full">
                     <!-- Tablet: breiterer Crop (ab 640px) -->
                     <source media="(min-width: 640px)" srcset="images/sabrina-hero-tablet.jpg">
                     <!-- Mobile: enger Portrait-Crop, Kopf mittig mit Headroom -->
                     <img src="images/sabrina-hero-portrait.jpg" 
                          alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
-                         class="w-full h-full object-cover" style="object-position: center top;">
+                         class="block w-full h-full object-cover" style="object-position: center top;">
                 </picture>
                 <!-- Sanfter Verlauf nach unten -->
                 <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white"></div>

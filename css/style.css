@@ -569,6 +569,46 @@ header {
 }
 
 /* ============================================================
+   iPAD-PRO-HOCHKANT-FIX (ab 1024px im Hochformat)
+   Das Desktop-Layout ist für Querformat-Hero ausgelegt. Auf einem
+   iPad Pro Hochkant (1024x1366) wird der Hero-Container fast
+   quadratisch -> Sabrina wird übergroß gerendert und gerät hinter
+   den Lesbarkeits-Schleier. Lösung: auf Hochformat-Viewports ab
+   1024px das Mobile/Tablet-Layout (Foto oben, Text unten) zeigen.
+   ============================================================ */
+@media (min-width: 1024px) and (orientation: portrait) {
+    section#home > div.lg\:hidden { display: block !important; }
+    section#home > div.hidden.lg\:block { display: none !important; }
+    section#home {
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+    }
+    /* Foto-Container etwas höher, da Viewport viel Höhe hat */
+    section#home > div.lg\:hidden > div:first-child {
+        height: 55vh !important;
+        max-height: 720px;
+    }
+    /* Text-Container zentriert mit max-width für angenehme Lesbarkeit */
+    section#home > div.lg\:hidden > div:nth-child(2) {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    /* Buttons nebeneinander */
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 > a {
+        flex: 1 1 240px;
+    }
+}
+
+/* ============================================================
    TABLET-OPTIMIERUNG (768px – 1023px)
    Hier wird das Layout für iPad Portrait/Landscape und vergleich-
    bare Tablets gezielt korrigiert. Die Seite wurde primär für

@@ -203,11 +203,16 @@
     <section id="home" class="relative bg-gradient-to-r from-gray-100 to-gray-200 lg:h-screen lg:overflow-hidden">
         <!-- ============ MOBILE LAYOUT: Foto oben, Text unten ============ -->
         <div class="lg:hidden">
-            <!-- Mobile Foto -->
+            <!-- Mobile Foto - eigene Portrait-Crops mit Headroom oben, damit der Kopf auf keinem Gerät abgeschnitten wird -->
             <div class="relative w-full h-[70vh] sm:h-[75vh] overflow-hidden">
-                <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
-                     alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
-                     class="w-full h-full object-cover" style="object-position: 60% 15%;">
+                <picture>
+                    <!-- Tablet: breiterer Crop (ab 640px) -->
+                    <source media="(min-width: 640px)" srcset="images/sabrina-hero-tablet.jpg">
+                    <!-- Mobile: enger Portrait-Crop -->
+                    <img src="images/sabrina-hero-portrait.jpg" 
+                         alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
+                         class="w-full h-full object-cover" style="object-position: center 25%;">
+                </picture>
                 <!-- Sanfter Verlauf nach unten -->
                 <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white"></div>
             </div>
@@ -272,12 +277,15 @@
 
         <!-- ============ DESKTOP LAYOUT: Foto als Hintergrund ============ -->
         <div class="hidden lg:block h-full">
-            <div class="absolute inset-0">
-                <div class="w-full h-full relative">
-                    <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
+            <!-- Weißer Streifen oben in Menü-Höhe, damit das Foto nicht hinter der Menü verschwindet -->
+            <div class="absolute top-0 left-0 right-0 h-24 bg-white z-[5]"></div>
+            <div class="absolute inset-0 pt-24">
+                <div class="w-full h-full relative overflow-hidden">
+                    <img src="images/sabrina-hero-desktop.jpg" 
                          alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
                          class="w-full h-full object-cover object-[center_top]">
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/55 to-transparent"></div>
+                    <!-- Lesbarkeits-Schleier: links für Text-Lesbarkeit, rechte Hälfte (Gesicht) bleibt kräftig -->
+                    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.7) 25%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0) 65%);"></div>
                 </div>
             </div>
             

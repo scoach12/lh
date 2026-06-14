@@ -200,14 +200,19 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative bg-gradient-to-r from-gray-100 to-gray-200 lg:h-screen lg:overflow-hidden">
+    <section id="home" class="relative bg-white lg:bg-gradient-to-r lg:from-gray-100 lg:to-gray-200 lg:h-screen lg:overflow-hidden">
         <!-- ============ MOBILE LAYOUT: Foto oben, Text unten ============ -->
         <div class="lg:hidden">
-            <!-- Mobile Foto -->
+            <!-- Mobile Foto - eigene Portrait-Crops mit Headroom oben, damit der Kopf auf keinem Gerät abgeschnitten wird -->
             <div class="relative w-full h-[70vh] sm:h-[75vh] overflow-hidden">
-                <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
-                     alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
-                     class="w-full h-full object-cover" style="object-position: 60% 15%;">
+                <picture class="block w-full h-full">
+                    <!-- Ab 500px (Foldables wie Surface Duo bis Tablet): Querformat-Crop mit vollem Oberkörper -->
+                    <source media="(min-width: 500px)" srcset="images/sabrina-hero-desktop.jpg">
+                    <!-- Mobile: enger Portrait-Crop, Kopf mittig mit Headroom -->
+                    <img src="images/sabrina-hero-portrait.jpg" 
+                         alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
+                         class="block w-full h-full object-cover" style="object-position: center top;">
+                </picture>
                 <!-- Sanfter Verlauf nach unten -->
                 <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-b from-transparent to-white"></div>
             </div>
@@ -272,12 +277,18 @@
 
         <!-- ============ DESKTOP LAYOUT: Foto als Hintergrund ============ -->
         <div class="hidden lg:block h-full">
-            <div class="absolute inset-0">
-                <div class="w-full h-full relative">
+            <!-- Weißer Streifen oben in Menü-Höhe, damit das Foto nicht hinter der Menü verschwindet -->
+            <div class="absolute top-0 left-0 right-0 h-24 bg-white z-[5]"></div>
+            <div class="absolute inset-0 pt-24">
+                <div class="w-full h-full relative overflow-hidden">
+                    <!-- Bild absichtlich breiter als Container (110%) und um 5.3% nach rechts verschoben,
+                         damit die Nasenspitze auf die vom User markierte Zielposition rückt -->
                     <img src="https://page.gensparksite.com/v1/base64_upload/331e880532d9f7e6983b792d8a85b907" 
                          alt="Dr. med. Sabrina Kising - Online-Therapeutin für Trauma, Paar-Therapie und Sexualtherapie" 
-                         class="w-full h-full object-cover object-[center_top]">
-                    <div class="absolute inset-0 bg-gradient-to-r from-white/95 via-white/55 to-transparent"></div>
+                         class="absolute top-0 left-0 w-full h-full object-cover" 
+                         style="object-position: 80% top; transform: translateX(5.3%);">
+                    <!-- Lesbarkeits-Schleier: links für Text-Lesbarkeit, rechte Hälfte (Gesicht) bleibt kräftig -->
+                    <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(255,255,255,0.92) 0%, rgba(255,255,255,0.7) 30%, rgba(255,255,255,0.15) 58%, rgba(255,255,255,0) 75%);"></div>
                 </div>
             </div>
             
@@ -392,7 +403,7 @@
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center">
-                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
+                        <div class="w-full max-w-[22rem] aspect-square md:w-[26rem] md:h-[26rem] md:aspect-auto lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/005740a99da5270d410164e8da5fa054" 
                                  alt="Aquarell-Silhouette einer schwangeren Frau mit Spiegelung - Symbol für Trauma-Therapie und Heilung" 
                                  class="w-full h-full object-cover rounded-2xl">
@@ -401,9 +412,9 @@
                 </div>
 
                 <!-- Paar-Therapie -->
-                <div id="paar" class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center bg-gradient-to-r from-orange-50 to-emerald-50 py-16 px-8 md:px-12 rounded-3xl">
+                <div id="paar" class="grid lg:grid-cols-12 gap-10 lg:gap-16 items-center bg-gradient-to-r from-orange-50 to-emerald-50 py-16 px-4 sm:px-8 md:px-12 rounded-3xl">
                     <div class="order-2 lg:order-1 lg:col-span-5 flex justify-center">
-                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
+                        <div class="w-full max-w-[22rem] aspect-square md:w-[26rem] md:h-[26rem] md:aspect-auto lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/6314f2426497cf05b27187ee9e349c17" 
                                  alt="Aquarell-Silhouetten eines Paares mit Spiegelung - Symbol für Paar-Therapie und Verbindung" 
                                  class="w-full h-full object-cover rounded-2xl">
@@ -424,7 +435,7 @@
                                 Ihr habt euch nicht verloren.<br>Ihr habt euch nur aus den Augen verloren.
                             </p>
                             <a href="paar-therapie.html" class="inline-block bg-dark-green text-white px-7 py-4 rounded-lg font-medium hover:bg-dark-green/90 transition-colors">
-                                Zurück zu „noch wir"
+                                Ich will „Noch wir."
                             </a>
                         </div>
                     </div>
@@ -452,7 +463,7 @@
                         </div>
                     </div>
                     <div class="order-1 lg:order-2 lg:col-span-5 flex justify-center">
-                        <div class="w-[22rem] h-[22rem] md:w-[26rem] md:h-[26rem] lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
+                        <div class="w-full max-w-[22rem] aspect-square md:w-[26rem] md:h-[26rem] md:aspect-auto lg:w-[28rem] lg:h-[28rem] bg-white rounded-2xl flex items-center justify-center relative overflow-hidden shadow-xl border border-orange-100">
                             <img src="https://page.gensparksite.com/v1/base64_upload/fde0978a3eea22ea5484d96118eacc18" 
                                  alt="Aquarell-Tulpe in Orange-Tönen - Symbol für Sexual-Therapie und Blüte der Intimität" 
                                  class="w-full h-full object-cover rounded-2xl">

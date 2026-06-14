@@ -3,12 +3,15 @@
 /* Smooth scrolling */
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 /* Body styles */
 body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+    max-width: 100vw;
 }
 
 /* Logo font */
@@ -562,6 +565,301 @@ header {
     
     html {
         scroll-behavior: auto;
+    }
+}
+
+/* ============================================================
+   iPAD-PRO-HOCHKANT-FIX (ab 1024px im Hochformat)
+   Das Desktop-Layout ist für Querformat-Hero ausgelegt. Auf einem
+   iPad Pro Hochkant (1024x1366) wird der Hero-Container fast
+   quadratisch -> Sabrina wird übergroß gerendert und gerät hinter
+   den Lesbarkeits-Schleier. Lösung: auf Hochformat-Viewports ab
+   1024px das Mobile/Tablet-Layout (Foto oben, Text unten) zeigen.
+   ============================================================ */
+@media (min-width: 1024px) and (orientation: portrait) {
+    section#home > div.lg\:hidden { display: block !important; }
+    section#home > div.hidden.lg\:block { display: none !important; }
+    section#home {
+        height: auto !important;
+        overflow: visible !important;
+        background: white !important;
+    }
+    /* Foto-Container etwas höher, da Viewport viel Höhe hat */
+    section#home > div.lg\:hidden > div:first-child {
+        height: 55vh !important;
+        max-height: 720px;
+    }
+    /* Text-Container zentriert mit max-width für angenehme Lesbarkeit */
+    section#home > div.lg\:hidden > div:nth-child(2) {
+        max-width: 720px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+    /* Buttons nebeneinander */
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 > a {
+        flex: 1 1 240px;
+    }
+}
+
+/* ============================================================
+   TABLET-OPTIMIERUNG (768px – 1023px)
+   Hier wird das Layout für iPad Portrait/Landscape und vergleich-
+   bare Tablets gezielt korrigiert. Die Seite wurde primär für
+   Mobile + Desktop entwickelt – diese Regeln verhindern, dass
+   im Tablet-Bereich eine "gestreckte Mobile-Version" entsteht.
+   ============================================================ */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    /* ---------- HERO (Startseite, Mobile-Block wird im Tablet
+       weiterverwendet, aber Foto und Innenabstände werden
+       proportional reduziert) ---------- */
+    section#home > div.lg\:hidden > div:first-child {
+        /* Mobile-Foto: bei Tablet kürzer halten, damit Text-
+           Inhalt noch über der Falz sichtbar wird */
+        height: 52vh !important;
+        max-height: 540px;
+    }
+
+    section#home > div.lg\:hidden > div:nth-child(2) {
+        /* Text-Container im Hero: zentrieren und maximale
+           Breite begrenzen für angenehme Zeilenlänge */
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /* Hero-CTA-Buttons nebeneinander statt full-width gestapelt */
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 {
+        flex-direction: row;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    section#home > div.lg\:hidden > div:nth-child(2) .flex.flex-col.gap-3 > a {
+        flex: 1 1 240px;
+    }
+
+    /* ---------- Generelle Buttons / CTAs auf Tablet
+       nicht mehr full-width strecken ---------- */
+    .btn-primary,
+    .btn-secondary,
+    a.meetergo-modal-button.btn-primary,
+    a.btn-secondary {
+        /* Tablets: nicht über die ganze Breite */
+        display: inline-flex !important;
+        width: auto !important;
+    }
+
+    /* Buttons-Container, der via flex-col stapelt, im Tablet
+       nebeneinander darstellen (greift für viele CTAs auf den
+       Therapie-Unterseiten) */
+    .hero-buttons,
+    .cta-buttons,
+    .button-group {
+        flex-direction: row !important;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+
+    /* ---------- Service-Sections: Bilder + Text nebeneinander
+       statt gestapelt (gilt für trauma, paar, sexual) ---------- */
+    .grid.lg\:grid-cols-12 {
+        grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
+        gap: 2.5rem !important;
+        align-items: center;
+    }
+    .grid.lg\:grid-cols-12 > .lg\:col-span-7 {
+        grid-column: span 7 / span 7;
+    }
+    .grid.lg\:grid-cols-12 > .lg\:col-span-5 {
+        grid-column: span 5 / span 5;
+    }
+    .grid.lg\:grid-cols-12 > .lg\:col-span-6 {
+        grid-column: span 6 / span 6;
+    }
+    .grid.lg\:grid-cols-12 > .lg\:order-1 { order: 1; }
+    .grid.lg\:grid-cols-12 > .lg\:order-2 { order: 2; }
+
+    /* Service-Bilder im Tablet kleiner: keine 26rem mehr */
+    .grid.lg\:grid-cols-12 .w-\[22rem\].h-\[22rem\],
+    .grid.lg\:grid-cols-12 .md\:w-\[26rem\].md\:h-\[26rem\] {
+        width: 18rem !important;
+        height: 18rem !important;
+    }
+
+    /* ---------- lg:grid-cols-2 (Therapie-Unterseiten) :
+       auch im Tablet zweispaltig anzeigen ---------- */
+    .grid.lg\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 2.5rem !important;
+        align-items: center;
+    }
+    .grid.lg\:grid-cols-2 > .lg\:order-1 { order: 1; }
+    .grid.lg\:grid-cols-2 > .lg\:order-2 { order: 2; }
+    /* Bilder in diesen zweispaltigen Sektionen begrenzen */
+    .grid.lg\:grid-cols-2 img {
+        max-width: 100%;
+        height: auto;
+    }
+    .grid.lg\:grid-cols-2 .w-\[22rem\],
+    .grid.lg\:grid-cols-2 .md\:w-\[26rem\],
+    .grid.lg\:grid-cols-2 .lg\:w-\[28rem\] {
+        width: 100% !important;
+        max-width: 22rem;
+        height: auto !important;
+        aspect-ratio: 1 / 1;
+    }
+    .grid.lg\:grid-cols-2 .h-\[22rem\],
+    .grid.lg\:grid-cols-2 .md\:h-\[26rem\],
+    .grid.lg\:grid-cols-2 .lg\:h-\[28rem\] {
+        height: auto !important;
+        max-height: 22rem;
+    }
+
+    /* ---------- lg:grid-cols-5 (z.B. Über-mich Hero) :
+       zweispaltig 3:2 Aufteilung auf Tablet ---------- */
+    .grid.lg\:grid-cols-5 {
+        grid-template-columns: 3fr 2fr !important;
+        gap: 2.5rem !important;
+        align-items: center;
+    }
+    .grid.lg\:grid-cols-5 > .lg\:col-span-3 {
+        grid-column: span 1 / span 1;
+    }
+    .grid.lg\:grid-cols-5 > .lg\:col-span-2 {
+        grid-column: span 1 / span 1;
+    }
+    .grid.lg\:grid-cols-5 > .lg\:order-1 { order: 1; }
+    .grid.lg\:grid-cols-5 > .lg\:order-2 { order: 2; }
+
+    /* ---------- "Über mich" / Inhaltsbild + Textblöcke
+       zweispaltig auf Tablet ---------- */
+    .grid.md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 2rem;
+    }
+
+    /* 4-Spalten-Grid (z.B. "Vorteile Online-Therapie") als 2x2
+       statt 4x1 - damit nicht alles untereinander steht */
+    .grid.md\:grid-cols-2.lg\:grid-cols-4 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    /* Testimonials: bei 768-820px nur 2 Spalten (statt 3),
+       damit die Karten lesbar bleiben */
+    .grid.grid-cols-1.md\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    /* Letzte Karte zentriert, wenn 3 Items in 2 Spalten */
+    .grid.grid-cols-1.md\:grid-cols-3 > *:nth-child(3):last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        justify-self: center;
+    }
+
+    /* Footer-Spalten: leicht reduzieren */
+    .grid.md\:grid-cols-12 {
+        gap: 2rem;
+    }
+
+    /* ---------- Lesbarkeit: Fließtext nicht über ganze Breite
+       strecken (max ~70 Zeichen) ---------- */
+    section .container.mx-auto > div > p,
+    section .max-w-7xl > div > p,
+    .prose p {
+        max-width: 65ch;
+    }
+
+    /* Innerhalb von einspaltigen text-zentrierten Abschnitten
+       (häufig "max-w-3xl mx-auto" oder "max-w-4xl mx-auto") wird
+       der Fließtext zusätzlich begrenzt für angenehme Lesbarkeit */
+    section .max-w-3xl,
+    section .max-w-4xl {
+        max-width: 36rem !important;
+    }
+
+    /* Aber: Container-Wrapper, die Buttons/Boxen-Gruppen umschließen,
+       sollen wieder ihre volle Breite haben */
+    section .max-w-3xl:has(.grid),
+    section .max-w-4xl:has(.grid),
+    section .max-w-3xl:has(button),
+    section .max-w-4xl:has(button) {
+        max-width: 100% !important;
+    }
+
+    /* Testimonials/Kommentar-Karten: bei lg:grid-cols-3 auf 2 Spalten */
+    .grid.lg\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 1.5rem;
+    }
+    .grid.lg\:grid-cols-3 > *:nth-child(3):last-child {
+        grid-column: 1 / -1;
+        max-width: 50%;
+        justify-self: center;
+    }
+
+    /* ---------- Navigation bei 768px-1023px:
+       Logo bleibt mittig, Menü etwas kompakter,
+       Button-Text wird verkürzt durch xl:hidden span ---------- */
+    header nav .hidden.md\:flex {
+        gap: 0.75rem;
+    }
+    header nav .hidden.md\:flex .nav-link {
+        font-size: 0.875rem;
+    }
+    /* CTA-Button im Header etwas schlanker */
+    header nav .hidden.md\:flex a.meetergo-modal-button {
+        padding-left: 0.875rem;
+        padding-right: 0.875rem;
+        font-size: 0.875rem;
+    }
+
+    /* ---------- Floating decorative Elemente im Hero
+       auf Tablet ausblenden (waren ohnehin nur Desktop) ---------- */
+    .floating-elements,
+    section#home .animate-pulse {
+        display: none !important;
+    }
+
+    /* ---------- Container-Padding für Tablet sanft erhöhen ---------- */
+    .container.mx-auto {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+/* Speziell sehr schmaler Tablet-Bereich (768–820px Portrait):
+   Navigation noch enger setzen, sonst kann sie überlaufen */
+@media (min-width: 768px) and (max-width: 860px) {
+    header nav .hidden.md\:flex {
+        gap: 0.5rem;
+    }
+    header nav .hidden.md\:flex .nav-link {
+        font-size: 0.8125rem;
+    }
+    header nav .hidden.md\:flex a.meetergo-modal-button span.xl\:hidden {
+        display: none;
+    }
+    /* In diesem schmalen Bereich nur das Icon des CTA zeigen */
+    header nav .hidden.md\:flex a.meetergo-modal-button {
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+    }
+    header nav .hidden.md\:flex a.meetergo-modal-button::after {
+        content: "Termin";
+        font-size: 0.8125rem;
+    }
+    header nav .hidden.md\:flex a.meetergo-modal-button i {
+        margin-right: 0.25rem;
     }
 }
 

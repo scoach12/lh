@@ -41,7 +41,7 @@ Das wars! Ihr Kontaktformular sendet jetzt direkt an Make.com.
 
 ### Schritt 1: E-Mail-Benachrichtigung
 - **App:** "Email" → "Send an Email"
-- **An:** `kontakt@liebe-heilung.de`
+- **An:** `kontakt@liebeheilung.de`
 - **Betreff:** `Neue Kontaktanfrage - {{vorname}} {{nachname}}`
 - **Text:**
 ```
@@ -81,7 +81,7 @@ Dr. med. Sabrina Kising
 
 ---
 Liebe & Heilung
-kontakt@liebe-heilung.de
+kontakt@liebeheilung.de
 ```
 
 ## 🛡️ Was passiert bei Problemen?
@@ -95,7 +95,7 @@ kontakt@liebe-heilung.de
 ### 📧 E-Mail-Fallback:
 - Öffnet automatisch das E-Mail-Programm
 - Vorausgefüllte E-Mail mit allen Formulardaten
-- Direkter Kontakt zu `kontakt@liebe-heilung.de`
+- Direkter Kontakt zu `kontakt@liebeheilung.de`
 
 ## 📊 Datenfelder die an Make.com gesendet werden:
 

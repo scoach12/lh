@@ -12,8 +12,8 @@ Diese Mail geht direkt nach dem Eintragen raus.
 
 ### Absender
 - **From-Name:** Dr. Sabrina Kising
-- **From-Email:** kising.sabrina@mailbox.org
-- **Reply-to:** kising.sabrina@mailbox.org
+- **From-Email:** kontakt@liebeheilung.de
+- **Reply-to:** kontakt@liebeheilung.de
 
 ### Betreff (eine Zeile)
 ```
@@ -66,8 +66,8 @@ Diese Mail geht ca. 5 Minuten nach der Bestätigung raus.
 
 ### Absender
 - **From-Name:** Dr. Sabrina Kising
-- **From-Email:** kising.sabrina@mailbox.org
-- **Reply-to:** kising.sabrina@mailbox.org
+- **From-Email:** kontakt@liebeheilung.de
+- **Reply-to:** kontakt@liebeheilung.de
 
 ### Betreff
 ```
@@ -121,7 +121,7 @@ Fachärztin für Frauenheilkunde und Geburtshilfe
 Paar- und Sexualtherapeutin
 
 📞 +49 (0) 30 12345678
-✉️ kising.sabrina@mailbox.org
+✉️ kontakt@liebeheilung.de
 🌐 https://liebeheilung.de
 
 Du erhältst diese E-Mail, weil du dich für mein Gratis-Heft

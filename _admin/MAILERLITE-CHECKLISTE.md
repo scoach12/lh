@@ -8,7 +8,7 @@ Zeitaufwand: **ca. 45–60 Minuten**, komplett kostenlos.
 ## Vorbereitung (5 Min)
 
 Halte bereit:
-- Deine Business-E-Mail-Adresse (`kising.sabrina@mailbox.org`)
+- Deine Business-E-Mail-Adresse (`kontakt@liebeheilung.de`)
 - Das Gratis-Heft als PDF (`Was_du_erlebt_hast_zaehlt.pdf`)
 - Ein Profilbild von dir (kann später ergänzt werden)
 - Ausweisdaten (nur falls MailerLite eine Identitätsprüfung verlangt — meist nicht nötig)
@@ -178,7 +178,7 @@ Sag Bescheid, wenn du dahin willst — ich helfe dir dann mit Inhalten und Struk
 
 **„Der Absender heißt komisch"**
 → Bei jeder Automation: **Sender = deine Adresse mit vollem Namen** setzen:
-`Dr. Sabrina Kising <kising.sabrina@mailbox.org>`
+`Dr. Sabrina Kising <kontakt@liebeheilung.de>`
 
 **„Ich sehe keine Anmeldungen"**
 → Prüfe: Ist das Formular veröffentlicht (nicht nur gespeichert)?

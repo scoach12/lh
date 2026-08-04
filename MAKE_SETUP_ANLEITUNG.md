@@ -39,7 +39,7 @@ const MAKE_WEBHOOK_URL = 'https://hook.eu1.make.com/abc123xyz';
 
 **Schritt 2: E-Mail senden**
 - App: "Email" → "Send an Email"
-- **An:** kontakt@liebe-heilung.de
+- **An:** kontakt@liebeheilung.de
 - **Betreff:** "Neue Kontaktanfrage - {{vorname}} {{nachname}}"
 - **Text:**
 ```

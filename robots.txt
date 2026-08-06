@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Rechtliche Seiten – nicht in Suchergebnissen anzeigen
+Disallow: /impressum.html
+Disallow: /datenschutz.html
+Disallow: /danke.html
+
+# Interne Ordner
+Disallow: /_admin/
+
+Sitemap: https://liebeheilung.de/sitemap.xml

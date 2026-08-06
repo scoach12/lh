@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danke — dein Heft ist unterwegs | Dr. med. Sabrina Kising</title>
+    <meta name="description" content="Danke für dein Vertrauen. Dein Heft ist gleich in deinem Postfach.">
+
+    <!-- Nicht indexieren — diese Seite ist ein Zwischenschritt -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://liebeheilung.de/danke.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config (konsistent mit Rest der Site) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'healing-orange': '#FF6B35',
+                        'dark-green': '#274543',
+                        'soft-pink': '#FCE4EC',
+                        'soft-orange': '#FFF3E0'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-soft-orange via-white to-soft-pink min-h-screen flex flex-col">
+
+    <!-- Minimaler Header — nur Logo/Name als Rückweg -->
+    <header class="py-6 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <a href="/" class="inline-flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                    <i class="fas fa-feather-alt text-white text-sm"></i>
+                </div>
+                <div>
+                    <p class="font-playfair text-xl text-gray-800 leading-tight">Liebe und Heilung</p>
+                    <p class="text-xs text-gray-500 tracking-wide">Dr. med. Sabrina Kising</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hauptbereich -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+        <div class="container mx-auto max-w-2xl">
+
+            <!-- Zarter Umschlag als Illustration -->
+            <div class="text-center mb-10">
+                <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-orange-100 to-pink-100 rounded-full mb-2 shadow-inner">
+                    <i class="fas fa-envelope-open-text text-orange-500 text-3xl"></i>
+                </div>
+            </div>
+
+            <!-- Kernbotschaft -->
+            <div class="text-center mb-12">
+                <p class="font-playfair text-2xl md:text-3xl text-orange-600 italic mb-10">
+                    Danke.
+                </p>
+
+                <h1 class="font-playfair text-3xl md:text-4xl font-normal text-gray-800 mb-10 leading-snug">
+                    Nur noch ein Klick von dir –<br>
+                    dann ist es unterwegs.
+                </h1>
+
+                <p class="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto">
+                    Ich habe dir gerade eine E-Mail geschickt. Bitte öffne sie und
+                    bestätige kurz mit einem Klick, dass du wirklich du bist.
+                </p>
+
+                <p class="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto mt-4">
+                    Danach kommt dein Heft.
+                </p>
+            </div>
+
+            <!-- Was du jetzt tun kannst — sanfte Hinweise -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-8 md:p-10 shadow-sm border border-orange-100/50 mb-10">
+                <h2 class="font-playfair text-2xl text-gray-800 mb-6 text-center">
+                    Falls die Mail nicht kommt
+                </h2>
+
+                <div class="space-y-5">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-orange-600 font-semibold text-sm">1</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            <span class="font-semibold text-gray-800">Schau bitte in deinen Spam-Ordner.</span>
+                            Manchmal landen wichtige Mails dort — besonders bei der ersten Nachricht.
+                        </p>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-orange-600 font-semibold text-sm">2</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            <span class="font-semibold text-gray-800">Warte ein paar Minuten.</span>
+                            Meistens geht es sekundenschnell — sehr selten braucht die Mail etwas länger.
+                        </p>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
+                            <span class="text-orange-600 font-semibold text-sm">3</span>
+                        </div>
+                        <p class="text-gray-700 leading-relaxed">
+                            <span class="font-semibold text-gray-800">Wenn nichts kommt, schreib mir.</span>
+                            Einfach eine kurze Zeile an
+                            <a href="mailto:kontakt@liebeheilung.de" class="text-orange-600 hover:text-orange-700 underline decoration-orange-300 hover:decoration-orange-500 transition-colors">kontakt@liebeheilung.de</a> –
+                            ich schick dir das Heft persönlich.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stille Rückverlinkung — kein Verkaufsdruck -->
+            <div class="text-center">
+                <p class="text-gray-600 italic mb-6 leading-relaxed">
+                    Und bis das Heft bei dir ist —<br>
+                    sei einen Moment still. Nichts musst du gerade tun.
+                </p>
+
+                <a href="/"
+                   class="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 font-medium transition-colors">
+                    <i class="fas fa-arrow-left text-sm"></i>
+                    Zurück zur Startseite
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Minimaler Footer -->
+    <footer class="py-8 px-4 mt-12">
+        <div class="container mx-auto max-w-5xl text-center">
+            <p class="text-sm text-gray-500 mb-2">
+                Dr. med. Sabrina Kising · Fachärztin, Paar- und Sexualtherapeutin
+            </p>
+            <div class="flex items-center justify-center gap-4 text-xs text-gray-400">
+                <a href="/impressum.html" class="hover:text-orange-600 transition-colors">Impressum</a>
+                <span>·</span>
+                <a href="/datenschutz.html" class="hover:text-orange-600 transition-colors">Datenschutz</a>
+                <span>·</span>
+                <a href="/kontakt.html" class="hover:text-orange-600 transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

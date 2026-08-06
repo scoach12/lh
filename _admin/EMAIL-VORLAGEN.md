@@ -71,48 +71,44 @@ Diese Mail geht ca. 5 Minuten nach der Bestätigung raus.
 
 ### Betreff
 ```
-Da ist es – dein Heft. Und ein Gedanke dazu.
+Für dich: Was du erlebt hast, zählt.
 ```
 
 ### Vorschautext
 ```
-Was du erlebt hast, zählt. Nimm dir kurz Zeit.
+Da ist es. Für einen ruhigen Moment.
 ```
 
 ### Text der Mail
 
 ```
-Hallo {{fields.name|default:""}},
+Hallo,
 
-hier ist es – dein Heft.
+da ist es.
 
-👉 [Heft öffnen und lesen (PDF)](PDF_LINK)
+Hier ist dein Heft – „Was du erlebt hast, zählt."
 
-Sechs Seiten. Ohne Ratgeberstimme.
-Nichts, was du tun musst.
-Nur das, was ich dir gerne persönlich sagen würde,
-wenn wir uns gegenübersitzen könnten.
+👉 [Heft öffnen (PDF)](PDF_LINK)
 
-Vielleicht liest du es jetzt gleich.
-Vielleicht speicherst du es dir für einen Moment,
-in dem du kurz nichts mehr weißt.
-Beides ist richtig.
+Nimm es dir vor, wenn du einen ruhigen Moment hast.
+Nicht auf dem Sprung. Es läuft dir nicht weg.
+
+Auf den letzten Seiten wartet eine kleine Übung.
+Fünf Minuten, ein Blatt, ein Stift.
+Es liest niemand außer dir.
+
+Und falls beim Lesen etwas in dir aufwacht,
+das schon lange auf ein Wort gewartet hat:
+Du musst das nicht allein tragen.
+
+Wenn du darüber sprechen möchtest, bin ich da.
+Ohne Eile. Ohne Bewertung.
+Du findest mich jederzeit auf liebeheilung.de.
 
 ---
 
-Und wenn du magst –
-und wirklich nur, wenn du magst:
+Für heute: Lies. Mehr nicht.
 
-Schreib mir eine Zeile zurück.
-
-Was trägst du gerade?
-Was bringt dich her?
-
-Ich lese jede Antwort. Selbst.
-Ich verspreche keinen langen Austausch –
-aber ich verspreche, dass ich dich lese.
-
-Herzlich,
 Sabrina
 
 ---
@@ -120,15 +116,18 @@ Dr. Sabrina Kising · Liebe und Heilung
 Fachärztin für Frauenheilkunde und Geburtshilfe
 Paar- und Sexualtherapeutin
 
-📞 +49 (0) 30 12345678
-✉️ kontakt@liebeheilung.de
 🌐 https://liebeheilung.de
 
-Du erhältst diese E-Mail, weil du dich für mein Gratis-Heft
+Du erhältst diese E-Mail, weil du dich für das Heft
 angemeldet hast. Wenn du keine weiteren Nachrichten von mir
 erhalten möchtest: {$unsubscribe} (dieser Platzhalter wird
 in MailerLite automatisch gesetzt).
 ```
+
+**Bewusste Entscheidung zum Ton:**
+- **Keine Rückantwort erwartet.** Kein „Schreib mir zurück", keine Frage, die die Frau innerlich verpflichtet zu antworten.
+- **Kontakt bleibt offen** über die Website (`liebeheilung.de`) — sie kommt, wenn sie will.
+- **Keine Kontakt-Mail im Fuß** — die Frau soll nicht das Gefühl haben, dass jetzt ein E-Mail-Austausch beginnt.
 
 **Wichtig:**
 - **PDF_LINK** ersetzt du durch den echten Link zu deinem PDF in MailerLite.

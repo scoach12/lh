@@ -51,20 +51,27 @@ Damit deine E-Mails nicht im Spam landen.
 
 ---
 
-## Schritt 3 — Auftragsverarbeitungsvertrag (AVV) unterzeichnen (5 Min) ⚠️ PFLICHT
+## Schritt 3 — DPA / AVV (Datenverarbeitungsvertrag) sichern (2 Min) ⚠️ PFLICHT
 
-Ohne diesen Schritt bist du **nicht DSGVO-konform**.
+**Wichtige Änderung (Stand August 2026):** MailerLite hat den separaten AVV-Prozess
+abgeschafft. Der DPA ist jetzt **fester Bestandteil der AGB**. Sobald du die
+Nutzungsbedingungen bei der Anmeldung akzeptiert hast, ist der DPA
+**automatisch geschlossen**. Es gibt keinen "Sign"-Button mehr im Dashboard.
 
-1. Gehe zu **Account → Settings → Compliance**
-2. Klick auf **„Data Processing Agreement (DPA)"**
-3. Fülle das Formular aus:
-   - Firmenname: `Praxis Dr. Sabrina Kising`
-   - Adresse: (deine Praxisadresse)
-   - Kontaktperson für Datenschutz: `Dr. Sabrina Kising`
-4. Klick **„Sign"** — der AVV wird digital unterzeichnet
-5. **Herunterladen und aufbewahren** (PDF-Kopie in deine Datenschutz-Ablage)
+**Für deine Datenschutz-Akte brauchst du trotzdem eine schriftliche Kopie:**
 
-**Fertig, wenn:** Du das PDF des AVV in deinen Unterlagen hast.
+1. Öffne im Browser: **https://www.mailerlite.com/legal/data-processing-agreement**
+2. `Strg + P` → **„Als PDF speichern"**
+3. Speichern als: `MailerLite-DPA-JJJJ-MM-TT.pdf`
+4. Ablegen in deine Datenschutz-Akte (z.B. Ordner „DSGVO / AVVs")
+
+**Für Behörden / Kontrollen** sichere zusätzlich:
+- Screenshot oder E-Mail der MailerLite-Anmelde-Bestätigung (Betreff „Welcome to MailerLite")
+- Das gespeicherte DPA-PDF
+
+Beides zusammen belegt: Du hast am Anmeldedatum die AGB inklusive DPA akzeptiert.
+
+**Fertig, wenn:** Das DPA-PDF in deinen Unterlagen liegt.
 
 ---
 

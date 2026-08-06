@@ -1,7 +1,7 @@
 # Projekt-Status — Liebe und Heilung
 
 **Letzte Aktualisierung:** 06.08.2026
-**Aktueller Commit auf `main`:** `7111a7c` — Release: Funnel + Domain-Vereinheitlichung + Business-E-Mail
+**Aktueller Commit auf `main`:** `cc3bb52` — feat(funnel): danke.html
 **Aktueller Branch für Änderungen:** `genspark_ai_developer`
 
 > Diese Datei ist der Single Source of Truth über den Projekt-Stand.
@@ -10,6 +10,13 @@
 ---
 
 ## ✅ Erledigt
+
+### August 2026 — Doku + Danke-Seite (PRs #8, #9, #10)
+- ✅ **PR #8** — `_admin/CHAT-KONTEXT.md` + `PROJEKT-STATUS.md` (dauerhafte Doku im Repo)
+- ✅ **PR #9** — bestehende Arbeits-Vereinbarungen in `CHAT-KONTEXT.md` festgeschrieben
+- ✅ **PR #10** — `danke.html` als Weiterleitungsziel nach MailerLite-Anmeldung
+  - live unter `https://liebeheilung.de/danke.html`
+  - `noindex, nofollow` (nicht in Google)
 
 ### August 2026 (PR #7, Commit `7111a7c`)
 - ✅ Business-Mail **kontakt@liebeheilung.de** LIVE (mailbox.org, Alias auf praxis-kising@mailbox.org)
@@ -46,10 +53,7 @@ Wenn die Landingpage-URL steht:
 - KI tauscht Platzhalter `MAILERLITE_LANDINGPAGE_URL` in `index.html` (und ggf. Blog-Artikeln)
 - Absender-Mail für MailerLite: `kontakt@liebeheilung.de`
 
-### `danke.html` bauen (KI-Aufgabe, ~15 Min)
-**Verantwortlich:** KI, wenn Sabrina den Auftrag gibt
-Ruhige Danke-Seite als Weiterleitungsziel nach MailerLite-Eintragung.
-Wird in MailerLite Schritt 5.8 als "Success page URL" hinterlegt.
+### ~~`danke.html` bauen~~ — ✅ erledigt in PR #10
 
 ---
 
@@ -67,6 +71,21 @@ Wird in MailerLite Schritt 5.8 als "Success page URL" hinterlegt.
 | Was | Wo |
 |---|---|
 | Repo | https://github.com/scoach12/lh |
+| Live-Website | https://liebeheilung.de |
+| Business-Mail | kontakt@liebeheilung.de |
+| Meetergo | https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde |
+| Gratis-Heft PDF | `downloads/was-du-erlebt-hast-zaehlt.pdf` |
+| MailerLite-Setup | `_admin/MAILERLITE-CHECKLISTE.md` |
+| E-Mail-Texte | `_admin/EMAIL-VORLAGEN.md` |
+
+---
+
+## Wie du diese Datei aktuell hältst
+
+Nach jedem größeren Schritt entweder:
+- **selbst editieren** (die Datei ist einfach Markdown), oder
+- der **KI sagen**: "Aktualisiere `PROJEKT-STATUS.md` — [was war der Schritt]"
+o | https://github.com/scoach12/lh |
 | Live-Website | https://liebeheilung.de |
 | Business-Mail | kontakt@liebeheilung.de |
 | Meetergo | https://my.meetergo.com/form/cb039eee-9d0d-4f34-a61f-5a5e1c1f4fde |

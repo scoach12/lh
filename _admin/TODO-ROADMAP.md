@@ -101,11 +101,14 @@ Priorisierung folgt: erst Impact, dann Aufwand.
 
 ---
 
-## 💡 Lead-Magnet-Überschriften – Sabrinas Ideen
+## 💡 Lead-Magnet-Überschriften – Ideen-Sammlung
 
-Aktueller Arbeitstitel: **"Was du erlebt hast, zählt"**
+**Aktuelles Heft (Noch immer / Trauma):** "Was du erlebt hast, zählt" ✅ steht, bleibt.
 
-Weitere Optionen zur Auswahl / für spätere Freebies:
+Die folgende Sammlung ist **Inspiration für zukünftige Freebies** zu den anderen Bewegungen (Noch wir / Noch ich), falls Sabrina eines Tages weitere Hefte schreibt.
+Nicht als konkrete To-Do – konkreter Titel entsteht immer aus dem Inhalt heraus.
+
+Alle unten stehenden Titel drehen sich thematisch weiter um Geburt/Trauma – dienen also vor allem als **Ton-Referenz** für Sabrinas Sprach-DNA:
 
 **Radikal / Pillar-Style (Sabrinas Sprach-DNA):**
 - "7 Dinge, die keine deiner Mütter-Freundinnen dir über die Geburt sagt"

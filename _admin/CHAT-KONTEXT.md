@@ -23,8 +23,24 @@ Hallo! Ich bin Dr. Sabrina Kising (liebeheilung.de). Wir arbeiten an meiner Ther
 - **"Noch wir."** — emerald — Paar-Therapie
 - **"Noch ich."** — pink — Frauen-/Sexual-Therapie
 
+## Bestehende Arbeits-Vereinbarungen (WICHTIG — nicht überschreiben)
+
+Diese Absprachen bestehen seit Monaten. Halte dich daran, auch wenn du sie
+in diesem Chat noch nie gehört hast:
+
+- **PR-Merges:** Wenn wir eine Änderung besprochen haben und du einen PR
+  erstellst, **frag mich einmal kurz "Soll ich mergen?"** — wenn ich "ja"
+  sage, **merge du direkt selbst**. Ich muss GitHub dafür nicht öffnen.
+- **Ton:** Deutsch, "du"-Form, warm aber sachlich. Keine Marketing-Sprache,
+  kein Coach-Talk. Meine Website hat einen stillen, präsenten Ton — halte
+  das durch.
+- **Vorgehen:** Kleine, atomare Commits mit klarer Botschaft. PR-Beschreibung
+  auf Deutsch. Nach jedem Merge kurze Bestätigung an mich.
+- **Kein Overengineering:** Wenn eine Aufgabe in 15 Minuten geht, mach sie
+  in 15 Minuten. Nicht drei Vorschläge diskutieren, die keiner braucht.
+
 ## Kontext-Doku im Repo
-Die KI soll ZUERST diese drei Dateien lesen, dann fragen, womit wir weitermachen:
+Die KI soll ZUERST diese Dateien lesen, dann fragen, womit wir weitermachen:
 
 1. `_admin/PROJEKT-STATUS.md` — was ist fertig, was ist offen
 2. `_admin/README.md` — Übersicht Funnel-Doku

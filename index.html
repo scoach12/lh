@@ -73,71 +73,135 @@
     </script>
     
     <!-- Strukturierte Daten für Suchmaschinen -->
+    <!-- Schema.org: Praxis / Online-Business -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "MedicalBusiness",
-        "name": "Liebe & Heilung - Online-Therapie",
-        "alternateName": "Dr. med. Sabrina Kising Online-Therapie",
-        "description": "Professionelle Online-Therapie für Trauma, Paartherapie und Sexualtherapie von Dr. med. Sabrina Kising",
+        "@id": "https://liebeheilung.de/#praxis",
+        "name": "Praxis Liebe & Heilung – Onlineberatung für Frauen, Paare und Familien",
+        "alternateName": "Dr. med. Sabrina Kising – Online-Therapie",
+        "description": "Einfühlsame Online-Begleitung nach der Geburt. Für Frauen mit Geburtstrauma, für Paare, die sich als Paar wiederfinden wollen, und für Frauen, die den Zugang zu sich selbst und ihrem Körper suchen. Geleitet von Dr. med. Sabrina Kising, Fachärztin für Gynäkologie und Geburtshilfe.",
         "url": "https://liebeheilung.de",
-        "logo": "https://liebeheilung.de/images/logo.png",
-        "image": "https://liebeheilung.de/images/og-image.jpg",
-        "priceRange": "$$",
-        "telephone": "+49-XXX-XXXXXXX",
         "email": "kontakt@liebeheilung.de",
         "address": {
             "@type": "PostalAddress",
-            "addressCountry": "DE",
-            "addressLocality": "Deutschland"
+            "streetAddress": "Am Bachteil 12",
+            "postalCode": "86862",
+            "addressLocality": "Lamerdingen",
+            "addressCountry": "DE"
         },
-        "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": "51.1657",
-            "longitude": "10.4515"
+        "areaServed": {
+            "@type": "Country",
+            "name": "Deutschland, Österreich, Schweiz – deutschsprachiger Raum weltweit (Online)"
         },
-        "openingHours": "Mo-Fr 09:00-18:00",
-        "paymentAccepted": ["Überweisung", "PayPal"],
-        "currenciesAccepted": "EUR",
-        "serviceType": ["Online-Therapie", "Trauma-Therapie", "Paartherapie", "Sexualtherapie"],
-        "medicalSpecialty": ["Psychiatry", "Psychology", "Gynecology"],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Online-Therapie Services",
-            "itemListElement": [
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "MedicalTherapy",
-                        "name": "Online Trauma-Therapie",
-                        "description": "Professionelle Behandlung von Geburtstrauma und Schwangerschaftstrauma"
-                    }
-                },
-                {
-                    "@type": "Offer", 
-                    "itemOffered": {
-                        "@type": "MedicalTherapy",
-                        "name": "Online Paartherapie",
-                        "description": "Beziehungsberatung und Paartherapie für Paare in Krisen"
-                    }
-                },
-                {
-                    "@type": "Offer",
-                    "itemOffered": {
-                        "@type": "MedicalTherapy", 
-                        "name": "Online Sexualtherapie",
-                        "description": "Behandlung sexueller Probleme und Störungen"
-                    }
-                }
-            ]
-        },
-        "founder": {
-            "@type": "Person",
-            "name": "Dr. med. Sabrina Kising",
-            "jobTitle": "Ärztin für Gynäkologie und Geburtshilfe",
-            "alumniOf": "Medizinische Fakultät",
-            "knowsAbout": ["Trauma-Therapie", "Paartherapie", "Sexualtherapie", "Online-Therapie"]
+        "availableService": [
+            {
+                "@type": "MedicalTherapy",
+                "name": "Trauma-Therapie nach der Geburt (Noch immer.)",
+                "description": "Einfühlsame Online-Begleitung für Frauen mit Geburtstrauma – auch wenn das Baby gesund ist. Für das, was geblieben ist.",
+                "url": "https://liebeheilung.de/trauma-therapie.html"
+            },
+            {
+                "@type": "MedicalTherapy",
+                "name": "Paartherapie nach der Geburt (Noch wir?)",
+                "description": "Online-Paartherapie für Paare, die nach der Geburt als Eltern funktionieren, sich aber als Paar verloren fühlen. Für die Stille, die vorher nicht war.",
+                "url": "https://liebeheilung.de/paar-therapie.html"
+            },
+            {
+                "@type": "MedicalTherapy",
+                "name": "Sexualtherapie nach der Geburt (Noch ich?)",
+                "description": "Online-Begleitung für Frauen, deren Körper sich nach der Geburt fremd anfühlt und deren Lust verschwunden scheint. Für den Weg zurück zu sich selbst.",
+                "url": "https://liebeheilung.de/sexual-therapie.html"
+            }
+        ],
+        "medicalSpecialty": ["Gynecology", "Obstetrics", "Psychiatry"],
+        "founder": {"@id": "https://liebeheilung.de/#sabrina-kising"},
+        "sameAs": [
+            "https://www.instagram.com/dr.sabrina.kising/"
+        ]
+    }
+    </script>
+
+    <!-- Schema.org: Dr. med. Sabrina Kising als Person / Ärztin -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Physician",
+        "@id": "https://liebeheilung.de/#sabrina-kising",
+        "name": "Dr. med. Sabrina Kising",
+        "honorificPrefix": "Dr. med.",
+        "jobTitle": "Fachärztin für Gynäkologie und Geburtshilfe",
+        "description": "Ärztin und Therapeutin mit Fokus auf Frauen nach der Geburt: Geburtstrauma, Paardynamik, Körper- und Sexualitätserleben. Verbindet medizinische Expertise mit einer warmen, tiefgehenden Sprache.",
+        "url": "https://liebeheilung.de/ueber-mich.html",
+        "worksFor": {"@id": "https://liebeheilung.de/#praxis"},
+        "medicalSpecialty": ["Gynecology", "Obstetrics"],
+        "knowsAbout": [
+            "Geburtstrauma",
+            "Trauma nach der Geburt",
+            "Postpartale Belastung",
+            "Paartherapie nach der Geburt",
+            "Sexualtherapie für Frauen",
+            "Weibliche Lust nach der Geburt",
+            "Körpererleben nach Schwangerschaft und Geburt",
+            "Gynäkologie",
+            "Geburtshilfe"
+        ],
+        "knowsLanguage": ["de", "en"],
+        "memberOf": {
+            "@type": "Organization",
+            "name": "Bayerische Landesärztekammer"
         }
+    }
+    </script>
+
+    <!-- Schema.org: FAQ (wichtig für KI-Antworten und Google-Snippets) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Für wen ist die Online-Therapie bei Dr. Sabrina Kising gedacht?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Für Frauen nach der Geburt, die spüren, dass etwas geblieben ist – auch wenn das Baby gesund ist. Für Paare, die als Eltern funktionieren, sich aber als Paar verloren fühlen. Und für Frauen, deren Körper sich nach der Geburt fremd anfühlt oder deren Lust verschwunden scheint. Drei Bewegungen: Noch immer. Noch wir. Noch ich."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Was ist ein Geburtstrauma – und woran erkenne ich es?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ein Geburtstrauma zeigt sich nicht immer laut. Häufige Anzeichen: die Geburt lässt dich innerlich nicht los, du weinst plötzlich beim Erzählen, du meidest Gespräche über die Geburt, körperliche Anspannung, Schlafprobleme, das Gefühl 'ich sollte doch dankbar sein, das Baby ist gesund'. Ein Trauma entsteht durch das subjektive Erleben – nicht durch objektive Diagnosen. Auch eine medizinisch unauffällige Geburt kann traumatisch wirken."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Findet die Therapie online statt?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, alle Sitzungen finden vertraulich per Videocall statt. Das bedeutet: keine Anreise, keine Wartezimmer, keine Fahrten mit dem Baby. Du wählst deinen sicheren Ort. Deutschsprachiger Raum weltweit."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Bietet Dr. Kising ein kostenloses Kennenlerngespräch an?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja, es gibt ein kostenloses 15-minütiges Kennenlerngespräch. Ohne Verpflichtung, ohne Diagnose – nur um zu spüren, ob es passt. Die Terminbuchung erfolgt direkt online über die Website."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Gibt es ein kostenloses Info-Angebot?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Ja. Das kostenlose Heft 'Was du erlebt hast, zählt' zeigt sechs Anzeichen, warum eine belastende Geburt in dir weiterwirken kann – auch wenn objektiv 'alles gut' war. Zum Download auf der Startseite gegen E-Mail-Adresse."
+                }
+            }
+        ]
     }
     </script>
 

@@ -77,5 +77,6 @@ Disallow: /impressum.html
 Disallow: /datenschutz.html
 Disallow: /danke.html
 Disallow: /_admin/
+Disallow: /compliance/
 
 Sitemap: https://liebeheilung.de/sitemap.xml

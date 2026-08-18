@@ -1,0 +1,10 @@
+# Cloudflare Pages Headers
+# https://developers.cloudflare.com/pages/configuration/headers/
+
+# Compliance-Dokumente: Für Suchmaschinen unsichtbar (interne Nachweise)
+/compliance/*
+  X-Robots-Tag: noindex, nofollow, noarchive
+
+# Downloads: Kein Cache-Refresh nötig, dürfen aber indexiert werden
+/downloads/*
+  Cache-Control: public, max-age=86400

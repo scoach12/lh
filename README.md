@@ -27,7 +27,7 @@ Eine professionelle Website für Dr. med. Sabrina Kising, Fachärztin für Gynä
 
 ### Hauptseiten
 - `index.html` - Homepage mit Übersicht aller Therapiebereiche
-- `trauma-therapie.html` - Trauma-Therapie nach der Geburt (5 FAQs)
+- `geburtstrauma-begleitung.html` - Trauma-Therapie nach der Geburt (5 FAQs)
 - `paar-therapie.html` - Paar-Therapie & Beziehungsberatung (7 FAQs)
 - `sexual-therapie.html` - Sexual-Therapie & Sexualberatung (8 FAQs)
 - `ueber-mich.html` - Über Dr. Sabrina Kising

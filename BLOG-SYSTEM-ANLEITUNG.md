@@ -14,7 +14,7 @@ Ihr neues Blog-System basiert auf **individuellen HTML-Artikeln** mit einem prof
 │   ├── was-ist-ein-geburtstrauma.html # Beispiel-Artikel
 │   └── [weitere-artikel].html       # Ihre neuen Artikel
 ├── index.html                        # Hauptseite
-├── trauma-therapie.html              # Therapie-Seiten
+├── geburtstrauma-begleitung.html              # Therapie-Seiten
 └── ...
 ```
 

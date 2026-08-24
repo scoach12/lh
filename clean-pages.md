@@ -19,7 +19,7 @@
 - Entfernung von Modal-Button-Klassen
 
 ## Seiten die bereinigt werden müssen:
-- trauma-therapie.html
+- geburtstrauma-begleitung.html
 - paar-therapie.html  
 - sexual-therapie.html
 - ueber-mich.html

@@ -31,23 +31,23 @@ Die Bereinigung orientiert sich an folgenden Rechtsnormen:
 
 | # | Änderung | Umfang |
 |---|---|---|
-| 1 | Nav-/Footer-/Menü-Label „Trauma-Therapie" → „Geburtstrauma" | 19 HTML-Dateien, 59 Textstellen. Link zeigt weiter auf `trauma-therapie.html` (URL bleibt aus SEO- und Backlink-Gründen unverändert). |
-| 2 | Kontaktformular auf 5 Seiten: „Coaching-Bereich" → „Anliegen"; Dropdown „Trauma-Therapie (Nach der Geburt)" → „Geburtstrauma (Nach der Geburt)" | `index.html`, `paar-therapie.html`, `sexual-therapie.html`, `trauma-therapie.html`, `ueber-mich.html` |
+| 1 | Nav-/Footer-/Menü-Label „Trauma-Therapie" → „Geburtstrauma" | 19 HTML-Dateien, 59 Textstellen. Link zeigt weiter auf `geburtstrauma-begleitung.html` (URL bleibt aus SEO- und Backlink-Gründen unverändert). |
+| 2 | Kontaktformular auf 5 Seiten: „Coaching-Bereich" → „Anliegen"; Dropdown „Trauma-Therapie (Nach der Geburt)" → „Geburtstrauma (Nach der Geburt)" | `index.html`, `paar-therapie.html`, `sexual-therapie.html`, `geburtstrauma-begleitung.html`, `ueber-mich.html` |
 | 3 | `index.html` Meta-Tags komplett neu (Title, Description, Keywords, OpenGraph, Twitter Card, Schema.org MedicalTherapy-Name, alt-Attribute) | Startseite |
-| 4 | `trauma-therapie.html`: OpenGraph + Twitter Card getauscht | 4 Meta-Tags |
+| 4 | `geburtstrauma-begleitung.html`: OpenGraph + Twitter Card getauscht | 4 Meta-Tags |
 | 5 | „Online-Therapie" / „Online-Psychotherapie" / „Online-Therapeutin" aus allen Meta-Tags entfernt | `ueber-mich.html`, `paar-therapie.html`, `sexual-therapie.html`, `hebammen-information.html` |
-| 6 | Telefonnummer „+49 (0) 89 123 456 789" + „Mo–Fr: 9:00–18:00 Uhr" gelöscht | `trauma-therapie.html` |
-| 7 | 10 × 5-Sterne-Rating-Grafiken über Testimonials entfernt (Zitate bleiben) | `index.html` (3), `paar-therapie.html` (2), `sexual-therapie.html` (3), `trauma-therapie.html` (2) |
+| 6 | Telefonnummer „+49 (0) 89 123 456 789" + „Mo–Fr: 9:00–18:00 Uhr" gelöscht | `geburtstrauma-begleitung.html` |
+| 7 | 10 × 5-Sterne-Rating-Grafiken über Testimonials entfernt (Zitate bleiben) | `index.html` (3), `paar-therapie.html` (2), `sexual-therapie.html` (3), `geburtstrauma-begleitung.html` (2) |
 
 ### Runde 2 — Tiefe Quelltext-Compliance (Commit `4afd0e5`, PR #33)
 
 | # | Änderung | Umfang |
 |---|---|---|
-| 1 | „Online-Behandlung" → „Online-Begleitung" (Heilkunde-Wortlaut vermieden) | 5 Stellen: `sexual-therapie.html` (twitter:desc + Schema.org), `paar-therapie.html` (twitter:desc + Schema.org), `trauma-therapie.html` (mehrere), `hebammen-information.html` (Schema.org) |
-| 2 | Schema.org `alternateName`-Arrays: **nur** Trauma-Varianten raus, Paar-/Sexualtherapie-SEO-Begriffe bewusst behalten | `trauma-therapie.html` (jetzt: „Begleitung bei Geburtstrauma", „traumasensible Begleitung nach der Geburt") |
+| 1 | „Online-Behandlung" → „Online-Begleitung" (Heilkunde-Wortlaut vermieden) | 5 Stellen: `sexual-therapie.html` (twitter:desc + Schema.org), `paar-therapie.html` (twitter:desc + Schema.org), `geburtstrauma-begleitung.html` (mehrere), `hebammen-information.html` (Schema.org) |
+| 2 | Schema.org `alternateName`-Arrays: **nur** Trauma-Varianten raus, Paar-/Sexualtherapie-SEO-Begriffe bewusst behalten | `geburtstrauma-begleitung.html` (jetzt: „Begleitung bei Geburtstrauma", „traumasensible Begleitung nach der Geburt") |
 | 3 | „Systemische Therapie" / „Systemische Therapeutin" entfernt (nicht zertifiziertes Richtlinienverfahren) | 4 Stellen: `blog/index.html` (title + desc), `blog/artikel-template.html` (jobTitle Schema.org + Autoren-Bio), `blog/erste-schritte-aus-der-beziehungskrise.html` (jobTitle + keyword + H4 + Absatz) |
 | 4 | „Trauma-, Paar- und Sexualtherapie" → „Begleitung bei Geburtstrauma, Paar- und Sexualtherapie" | `kontakt.html` meta-description |
-| 5 | alt-Attribute mit „Trauma-Therapie" | `trauma-therapie.html` (2 Bilder) |
+| 5 | alt-Attribute mit „Trauma-Therapie" | `geburtstrauma-begleitung.html` (2 Bilder) |
 
 ---
 
@@ -64,7 +64,7 @@ Nicht alles wurde entfernt — bewusst nicht. Grund: Sachliche Berufsbezeichnung
 | „Paar- und Sexualtherapeutin" (im jobTitle Schema.org und in Autoren-Bios) | Belegte Zusatzqualifikation. |
 | „Psychotherapeuten" als **Zielgruppen-Ansprache** auf `hebammen-information.html` | Rechtlich korrekte Nennung einer Berufsgruppe, an die sich die Seite richtet — kein Selbst-Etikett. |
 | Disclaimer auf `ueber-mich.html`: „...ist ein beratendes und unterstützendes Angebot. Es ersetzt keine Psychotherapie nach dem Psychotherapeutengesetz (§ 1 PsychThG) und keine ärztliche Behandlung. Es erfolgt keine Diagnosestellung." | **Absichtliche und korrekte** Verwendung — grenzt das Angebot rechtssicher gegen Psychotherapie ab. |
-| URL-Pfad `trauma-therapie.html` (Dateiname) | Nicht öffentlich sichtbar. Änderung würde Backlinks brechen und Google-Ranking kosten. Nur die anzeigten Labels wurden auf „Geburtstrauma" umgestellt. |
+| URL-Pfad `geburtstrauma-begleitung.html` (Dateiname) | Nicht öffentlich sichtbar. Änderung würde Backlinks brechen und Google-Ranking kosten. Nur die anzeigten Labels wurden auf „Geburtstrauma" umgestellt. |
 | Der Claim „Heilung beginnt da, wo Liebe Raum bekommt." | Poetischer Markenclaim (`Liebe & Heilung`), kein Heilversprechen im Sinne des HWG. |
 
 ---

@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Dein Körper sagt Nein. Und hat recht damit. — Heft</title>
+    <meta name="description" content="Ein Heft bei Vaginismus. Zwei Übungen, ein paar Sätze, ein persönlicher Brief.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           HEFT — DRUCKREIFES A4-PDF-TEMPLATE
+           Zum Erzeugen des PDFs:
+           - Browser: „Datei → Drucken → Als PDF speichern"
+             Papier: A4, Ränder: „Keine" oder „Standard",
+             Hintergrundgrafiken: aktivieren.
+           - Oder mit Puppeteer / Playwright:
+             page.pdf({ format: 'A4', printBackground: true, margin: 0 })
+           ============================================================ */
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            color: #2C2C2C;
+            background: #E5E5E5;
+            line-height: 1.6;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* A4-Seite: 210mm × 297mm */
+        .page {
+            width: 210mm;
+            min-height: 297mm;
+            padding: 18mm 20mm 16mm;
+            background: #FBF7F2;
+            background-image:
+                radial-gradient(circle at 15% 25%, rgba(255, 178, 128, 0.10), transparent 55%),
+                radial-gradient(circle at 85% 75%, rgba(200, 230, 201, 0.18), transparent 60%),
+                radial-gradient(circle at 65% 15%, rgba(252, 228, 236, 0.15), transparent 55%);
+            margin: 12mm auto;
+            box-shadow: 0 6px 30px rgba(0,0,0,0.08);
+            position: relative;
+            page-break-after: always;
+            overflow: hidden;
+        }
+        .page:last-child { page-break-after: auto; }
+
+        /* Serifiges für Überschriften */
+        h1, h2, h3, .serif, blockquote {
+            font-family: 'Playfair Display', 'Georgia', serif;
+            color: #2C2C2C;
+            font-weight: 700;
+        }
+        .script { font-family: 'Dancing Script', cursive; }
+        .label {
+            font-size: 10pt;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #274543;
+            font-weight: 600;
+        }
+        em, .italic { font-style: italic; }
+
+        /* Farben */
+        .orange { color: #E86A2C; }
+        .darkgreen { color: #274543; }
+        .muted { color: #6B6B6B; }
+
+        /* Layout-Helfer */
+        p { margin: 0 0 10pt 0; font-size: 11.5pt; line-height: 1.6; }
+        h1 { font-size: 34pt; line-height: 1.1; margin-bottom: 12pt; }
+        h2 { font-size: 22pt; line-height: 1.2; margin-bottom: 12pt; }
+        h3 { font-size: 15pt; line-height: 1.3; margin-bottom: 6pt; }
+
+        .divider {
+            display: flex; align-items: center; gap: 10pt;
+            color: #B47A5A; font-family: 'Playfair Display', serif;
+            font-style: italic; font-size: 10pt; margin: 10pt 0 20pt;
+        }
+        .divider::before, .divider::after {
+            content: ""; flex: 1; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(180,122,90,0.45), transparent);
+        }
+
+        /* Fußzeile mit Seitenzahl */
+        .footer {
+            position: absolute;
+            bottom: 10mm; left: 20mm; right: 20mm;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 9pt; color: #999; letter-spacing: 0.1em;
+            border-top: 1px solid rgba(180,122,90,0.2); padding-top: 6pt;
+        }
+
+        /* ------------- SEITE 1 (TITEL) ------------- */
+        .cover {
+            display: flex; flex-direction: column; justify-content: space-between;
+            padding-top: 28mm;
+        }
+        .cover .top { text-align: left; }
+        .cover .middle { text-align: center; margin: 8mm 0; }
+        .cover img.muschel {
+            width: 100mm; height: auto; display: block; margin: 0 auto 6mm;
+        }
+        .cover h1 { font-size: 42pt; text-align: center; }
+        .cover .subtitle {
+            font-family: 'Playfair Display', serif; font-style: italic;
+            font-size: 15pt; text-align: center; color: #4A4A4A;
+            margin: 10pt 30pt 0; line-height: 1.5;
+        }
+        .cover .bottom {
+            text-align: center; margin-top: 10mm;
+            padding-top: 10pt; border-top: 1px solid rgba(180,122,90,0.25);
+        }
+        .cover .bottom p { font-size: 10.5pt; margin: 3pt 0; color: #4A4A4A; }
+        .cover .bottom .author { font-weight: 600; font-size: 12pt; color: #2C2C2C; }
+
+        /* ------------- BRIEF (SEITE 2) ------------- */
+        .letter p { font-size: 12pt; }
+        .signature {
+            font-family: 'Dancing Script', cursive; font-size: 30pt;
+            color: #2C2C2C; margin-top: 20pt;
+        }
+
+        /* ------------- WAS DEIN KÖRPER MACHT (S3) ------------- */
+        .cycle-box {
+            background: #fff; border: 1px solid rgba(232,106,44,0.25);
+            border-radius: 10pt; padding: 14pt 18pt; margin: 12pt 0 16pt;
+            text-align: center;
+        }
+        .cycle-box .cycle {
+            font-family: 'Playfair Display', serif; font-style: italic;
+            font-size: 14pt; color: #E86A2C;
+        }
+        .cycle-box .cycle span { margin: 0 8pt; color: #B47A5A; }
+
+        /* ------------- ÜBUNGEN (S4-5) ------------- */
+        .exercise-header {
+            background: rgba(255, 178, 128, 0.12);
+            border-left: 3pt solid #E86A2C;
+            padding: 8pt 12pt; margin: 10pt 0 14pt;
+            font-family: 'Playfair Display', serif; font-style: italic;
+            font-size: 11pt; color: #4A4A4A;
+        }
+        ol.steps { margin: 0 0 14pt 20pt; }
+        ol.steps li {
+            font-size: 11pt; line-height: 1.7; margin-bottom: 4pt;
+            padding-left: 4pt;
+        }
+        ol.steps li::marker { color: #E86A2C; font-weight: 700; }
+
+        .box-important {
+            background: rgba(200, 230, 201, 0.25);
+            border-radius: 8pt; padding: 12pt 14pt; margin-top: 10pt;
+            font-size: 10.5pt; line-height: 1.6;
+        }
+        .box-important strong { color: #274543; }
+
+        /* ------------- SÄTZE (S6-7) ------------- */
+        .quote-block {
+            margin-bottom: 9pt; padding: 6pt 0 6pt 14pt;
+            border-left: 2pt solid rgba(232,106,44,0.4);
+        }
+        .quote-context {
+            font-size: 9.5pt; color: #7A7A7A; font-style: italic;
+            margin-bottom: 3pt; letter-spacing: 0.05em;
+        }
+        .quote-text {
+            font-family: 'Playfair Display', serif; font-size: 11pt;
+            line-height: 1.5; color: #2C2C2C;
+        }
+
+        /* ------------- ABSCHLUSS (S8) ------------- */
+        .cta-box {
+            background: #fff; border: 1px solid rgba(232,106,44,0.35);
+            border-radius: 12pt; padding: 14pt 20pt; margin: 10pt 0;
+            text-align: center;
+        }
+        .cta-box .cta-label {
+            font-size: 9pt; letter-spacing: 0.25em; text-transform: uppercase;
+            color: #274543; font-weight: 600; margin-bottom: 8pt;
+        }
+        .cta-box .cta-title {
+            font-family: 'Playfair Display', serif; font-size: 16pt;
+            color: #2C2C2C; margin-bottom: 6pt;
+        }
+        .cta-box .cta-details {
+            font-size: 10.5pt; color: #5A5A5A; margin-bottom: 10pt;
+        }
+        .cta-box .cta-link {
+            display: inline-block; padding: 8pt 20pt;
+            background: linear-gradient(90deg, #E86A2C, #F97316);
+            color: #fff; border-radius: 6pt; font-weight: 600;
+            font-size: 11pt; text-decoration: none; letter-spacing: 0.05em;
+        }
+
+        .sonne-img {
+            display: block; margin: 0 auto 6pt;
+            width: 42mm; height: auto;
+        }
+
+        .sources {
+            font-size: 8pt; color: #999; line-height: 1.5;
+            margin-top: 10pt; padding-top: 6pt;
+            border-top: 1px solid rgba(180,122,90,0.15);
+        }
+
+        /* Druck-Optimierung */
+        @page {
+            size: A4;
+            margin: 0;
+        }
+        @media print {
+            html, body { background: #FBF7F2; }
+            .page {
+                margin: 0;
+                box-shadow: none;
+                page-break-after: always;
+            }
+            .page:last-child { page-break-after: auto; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ============================================================
+     SEITE 1 · TITEL
+     ============================================================ -->
+<section class="page cover">
+    <div class="top">
+        <div class="label darkgreen">Mehr als eine Diagnose</div>
+    </div>
+
+    <div class="middle">
+        <img src="../images/heft/print/muschel.jpg" alt="Muschel — Watercolor" class="muschel">
+        <h1>
+            Dein Körper<br>
+            <span class="italic orange">sagt Nein.</span><br>
+            Und hat recht damit.
+        </h1>
+        <p class="subtitle">
+            Zwei Übungen, ein paar Sätze, und das,<br>
+            was ich dir gerne persönlich sagen würde.
+        </p>
+    </div>
+
+    <div class="bottom">
+        <p class="author">Dr. med. Sabrina Kising</p>
+        <p>Fachärztin für Gynäkologie und Geburtshilfe</p>
+        <p>Sexualtherapeutin · Paartherapeutin</p>
+        <p style="margin-top: 8pt; font-family: 'Dancing Script', cursive; font-size: 16pt; color: #E86A2C;">liebeheilung.de</p>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 2 · BRIEF
+     ============================================================ -->
+<section class="page">
+    <div class="label">Ein Brief</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Warum ich dir dieses<br>Heft schreibe.</h2>
+
+    <div class="letter">
+        <p>
+            Du hast dir dieses Heft geholt. Das bedeutet: du bist schon einen Schritt gegangen.
+            Nicht zu mir. Aber zu dir.
+        </p>
+        <p>
+            Vielleicht war das der erste Schritt seit Jahren. Vielleicht seit der ersten
+            Untersuchung, bei der jemand gesagt hat: <em>„Entspannen Sie sich."</em>
+            Und du wolltest. Und dein Körper hat nicht gehorcht.
+        </p>
+        <p>
+            Ich schreibe dir das nicht als Ratgeber. Ich schreibe es als Frau, die Ärztin ist.
+            Und die weiß, dass dein Körper sich nicht anstellt. <strong>Er schützt dich.</strong>
+        </p>
+        <p>
+            Auf meiner Website steht, was Vaginismus <em>ist</em>. Hier steht, was du <em>tun</em>
+            kannst. Nicht alles. Nichts, was dich überfordert. Aber zwei Dinge, die du heute
+            machen kannst. Und ein paar Sätze, die dir helfen, wenn du sie brauchst.
+        </p>
+        <p>
+            Du musst nicht alles auf einmal verstehen. Du musst nur wissen, dass es einen
+            nächsten Schritt gibt. <span class="italic">Das ist er.</span>
+        </p>
+
+        <p class="signature">Sabrina</p>
+    </div>
+
+    <div class="footer">
+        <span>Dein Körper sagt Nein.</span>
+        <span>2</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 3 · WAS DEIN KÖRPER MACHT
+     ============================================================ -->
+<section class="page">
+    <div class="label">Verstehen</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Was dein Körper macht<br>(und warum er recht hat).</h2>
+
+    <p>
+        Dein Beckenboden spannt an. Ohne dich zu fragen. Nicht weil du zu eng bist.
+        Nicht weil du dich anstellst. Weil er etwas gelernt hat: <em>Hier droht Gefahr.</em>
+    </p>
+    <p>
+        Das ist kein Defekt. Das ist ein Schutzreflex, der sich verselbstständigt hat.
+        Dein Körper hat gut aufgepasst. Nur etwas zu gut.
+    </p>
+
+    <p style="margin-top: 8pt;">Der Kreislauf sieht so aus:</p>
+
+    <div class="cycle-box">
+        <div class="cycle">
+            Angst <span>→</span> Anspannung <span>→</span> Schmerz <span>→</span> mehr Angst
+        </div>
+    </div>
+
+    <p>
+        Jede Runde dreht er schneller. Das ist der eigentliche Gegner.
+        <strong>Nicht dein Körper. Nicht du.</strong>
+    </p>
+
+    <p>
+        Aber hier ist das Wichtige: was dein Körper gelernt hat, kann er anders lernen.
+        Nicht durch Druck. Nicht durch <em>„einfach entspannen"</em>. Sondern durch
+        Sicherheit. Durch Spüren. Durch kleine Schritte.
+    </p>
+
+    <p style="margin-top: 16pt; font-family: 'Playfair Display', serif; font-style: italic; font-size: 13pt; color: #E86A2C; text-align: center;">
+        Die nächste Seite ist ein erster Schritt.
+    </p>
+
+    <div class="footer">
+        <span>Dein Körper sagt Nein.</span>
+        <span>3</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 4 · ÜBUNG 1
+     ============================================================ -->
+<section class="page">
+    <div class="label">Übung 1 · 5 Minuten</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Deinen Beckenboden<br><span class="italic orange">spüren</span>.</h2>
+
+    <div class="exercise-header">
+        Das kannst du heute machen. Zu Hause. Allein. In 5 Minuten.
+    </div>
+
+    <h3>Warum diese Übung?</h3>
+    <p>
+        Weil dein Beckenboden jetzt etwas tut, ohne dass du es spürst. Er spannt an.
+        Automatisch. Du merkst es nicht — bis es weh tut. Diese Übung hilft dir,
+        ihn zum ersten Mal zu spüren. Nicht zu verändern. Nur zu spüren.
+    </p>
+
+    <h3 style="margin-top: 14pt;">So geht es:</h3>
+    <ol class="steps">
+        <li>Setz dich hin. Oder leg dich hin. Wo du sicher bist.</li>
+        <li>Atme ein. Langsam.</li>
+        <li>Atme aus. Langsam.</li>
+        <li>Spanne deinen Beckenboden an — so wie wenn du den Urin zurückhältst.</li>
+        <li>Halte 3 Sekunden.</li>
+        <li>Lass los. Langsam. Nicht abrupt.</li>
+        <li>Spüre nach: Was ist da? Wärme? Druck? Leere? Nichts?</li>
+        <li>Warte 5 Sekunden. Atme.</li>
+        <li>Wiederhole 3×.</li>
+    </ol>
+
+    <div class="box-important">
+        <p style="margin: 0;"><strong>Das Wichtige:</strong> Du veränderst nichts. Du spürst nur.
+        Das ist der erste Schritt: deinen Körper kennenlernen. Nicht bewerten. Nur spüren.</p>
+    </div>
+
+    <p style="margin-top: 14pt; font-size: 10.5pt; color: #5A5A5A;">
+        Wenn du das zum ersten Mal machst, spürst du vielleicht: da ist Anspannung.
+        Da ist etwas, das hält. Das ist dein Beckenboden. Er ist nicht dein Feind.
+        Er ist dein Wächter. Und du lernst ihn gerade kennen.
+    </p>
+
+    <div class="footer">
+        <span>Übung 1 · Spüren</span>
+        <span>4</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 5 · ÜBUNG 2
+     ============================================================ -->
+<section class="page">
+    <div class="label">Übung 2 · Nächster Schritt</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Öffnen <span class="italic orange">lernen</span>.</h2>
+
+    <div class="exercise-header">
+        Für wenn du Übung 1 kennst und bereit für den nächsten Schritt bist.
+    </div>
+
+    <h3>Warum diese Übung?</h3>
+    <p>
+        Weil dein Beckenboden gut im Anspannen ist. Aber vielleicht nicht mehr im Öffnen.
+        Das Öffnen ist der schwierige Teil — weil es Kontrolle abgibt.
+        Genau die Kontrolle, die dein Körper festhält.
+    </p>
+
+    <h3 style="margin-top: 14pt;">So geht es:</h3>
+    <ol class="steps">
+        <li>Leg eine Hand auf deinen Bauch oder Oberschenkel.</li>
+        <li>Spanne die Hand zur Faust — und gleichzeitig deinen Beckenboden an.</li>
+        <li>Halte beides 3–5 Sekunden. Spüre die Anspannung in beiden.</li>
+        <li>Jetzt: öffne beides gleichzeitig. Langsam. Stück für Stück.</li>
+        <li>Stell dir vor, du öffnest deine Hand. Nicht schließen, nicht festhalten — <em>öffnen</em>.</li>
+        <li>Spüre, wie die Anspannung weniger wird. In Hand und Beckenboden gleichzeitig.</li>
+        <li>Wenn sie ganz weg ist: atme. Spüre, was sich verändert hat.</li>
+        <li>Wiederhole 5×.</li>
+    </ol>
+
+    <div class="box-important">
+        <p style="margin: 0;"><strong>Das Wichtige:</strong> Das Öffnen ist das Neue.
+        Nicht das Anspannen. Dein Körper kann anspannen. Er muss lernen, dass es sicher ist,
+        sich zu entspannen, sich zu öffnen. Das geht nicht an einem Tag.
+        Aber jeder Versuch sagt deinem Körper: <em>Hier ist es sicher. Du darfst entspannen.</em></p>
+    </div>
+
+    <p style="margin-top: 14pt; font-size: 10.5pt; color: #5A5A5A;">
+        Wenn du entspannst und Angst kommt — das ist normal. Dein Körper hat gelernt:
+        sich entspannen, sich öffnen ist gefährlich. Er darf lernen: sich zu öffnen kann
+        sicher sein. In deinem Tempo. In deiner Zeit. Niemand drängt.
+    </p>
+
+    <div class="footer">
+        <span>Übung 2 · Öffnen</span>
+        <span>5</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 6 · SÄTZE FÜR DICH SELBST
+     ============================================================ -->
+<section class="page">
+    <div class="label">Für dich</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Sätze, die du dir <span class="italic orange">selbst</span> sagen kannst.</h2>
+
+    <p style="font-style: italic; color: #5A5A5A; margin-bottom: 16pt;">
+        Für die Momente, in denen es passiert. Und du nicht weißt, was du denken sollst.
+    </p>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn die Anspannung kommt:</div>
+        <div class="quote-text">„Mein Körper schützt mich. Er hat recht damit. Aber er muss nicht mehr."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du dich schämst:</div>
+        <div class="quote-text">„Ich stelle mich nicht an. Mein Körper hat etwas gelernt. Und er kann etwas anderes lernen."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du Angst vor dem nächsten Mal hast:</div>
+        <div class="quote-text">„Ich muss heute nichts können. Ich muss nur hier sein. Einen Schritt."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du denkst: das geht nie weg:</div>
+        <div class="quote-text">„Über vier von fünf Frauen finden einen Weg. Ich bin nicht die Ausnahme."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du allein damit bist:</div>
+        <div class="quote-text">„Viele Frauen tragen das jahrelang allein. Ich trage es nicht mehr allein."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du nicht weißt, ob du Hilfe brauchst:</div>
+        <div class="quote-text">„Ich muss nicht wissen, ob es schlimm genug ist. Ich muss nur wissen, ob ich es nicht mehr allein tragen will."</div>
+    </div>
+
+    <div class="footer">
+        <span>Sätze für dich</span>
+        <span>6</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 7 · SÄTZE FÜR DEN PARTNER
+     ============================================================ -->
+<section class="page">
+    <div class="label">Für dich und deinen Partner</div>
+    <div class="divider"><span>~</span></div>
+
+    <h2>Sätze, die du deinem<br><span class="italic orange">Partner</span> sagen kannst.</h2>
+
+    <p style="font-style: italic; color: #5A5A5A; margin-bottom: 14pt;">
+        Für wenn du es nicht selbst erklären kannst. Aber es sagen musst.
+    </p>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn er fragt, warum du keine Lust hast:</div>
+        <div class="quote-text">„Es ist nicht keine Lust. Mein Körper macht zu. Ich will, aber er nicht. Es hat nichts mit dir zu tun."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn er denkt, er tue etwas falsch:</div>
+        <div class="quote-text">„Du tust nichts falsch. Mein Körper reagiert auf etwas, das vor dir war. Du bist nicht das Problem. Du bist der Mensch, der es mit mir trägt."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn er fragt, was er tun kann:</div>
+        <div class="quote-text">„Frag nicht. Dräng nicht. Sei da. Wenn ich Nähe will, komme ich. Wenn ich Abstand brauche, nimm es nicht persönlich."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn er schweigt und du nicht weißt, was er denkt:</div>
+        <div class="quote-text">„Ich weiß auch nicht, was ich denken soll. Aber ich weiß, dass ich das nicht allein tragen will. Willst du es mit mir tragen?"</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn ihr beide nicht wisst, wie es weitergeht:</div>
+        <div class="quote-text">„Wir müssen das nicht heute lösen. Wir müssen nur wissen, dass wir es zusammen machen. Nicht gegeneinander."</div>
+    </div>
+
+    <div class="quote-block">
+        <div class="quote-context">Wenn du ihm sagen willst, was du brauchst, aber nicht kannst:</div>
+        <div class="quote-text">„Ich brauche, dass du mich nicht fragst. Nicht heute. Nur da bist. Das reicht."</div>
+    </div>
+
+    <p style="margin-top: 8pt; font-size: 9.5pt; color: #5A5A5A; font-style: italic; line-height: 1.5;">
+        Vaginismus betrifft selten nur eine Person. Da ist oft ein Partner, der nicht weiß, was er tun soll.
+        Diese Sätze sind kein Ersatz für ein Gespräch. Sie sind ein Anfang.
+        <strong style="color: #274543; font-style: normal;">Wenn du sie nicht sagen kannst: zeig ihm diese Seite.</strong>
+    </p>
+
+    <div class="footer">
+        <span>Sätze für den Partner</span>
+        <span>7</span>
+    </div>
+</section>
+
+
+<!-- ============================================================
+     SEITE 8 · DER NÄCHSTE SCHRITT
+     ============================================================ -->
+<section class="page">
+    <div class="label">Der nächste Schritt</div>
+    <div class="divider"><span>~</span></div>
+
+    <img src="../images/heft/print/sonne-hand.jpg" alt="Sonne in einer Hand — Watercolor" class="sonne-img">
+
+    <h2 style="text-align: center;">Du musst nicht heute ankommen.<br>
+        <span class="italic orange">Du musst nur gehen.</span>
+    </h2>
+
+    <p style="margin-top: 10pt;">
+        Du hast zwei Übungen. Du hast Sätze. Du hast einen Brief von mir.
+        Das ist nicht alles. Aber es ist ein Anfang.
+    </p>
+
+    <p>
+        Wenn du spürst: <em>ich will mehr als Übungen allein</em> — dann lass uns kennenlernen.
+    </p>
+
+    <div class="cta-box">
+        <div class="cta-label">15 Minuten · Online · Kostenfrei</div>
+        <div class="cta-title">Ein Kennenlernen</div>
+        <div class="cta-details">Kein Untersuchungsstuhl. Kein Druck. Kein „jetzt musst du alles erklären“. Wir schauen nur, ob es passt.</div>
+        <a href="https://liebeheilung.de/vaginismus.html" class="cta-link">liebeheilung.de</a>
+    </div>
+
+    <p style="font-size: 10pt; color: #5A5A5A; margin-bottom: 8pt;">
+        Und wenn du noch nicht bereit bist: das ist auch ein Schritt. Du hast dieses Heft geholt.
+        Du hast gelesen. Du hast gespürt. <strong>Das ist mehr, als du gestern getan hast.</strong>
+    </p>
+
+    <div style="margin-top: 8pt; text-align: center;">
+        <p style="font-family: 'Dancing Script', cursive; font-size: 20pt; color: #2C2C2C; margin: 0; line-height: 1.1;">Sabrina</p>
+        <p style="font-size: 9.5pt; color: #5A5A5A; margin-top: 2pt;">Dr. med. Sabrina Kising · liebeheilung.de</p>
+    </div>
+
+    <div class="sources">
+        <p style="font-size: 8pt; margin-bottom: 3pt;"><strong>Quellen:</strong>
+        Meta-Analyse Journal of Sexual Medicine 2025/26 (18 Studien, 863 Patientinnen);
+        PubMed 15992873 (Kaplan-Desensibilisierung).</p>
+        <p style="font-size: 8pt; margin: 0;">
+        Dieses Heft ersetzt keine ärztliche Diagnose oder Behandlung. Es ist eine Einladung. Mehr nicht. Aber auch nicht weniger.
+        </p>
+    </div>
+
+    <div class="footer">
+        <span>liebeheilung.de</span>
+        <span>8</span>
+    </div>
+</section>
+
+</body>
+</html>

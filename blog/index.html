@@ -99,6 +99,9 @@
         .cat-dich {
             background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
         }
+        .cat-vaginismus {
+            background: linear-gradient(135deg, #f97316 0%, #81C784 100%);
+        }
 
         /* Filter-Buttons */
         .filter-btn {
@@ -140,6 +143,7 @@
         .cat-dot-geburt { background-color: #f97316; }
         .cat-dot-paar { background-color: #274543; }
         .cat-dot-dich { background-color: #ec4899; }
+        .cat-dot-vaginismus { background-color: #81C784; }
 
         /* Hero-Akzent */
         .klartext-label {
@@ -299,6 +303,10 @@
                             <span class="cat-dot cat-dot-dich"></span>
                             Noch ich.
                         </a>
+                        <a href="#articles" data-jump="vaginismus" class="inline-flex items-center gap-2 px-4 py-2 bg-white border border-[#81C784]/50 rounded-full text-sm font-medium text-gray-700 hover:bg-[#E8F5E9] hover:border-[#81C784] transition-all shadow-sm">
+                            <span class="cat-dot cat-dot-vaginismus"></span>
+                            Noch mehr.
+                        </a>
                     </div>
                 </div>
                 
@@ -356,6 +364,18 @@
                                     </div>
                                     <i class="fas fa-arrow-right text-pink-500 text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
                                 </a>
+
+                                <!-- Noch mehr. -->
+                                <a href="#articles" data-jump="vaginismus" class="cat-card-link flex items-center gap-4 p-4 rounded-xl bg-[#E8F5E9] hover:bg-[#C8E6C9]/60 hover:border-[#81C784] group">
+                                    <div class="w-11 h-11 cat-vaginismus rounded-full flex items-center justify-center flex-shrink-0 shadow-md">
+                                        <i class="fas fa-seedling text-white text-sm"></i>
+                                    </div>
+                                    <div class="flex-1 text-left">
+                                        <p class="font-semibold text-gray-800 leading-tight">Noch mehr.</p>
+                                        <p class="text-xs text-gray-500 mt-0.5">Vaginismus, mehr als eine Diagnose</p>
+                                    </div>
+                                    <i class="fas fa-arrow-right text-[#4a9a5a] text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -382,7 +402,7 @@
                 <button data-filter="all" class="filter-btn active inline-flex items-center gap-2 px-5 py-2.5 bg-gray-800 text-white rounded-full text-sm font-medium hover:bg-gray-900">
                     <i class="fas fa-th-large text-xs"></i>
                     Alle
-                    <span class="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs filter-count" data-count="all">7</span>
+                    <span class="ml-1 px-2 py-0.5 bg-white/20 rounded-full text-xs filter-count" data-count="all">8</span>
                 </button>
                 <button data-filter="geburt" class="filter-btn inline-flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-orange-200 text-gray-700 rounded-full text-sm font-medium hover:bg-orange-50 hover:border-orange-300">
                     <span class="cat-dot cat-dot-geburt"></span>
@@ -399,10 +419,51 @@
                     Noch ich.
                     <span class="ml-1 px-2 py-0.5 bg-pink-100 text-pink-700 rounded-full text-xs filter-count" data-count="dich">2</span>
                 </button>
+                <button data-filter="vaginismus" class="filter-btn inline-flex items-center gap-2 px-5 py-2.5 bg-white border-2 border-[#81C784]/40 text-gray-700 rounded-full text-sm font-medium hover:bg-[#E8F5E9] hover:border-[#81C784]">
+                    <span class="cat-dot cat-dot-vaginismus"></span>
+                    Noch mehr.
+                    <span class="ml-1 px-2 py-0.5 bg-[#E8F5E9] text-[#2f6b3a] rounded-full text-xs filter-count" data-count="vaginismus">1</span>
+                </button>
             </div>
 
             <!-- Blog Grid -->
             <div id="blog-grid" class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+
+                <!-- Artikel: Was ist Vaginismus? (Noch mehr.) – NEU -->
+                <article data-category="vaginismus" class="bg-white rounded-2xl shadow-lg overflow-hidden blog-card relative">
+                    <div class="absolute top-4 right-4 z-10">
+                        <span class="inline-flex items-center gap-1 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-xs font-semibold px-2.5 py-1 rounded-full shadow-sm">
+                            <i class="fas fa-sparkles text-[10px]"></i>
+                            NEU
+                        </span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between text-sm mb-4">
+                            <span class="cat-vaginismus text-white px-3 py-1 rounded-full text-xs font-medium inline-flex items-center gap-1.5">
+                                <span class="w-1.5 h-1.5 bg-white rounded-full"></span>
+                                Noch mehr.
+                            </span>
+                        </div>
+                        <h2 class="text-xl font-bold text-gray-800 mb-3 line-clamp-2" style="font-family: 'Playfair Display', serif;">
+                            <a href="was-ist-vaginismus.html" class="hover:text-[#4a9a5a] transition-colors">
+                                Was ist Vaginismus? — Wenn der Körper Nein sagt
+                            </a>
+                        </h2>
+                        <p class="text-gray-600 mb-4 line-clamp-3 italic">
+                            Vaginismus ist keine Einbildung und keine Verweigerung. Was hinter dem unwillkürlichen Reflex steckt — und warum du damit nicht allein bist.
+                        </p>
+                        <div class="flex items-center justify-between pt-3 border-t border-gray-100">
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="fas fa-calendar mr-2" style="color: #81C784;"></i>
+                                27. August 2026
+                            </div>
+                            <a href="was-ist-vaginismus.html" class="text-[#4a9a5a] hover:text-[#2f6b3a] font-medium text-sm flex items-center group">
+                                Lesen
+                                <i class="fas fa-arrow-right ml-1 group-hover:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+                    </div>
+                </article>
 
                 <!-- Artikel: Geburtstrauma-Anzeichen (Noch immer.) – NEU -->
                 <article data-category="geburt" class="bg-white rounded-2xl shadow-lg overflow-hidden blog-card relative">
@@ -869,7 +930,7 @@
             const blogGrid = document.getElementById('blog-grid');
 
             // Artikel-Anzahl pro Kategorie dynamisch ermitteln
-            const counts = { all: articles.length, geburt: 0, paar: 0, dich: 0 };
+            const counts = { all: articles.length, geburt: 0, paar: 0, dich: 0, vaginismus: 0 };
             articles.forEach(a => {
                 const cat = a.getAttribute('data-category');
                 if (counts[cat] !== undefined) counts[cat]++;
@@ -910,7 +971,7 @@
                     // Visuelle States je nach Kategorie
                     if (isActive) {
                         // Alle inaktiven Styles entfernen
-                        btn.classList.remove('bg-white', 'text-gray-700', 'border-orange-200', 'border-emerald-200', 'border-pink-200');
+                        btn.classList.remove('bg-white', 'text-gray-700', 'border-orange-200', 'border-emerald-200', 'border-pink-200', 'border-[#81C784]/40');
                         if (filter === 'all') {
                             btn.classList.add('bg-gray-800', 'text-white');
                         } else if (filter === 'geburt') {
@@ -924,6 +985,11 @@
                         } else if (filter === 'dich') {
                             btn.classList.remove('bg-gray-800');
                             btn.classList.add('bg-pink-500', 'text-white', 'border-pink-500');
+                        } else if (filter === 'vaginismus') {
+                            btn.classList.remove('bg-gray-800');
+                            btn.classList.add('text-white');
+                            btn.style.backgroundColor = '#81C784';
+                            btn.style.borderColor = '#81C784';
                         }
                     } else {
                         // Standard zurücksetzen
@@ -941,6 +1007,8 @@
                             btn.classList.add('bg-white', 'text-gray-700', 'border-emerald-200');
                         } else if (f === 'dich') {
                             btn.classList.add('bg-white', 'text-gray-700', 'border-pink-200');
+                        } else if (f === 'vaginismus') {
+                            btn.classList.add('bg-white', 'text-gray-700', 'border-[#81C784]/40');
                         }
                     }
                 });

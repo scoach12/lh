@@ -36,10 +36,9 @@
             min-height: 297mm;
             padding: 18mm 20mm 16mm;
             background: #FBF7F2;
-            background-image:
-                radial-gradient(circle at 15% 25%, rgba(255, 178, 128, 0.10), transparent 55%),
-                radial-gradient(circle at 85% 75%, rgba(200, 230, 201, 0.18), transparent 60%),
-                radial-gradient(circle at 65% 15%, rgba(252, 228, 236, 0.15), transparent 55%);
+            background-image: url('assets/page-bg.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
             margin: 12mm auto;
             box-shadow: 0 6px 30px rgba(0,0,0,0.08);
             position: relative;
@@ -82,7 +81,7 @@
         }
         .divider::before, .divider::after {
             content: ""; flex: 1; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(180,122,90,0.45), transparent);
+            background: rgba(180,122,90,0.3);
         }
 
         /* Fußzeile mit Seitenzahl */
@@ -191,7 +190,7 @@
         }
         .cta-box .cta-link {
             display: inline-block; padding: 8pt 20pt;
-            background: linear-gradient(90deg, #E86A2C, #F97316);
+            background: #EE7B34;
             color: #fff; border-radius: 6pt; font-weight: 600;
             font-size: 11pt; text-decoration: none; letter-spacing: 0.05em;
         }

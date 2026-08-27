@@ -218,117 +218,10 @@
     }
     </script>
 
-    <!-- MailerLite Universal (Formular „Gratis-Heft — Was du erlebt hast, zählt.") -->
-    <script>
-        (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-        .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-        n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-        (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-        ml('account', '2559380');
-    </script>
-    <!-- End MailerLite Universal -->
-
-    <!-- MailerLite Formular-Sicherung: verhindert, dass ein zu frueher Klick
-         (bevor MailerLites eigenes Skript den Handler gebunden hat) das
-         Formular nativ als leeren Tab-POST absendet statt per JSONP. -->
-    <script src="js/ml-form-safeguard.js" defer></script>
-
-    <!-- MailerLite-Formular an unser Design angleichen -->
-    <style>
-        /* Gratis-Heft: eingebettetes MailerLite-Formular in Website-Optik */
-        #gratis-heft-formular .ml-embedded {
-            background: transparent !important;
-            padding: 0 !important;
-            margin: 0 !important;
-        }
-        #gratis-heft-formular .ml-form-embedContainer,
-        #gratis-heft-formular .ml-form-embedWrapper {
-            background: transparent !important;
-            border: none !important;
-            box-shadow: none !important;
-            max-width: 100% !important;
-            width: 100% !important;
-        }
-        #gratis-heft-formular .ml-form-embedBody {
-            padding: 0 !important;
-        }
-        /* Ursprüngliche MailerLite-Überschrift + Text ausblenden – wir haben eigene */
-        #gratis-heft-formular .ml-form-embedContent {
-            display: none !important;
-        }
-        /* Eingabefelder */
-        #gratis-heft-formular input[type="text"],
-        #gratis-heft-formular input[type="email"] {
-            font-family: 'Inter', sans-serif !important;
-            font-size: 1rem !important;
-            padding: 0.9rem 1rem !important;
-            border: 1px solid #E5E7EB !important;
-            border-radius: 0.5rem !important;
-            background: #FFFFFF !important;
-            color: #1F2937 !important;
-            width: 100% !important;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
-            transition: border-color 0.2s, box-shadow 0.2s !important;
-        }
-        #gratis-heft-formular input[type="text"]:focus,
-        #gratis-heft-formular input[type="email"]:focus {
-            outline: none !important;
-            border-color: #FF6B35 !important;
-            box-shadow: 0 0 0 3px rgba(255, 107, 53, 0.15) !important;
-        }
-        /* DSGVO-Checkbox-Bereich */
-        #gratis-heft-formular .ml-form-checkboxRow label,
-        #gratis-heft-formular .ml-form-embedPermissions p,
-        #gratis-heft-formular .ml-form-embedPermissions {
-            font-family: 'Inter', sans-serif !important;
-            color: #4B5563 !important;
-            font-size: 0.875rem !important;
-            line-height: 1.5 !important;
-        }
-        #gratis-heft-formular .ml-form-embedPermissions a {
-            color: #FF6B35 !important;
-            text-decoration: underline !important;
-        }
-        #gratis-heft-formular input[type="checkbox"] {
-            accent-color: #FF6B35 !important;
-            width: 1.1rem !important;
-            height: 1.1rem !important;
-            margin-top: 0.15rem !important;
-        }
-        /* Absende-Button */
-        #gratis-heft-formular button[type="submit"],
-        #gratis-heft-formular .primary,
-        #gratis-heft-formular .ml-form-embedSubmit button {
-            font-family: 'Inter', sans-serif !important;
-            font-weight: 600 !important;
-            font-size: 1.05rem !important;
-            color: #FFFFFF !important;
-            background: linear-gradient(to right, #FF6B35, #F26522) !important;
-            border: none !important;
-            border-radius: 0.5rem !important;
-            padding: 0.95rem 1.5rem !important;
-            width: 100% !important;
-            cursor: pointer !important;
-            box-shadow: 0 4px 14px rgba(255, 107, 53, 0.25) !important;
-            transition: transform 0.2s, box-shadow 0.2s !important;
-        }
-        #gratis-heft-formular button[type="submit"]:hover,
-        #gratis-heft-formular .primary:hover,
-        #gratis-heft-formular .ml-form-embedSubmit button:hover {
-            transform: translateY(-1px) !important;
-            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.35) !important;
-        }
-        /* Fehler-/Erfolgs-Meldungen */
-        #gratis-heft-formular .ml-form-successBody,
-        #gratis-heft-formular .ml-form-embedSuccessBody {
-            font-family: 'Inter', sans-serif !important;
-            color: #1F2937 !important;
-        }
-        /* Loading-Button */
-        #gratis-heft-formular .loadingButton {
-            background: linear-gradient(to right, #FF6B35, #F26522) !important;
-        }
-    </style>
+    <!-- Hinweis: Das MailerLite-Formular "Gratis-Heft — Was du erlebt hast, zählt."
+         wurde auf die eigene Unterseite geburtstrauma-heft.html verlagert.
+         Diese Startseite verlinkt nur noch dorthin (kein eingebettetes Formular
+         mehr hier, siehe #gratis-heft weiter unten). -->
 </head>
 <body class="font-inter bg-white text-gray-800 leading-relaxed">
 
@@ -1147,10 +1040,11 @@
                             </div>
                         </div>
 
-                        <!-- Eingebettetes MailerLite-Formular -->
-                        <div id="gratis-heft-formular" class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-lg border border-orange-100/60">
-                            <div class="ml-embedded" data-form="CM6Vxh"></div>
-                        </div>
+                        <!-- Link zur dedizierten Heft-Unterseite -->
+                        <a href="geburtstrauma-heft.html" class="inline-flex items-center bg-gradient-to-r from-orange-500 to-orange-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                            <i class="fas fa-envelope-open-text mr-2"></i>
+                            Heft kostenlos holen
+                        </a>
 
                         <!-- Vertrauens-Zeile -->
                         <p class="text-sm text-gray-500 mt-5 flex items-center flex-wrap gap-x-4 gap-y-1">
@@ -1162,12 +1056,12 @@
 
                     <!-- Heft-Visual-Spalte (2/5) -->
                     <div class="lg:col-span-2">
-                        <div class="relative max-w-sm mx-auto">
+                        <a href="geburtstrauma-heft.html" class="relative max-w-sm mx-auto block group">
                             <!-- Weiche Schatten -->
                             <div class="absolute inset-0 bg-gradient-to-br from-orange-300/40 to-pink-300/40 rounded-3xl transform rotate-3 scale-105 blur-sm"></div>
 
                             <!-- Heft-Optik -->
-                            <div class="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-orange-100">
+                            <div class="relative bg-white rounded-2xl shadow-2xl overflow-hidden border border-orange-100 transition-transform duration-300 group-hover:-translate-y-1">
                                 <!-- Cover-Bereich -->
                                 <div class="bg-gradient-to-br from-orange-50 to-pink-50 p-10 pb-8 text-center">
                                     <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-pink-400 rounded-full mx-auto mb-6 flex items-center justify-center shadow-lg">
@@ -1185,7 +1079,7 @@
                                     <span class="flex items-center gap-1.5"><i class="fas fa-heart text-pink-500"></i> Zum Lesen &amp; Ausdrucken</span>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                 </div>

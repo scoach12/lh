@@ -260,6 +260,37 @@
             transition: color 0.3s;
         }
         .article-content a:hover { color: #be185d; }
+        /* Studien-Box: Forschungshinweise hervorheben */
+        .studie-box {
+            margin: 2.5rem 0;
+            padding: 1.75rem 1.75rem 1.75rem 3.25rem;
+            position: relative;
+            background: #ffffff;
+            border: 1px solid rgba(190, 24, 93, 0.15);
+            border-radius: 1rem;
+            box-shadow: 0 2px 14px rgba(190, 24, 93, 0.05);
+        }
+        .studie-box::before {
+            content: "\f0eb";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 1.6rem; left: 1.25rem;
+            color: #ec4899;
+            font-size: 1.1rem;
+        }
+        .studie-box .studie-label {
+            display: block;
+            font-family: 'Playfair Display', serif !important;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #be185d;
+            margin-bottom: 0.5rem;
+        }
+        .studie-box p { margin-bottom: 0; color: #374151; line-height: 1.75; font-size: 1.0rem; }
+        @media (min-width: 768px) { .studie-box p { font-size: 1.05rem; } }
         /* Vergleichs-Box spontan vs. responsiv: nur in diesem Artikel */
         .vergleich-box { margin: 2.5rem 0; display: grid; grid-template-columns: 1fr; gap: 1rem; }
         @media (min-width: 640px) { .vergleich-box { grid-template-columns: 1fr 1fr; } }

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geschafft — hier ist dein Heft | Dr. med. Sabrina Kising</title>
+    <meta name="description" content="Deine Anmeldung ist bestätigt. Hier kannst du dein kostenloses Heft direkt herunterladen.">
+
+    <!-- Nicht indexieren — diese Seite ist ein Zwischenschritt -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://liebeheilung.de/danke.html">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Tailwind Config (konsistent mit Rest der Site) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'healing-orange': '#FF6B35',
+                        'dark-green': '#274543',
+                        'soft-pink': '#FCE4EC',
+                        'soft-orange': '#FFF3E0',
+                        'soft-green': '#E8F5E9'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                        'playfair': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .font-playfair {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+
+    <!--
+        Automatische Weiterleitung (optional):
+        Wenn beim Aufruf ein ?heft=... Parameter mitgegeben wird, leiten wir direkt
+        zur passenden Danke-Seite weiter. Ohne Parameter zeigen wir die Auswahl unten.
+        Beispiele:
+          /danke.html?heft=geburtstrauma  -> danke-geburtstrauma.html
+          /danke.html?heft=vaginismus     -> danke-vaginismus.html
+    -->
+    <script>
+        (function () {
+            try {
+                var params = new URLSearchParams(window.location.search);
+                var heft = (params.get('heft') || '').toLowerCase();
+                if (heft.indexOf('geburtstrauma') !== -1) {
+                    window.location.replace('danke-geburtstrauma.html');
+                } else if (heft.indexOf('vaginismus') !== -1) {
+                    window.location.replace('danke-vaginismus.html');
+                }
+            } catch (e) { /* Auswahlseite bleibt sichtbar */ }
+        })();
+    </script>
+</head>
+<body class="bg-gradient-to-br from-soft-orange via-white to-soft-green min-h-screen flex flex-col">
+
+    <!-- Minimaler Header — nur Logo/Name als Rückweg -->
+    <header class="py-6 px-4">
+        <div class="container mx-auto max-w-5xl">
+            <a href="/" class="inline-flex items-center gap-3 group">
+                <div class="w-10 h-10 bg-gradient-to-br from-orange-400 to-emerald-400 rounded-full flex items-center justify-center shadow-md group-hover:shadow-lg transition-shadow">
+                    <i class="fas fa-feather-alt text-white text-sm"></i>
+                </div>
+                <div>
+                    <p class="font-playfair text-xl text-gray-800 leading-tight">Liebe und Heilung</p>
+                    <p class="text-xs text-gray-500 tracking-wide">Dr. med. Sabrina Kising</p>
+                </div>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hauptbereich -->
+    <main class="flex-1 flex items-center justify-center px-4 py-12">
+        <div class="container mx-auto max-w-2xl">
+
+            <!-- Kernbotschaft -->
+            <div class="text-center mb-10">
+                <p class="font-playfair text-2xl md:text-3xl text-orange-600 italic mb-8">
+                    Geschafft.
+                </p>
+
+                <h1 class="font-playfair text-3xl md:text-4xl font-normal text-gray-800 mb-6 leading-snug">
+                    Hier ist dein Heft.
+                </h1>
+
+                <p class="text-lg text-gray-700 leading-relaxed max-w-xl mx-auto">
+                    Deine Anmeldung ist bestätigt. Wähle dein Heft und lade es direkt herunter.
+                </p>
+            </div>
+
+            <!-- Auswahl der beiden Hefte -->
+            <div class="grid md:grid-cols-2 gap-6 mb-12">
+
+                <!-- Geburtstrauma-Heft -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-orange-100/60 flex flex-col text-center">
+                    <h2 class="font-playfair text-xl text-gray-800 mb-2 leading-snug">
+                        „Was du erlebt hast, zählt."
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">
+                        Dein Heft bei Geburtstrauma.
+                    </p>
+                    <a href="downloads/was-du-erlebt-hast-zaehlt.pdf"
+                       download
+                       class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fas fa-download"></i>
+                        Heft herunterladen
+                    </a>
+                </div>
+
+                <!-- Vaginismus-Heft -->
+                <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-emerald-100/60 flex flex-col text-center">
+                    <h2 class="font-playfair text-xl text-gray-800 mb-2 leading-snug">
+                        „Dein Körper sagt Nein."
+                    </h2>
+                    <p class="text-sm text-gray-600 mb-6 flex-1">
+                        Dein Heft bei Vaginismus.
+                    </p>
+                    <a href="downloads/dein-koerper-sagt-nein.pdf"
+                       download
+                       class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-orange-500 to-emerald-500 text-white px-6 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-300">
+                        <i class="fas fa-download"></i>
+                        Heft herunterladen
+                    </a>
+                </div>
+
+            </div>
+
+            <!-- Sanfter Hinweis: liegt auch im Postfach -->
+            <div class="bg-white/70 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-sm border border-orange-100/50 mb-10 text-center">
+                <p class="text-gray-700 leading-relaxed">
+                    <i class="fas fa-envelope text-orange-400 mr-2"></i>
+                    Du findest den Link zum Heft zur Sicherheit auch noch einmal in deinem
+                    E-Mail-Postfach — so hast du es jederzeit griffbereit.
+                </p>
+            </div>
+
+            <!-- Stille Rückverlinkung — kein Verkaufsdruck -->
+            <div class="text-center">
+                <p class="text-gray-600 italic mb-6 leading-relaxed font-playfair">
+                    Nimm dir das Heft in Ruhe vor.<br>
+                    Nichts musst du gerade tun — außer sanft mit dir zu sein.
+                </p>
+
+                <a href="/"
+                   class="inline-flex items-center gap-2 text-gray-600 hover:text-orange-600 font-medium transition-colors">
+                    <i class="fas fa-arrow-left text-sm"></i>
+                    Zurück zur Startseite
+                </a>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Minimaler Footer -->
+    <footer class="py-8 px-4 mt-12">
+        <div class="container mx-auto max-w-5xl text-center">
+            <p class="text-sm text-gray-500 mb-2">
+                Dr. med. Sabrina Kising · Fachärztin, Paar- und Sexualtherapeutin
+            </p>
+            <div class="flex items-center justify-center gap-4 text-xs text-gray-400">
+                <a href="/impressum.html" class="hover:text-orange-600 transition-colors">Impressum</a>
+                <span>·</span>
+                <a href="/datenschutz.html" class="hover:text-orange-600 transition-colors">Datenschutz</a>
+                <span>·</span>
+                <a href="/kontakt.html" class="hover:text-orange-600 transition-colors">Kontakt</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
